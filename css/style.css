@@ -3,3 +3,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.wrapper{
+  max-width: 1280px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  background-color: white;
+  position: fixed; 
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.header-ul{
+  display:flex;
+  flex-direction:row;
+  gap:40px;
+  text-decoration: none;
+}
+
+.header-right{
+  display:flex;
+  flex-direction:row;
+  gap:15px;
+}
