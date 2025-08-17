@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Blogers Webiste</title>
+    <script src="src/main.js" defer></script>
+  </head>
+  <body>
+    <header class="enter-header">
+      <a href="index.html"><img src="images/sakitxavi1 1.png" alt="logo" /></a>
+    </header>
+    <section class="enter-section">
+      <div class="container">
+        <h2 id="formTitle">კეთილი იყოს შენი კალამი!</h2>
+        <div class="tabs">
+          <button class="tab active" onclick="switchTab('login')">ავტორიზაცია</button>
+          <button class="tab" onclick="switchTab('register')">რეგისტრაცია</button>
+        </div>
+        <form id="loginForm" class="form active" onsubmit="return login(event)">
+          <div class="field">
+            <h3>ელფოსტა</h3>
+            <input type="email" placeholder="შეიყვანე ელფოსტა" required />
+          </div>
+          <div class="field">
+            <h3>პაროლი</h3>
+            <input type="password" placeholder="შეიყვანე პაროლი" required />
+            <div class="div-enter-flex">
+              <label class="inline"><input class="pointer" type="checkbox" /> დამახსოვრება</label>
+              <p class="helper"><a href="#" onclick="switchTab('reset')">დაგავიწყდა პაროლი?</a></p>
+            </div>
+          </div>
+          <button type="submit" class="btn primary">შესვლა</button>
+          <div class="divider">ან</div>
+          <button type="button" class="btn google-btn">
+            <img src="images/Google icon.png" alt="Google" />
+            <span>Google-ით ავტორიზაცია</span>
+          </button>
+        </form>
+
+        <form id="registerForm" class="form" onsubmit="return registerUser(event)">
+          <div class="field">
+            <h3>სახელი, გვარია</h3>
+            <input type="text" placeholder="შეიყავნე სახელი და გვარი" required />
+          </div>
+          <div class="field">
+            <h3>ელოსტა</h3>
+            <input type="email" placeholder="შეიყვანე ელფოსტა" required />
+          </div>
+          <div class="field">
+            <h3>პაროლი</h3>
+            <input type="password" placeholder="შეიყვანე პაროლი" minlength="6" required />
+          </div>
+          <label class="aprove"><input class="pointer" type="checkbox" required /> ვეთანხმები საკითხავის წესებს და პირობებს</label>
+          <button type="submit" class="btn primary">გაგრძელება</button>
+          <div class="divider">ან</div>
+          <button type="button" class="btn google-btn">
+            <img src="images/Google icon.png" alt="Google" />
+            <span>Google-ით რეგისტრაცია</span>
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer class="enter-footer">
+      <p>© 2025 „საკითხავი“. ყველა უფლება დაცულია.</p>
+    </footer>
+  </body>
+</html>
