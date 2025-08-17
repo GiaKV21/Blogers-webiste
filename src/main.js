@@ -15,3 +15,10 @@ function switchTab(tab) {
     document.getElementById('formTitle').textContent = "პაროლის აღდგენა";
   }
 }
+
+document.querySelectorAll('.toggle-password').forEach(icon => {
+  icon.addEventListener('click', () => {
+    const input = document.getElementById(icon.dataset.target);
+    input.type = input.type === "password" ? "text" : "password";
+  });
+});

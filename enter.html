@@ -26,9 +26,12 @@
           </div>
           <div class="field">
             <h3>პაროლი</h3>
-            <input type="password" placeholder="შეიყვანე პაროლი" required />
+            <div class="password-wrapper">
+              <input type="password" id="loginPassword" placeholder="შეიყვანე პაროლი" required />
+              <img src="images/eye.png" class="toggle-password" data-target="loginPassword" alt="eye" />
+            </div>
             <div class="div-enter-flex">
-              <label class="inline"><input class="pointer" type="checkbox" /> დამახსოვრება</label>
+              <label class="inline"><input type="checkbox" /> დამახსოვრება</label>
               <p class="helper"><a href="#" onclick="switchTab('reset')">დაგავიწყდა პაროლი?</a></p>
             </div>
           </div>
@@ -51,9 +54,12 @@
           </div>
           <div class="field">
             <h3>პაროლი</h3>
-            <input type="password" placeholder="შეიყვანე პაროლი" minlength="6" required />
+            <div class="password-wrapper">
+              <input type="password" id="registerPassword" placeholder="პაროლი (6+ სიმბოლო)" minlength="6" required />
+              <img src="images/eye.png" class="toggle-password" data-target="registerPassword" alt="eye" />
+            </div>
           </div>
-          <label class="aprove"><input class="pointer" type="checkbox" required /> ვეთანხმები საკითხავის წესებს და პირობებს</label>
+          <label class="aprove"><input type="checkbox" required /> ვეთანხმები საკითხავის წესებს და პირობებს</label>
           <button type="submit" class="btn primary">გაგრძელება</button>
           <div class="divider">ან</div>
           <button type="button" class="btn google-btn">
