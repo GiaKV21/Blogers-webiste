@@ -1,3 +1,5 @@
+// რეგისტაცია
+
 function switchTab(tab) {
   document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
   document.querySelectorAll('.form').forEach(form => form.classList.remove('active'));
@@ -22,3 +24,15 @@ document.querySelectorAll('.toggle-password').forEach(icon => {
     input.type = input.type === "password" ? "text" : "password";
   });
 });
+
+// დამავიწყდა პაროლი
+
+function goToStep(step) {
+  document.querySelectorAll('.password-container > div').forEach(div => div.classList.add('hidden'));
+  document.getElementById('step' + step).classList.remove('hidden');
+
+  if (step === 2) {
+    const email = document.getElementById('email').value.trim();
+    document.getElementById('showEmail').innerText = email;
+  }
+}

@@ -308,3 +308,114 @@ input[type="checkbox"] {
   right: 12px;
   cursor: pointer;
 }
+
+/* პაროლის შეცვლა */
+
+.section-password {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.password-container {
+  width: 500px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.p-steps {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 16px;
+  margin: 15px 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.email-input:focus { 
+  border-color: #c7cad1; 
+}
+
+.return-btn {
+  width: 100%;
+  padding: 15px;
+  background: #282624;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+  text-decoration: none;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.code {
+  width: 60px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+.password-field input {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.password-field h3{
+  font-size: 14px;
+}
+
+.password-field input:focus { 
+  border-color: #c7cad1; 
+}
+
+.small-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.a-small-text{
+  font-size: 16px;
+  color: #000000;
+}
+
+.hidden {
+  display: none;
+}
