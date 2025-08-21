@@ -318,7 +318,7 @@ input[type="checkbox"] {
 }
 
 .password-container {
-  width: 500px;
+  width: 540px;
   text-align: center;
 }
 
@@ -360,6 +360,10 @@ h2 {
   display: inline-block;
 }
 
+.showemail{
+  color: #282624;
+}
+
 .back-link {
   display: block;
   margin-top: 15px;
@@ -371,13 +375,16 @@ h2 {
 .code-inputs {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
 .code {
-  width: 60px;
+  width: 120px;
+  height: 120px;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .password-field {
