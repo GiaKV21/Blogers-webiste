@@ -56,9 +56,7 @@ header {
 
 .footer{
   background-color: #282624;
-  position: absolute;
   width: 100%;
-  bottom: 0px;
   padding: 30px 0px;
 }
 
@@ -136,7 +134,7 @@ header {
   width: 100%;
 }
 
-h2 {
+.enter-reg {
   margin: 0 0 18px;
   font-size: 20px;
   line-height: 1.2;
@@ -320,7 +318,7 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-h2 {
+.h2-steps {
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -424,3 +422,159 @@ h2 {
 .hidden {
   display: none;
 }
+
+/* მთავარი გვერდი */
+
+.hero {
+  background: #E3E3E3;
+  padding: 120px 0;
+}
+
+.hero-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  width: 500px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 16px 0;
+  gap: 5px;
+  font-size: 16px;
+  background: #282624;
+  color: #FFFFFF;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Slider Section */
+.slider-section {
+  padding: 40px 0;
+}
+
+.slider-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.slider-section-title {
+  font-size: 24px;
+}
+
+.a-slider{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slider-card {
+  min-width: calc(100% / 3);
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slider-card-inner {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.slider-card-cover {
+  background: #E3E3E3;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-description{
+  padding: 20px;
+}
+
+.slider-card-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.slider-card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.slider-card-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.slider-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #000000;
+}
+
+.div-images{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.span-images{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.slider-card-meta img {
+  cursor: pointer;
+}
+
+/* Arrows */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.slider-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.slider-btn.prev { left: -20px; }
+.slider-btn.next { right: -20px; }

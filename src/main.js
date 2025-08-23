@@ -1,3 +1,40 @@
+// მთავარი გვერდი
+
+    const sliderTrack = document.getElementById("sliderTrack");
+    const prevBtn = document.querySelector(".slider-btn.prev");
+    const nextBtn = document.querySelector(".slider-btn.next");
+
+    let currentIndex = 0;
+    const visibleCards = 3;
+    const moveBy = 2;
+    const totalCards = document.querySelectorAll(".slider-card").length;
+
+    function updateSlider() {
+      const cardWidth = document.querySelector(".slider-card").offsetWidth;
+      sliderTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex + visibleCards < totalCards) {
+        currentIndex += moveBy;
+        if (currentIndex + visibleCards > totalCards) {
+          currentIndex = totalCards - visibleCards;
+        }
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex -= moveBy;
+        if (currentIndex < 0) currentIndex = 0;
+        updateSlider();
+      }
+    });
+
+    window.addEventListener("resize", updateSlider);
+
+
 // რეგისტაცია
 
 function switchTab(tab) {
