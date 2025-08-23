@@ -574,3 +574,38 @@ input[type="checkbox"] {
 
 .slider-btn.prev { left: -75px; }
 .slider-btn.next { right: -75px; }
+
+/* პიროვნებები */
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.3);    
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 65px 0;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.btn {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #282624;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-text {
+  font-size: 16px;
+}
