@@ -1,16 +1,17 @@
 // მთავარი გვერდი
 
-  const sliderTrack = document.getElementById("sliderTrack");
-  const prevBtn = document.querySelector(".slider-btn.prev");
-  const nextBtn = document.querySelector(".slider-btn.next");
+document.querySelectorAll(".slider-section").forEach(section => {
+  const sliderTrack = section.querySelector(".slider-track");
+  const prevBtn = section.querySelector(".slider-btn.prev");
+  const nextBtn = section.querySelector(".slider-btn.next");
 
   let currentIndex = 0;
   const visibleCards = 3;
   const moveBy = 2;
-  const totalCards = document.querySelectorAll(".slider-card").length;
+  const totalCards = sliderTrack.querySelectorAll(".slider-card").length;
 
   function updateSlider() {
-    const cardWidth = document.querySelector(".slider-card").offsetWidth;
+    const cardWidth = sliderTrack.querySelector(".slider-card").offsetWidth;
     sliderTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
   }
 
@@ -33,6 +34,7 @@
   });
 
   window.addEventListener("resize", updateSlider);
+});
 
 // რეგისტაცია
 
