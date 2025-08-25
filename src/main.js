@@ -102,10 +102,73 @@ function login(event) {
   password.classList.add("error");
 
   errorMessage.innerHTML = '<img src="images/Danger Triangle.png" alt="!" class="error-icon"> არასწორია ელფოსტა ან პაროლი';
-  errorMessage.style.display = "block";
+  errorMessage.style.display = "flex";
 
   return false;
 }
+
+// რეგისტაციის ვალიდაცია
+
+function registerUser(event) {
+  event.preventDefault();
+
+  let isValid = true;
+
+  let fullName = document.getElementById("fullName");
+  let email = document.getElementById("registerEmail");
+  let password = document.getElementById("registerPassword");
+  let terms = document.getElementById("termsCheckbox");
+  
+  let fullNameError = fullName.parentElement.querySelector(".error-message");
+  let emailError = email.parentElement.querySelector(".error-message");
+  let passwordError = password.closest(".field").querySelector(".error-message");
+  let termsError = terms.closest("label").nextElementSibling;
+
+  // სახელი, გვარი
+  if (fullName.value.trim() === "") {
+    fullName.classList.add("error");
+    fullNameError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> ეს ველი სავალდებულოა`;
+    fullNameError.style.display = "flex";
+    isValid = false;
+  } else {
+    fullName.classList.remove("error");
+    fullNameError.style.display = "none";
+  }
+
+  // ელფოსტა
+  if (email.value.trim() === "") {
+    email.classList.add("error");
+    emailError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> ეს ველი სავალდებულოა`;
+    emailError.style.display = "flex";
+    isValid = false;
+  } else {
+    email.classList.remove("error");
+    emailError.style.display = "none";
+  }
+
+  // პაროლი
+  if (password.value.trim().length < 6) {
+    password.classList.add("error");
+    passwordError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> პაროლი უნდა მოიცავდეს მინიმუმ 6 სიმბოლოს`;
+    passwordError.style.display = "flex";
+    isValid = false;
+  } else {
+    password.classList.remove("error");
+    passwordError.style.display = "none";
+  }
+
+  // წესები და პირობები
+  if (!terms.checked) {
+    termsError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> გთხოვთ დაეთანხმეთ წესებს და პირობებს`;
+    termsError.style.display = "flex";
+    isValid = false;
+  } else {
+    termsError.style.display = "none";
+  }
+
+  return isValid;
+}
+
 
 // დამავიწყდა პაროლი
 

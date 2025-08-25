@@ -47,20 +47,24 @@
         <form id="registerForm" class="form" onsubmit="return registerUser(event)">
           <div class="field">
             <h3>სახელი, გვარია</h3>
-            <input type="text" placeholder="შეიყავნე სახელი და გვარი" required />
+            <input type="text"  id="fullName" placeholder="შეიყავნე სახელი და გვარი"/>
+            <small class="error-message"></small>
           </div>
           <div class="field">
             <h3>ელოსტა</h3>
-            <input type="email" placeholder="შეიყვანე ელფოსტა" required />
+            <input type="email"  id="registerEmail" placeholder="შეიყვანე ელფოსტა"/>
+            <small class="error-message"></small>
           </div>
           <div class="field">
-            <h3>პაროლი</h3>
+            <h3>პაროლი (6+ სიმბოლო)</h3>
             <div class="password-wrapper">
-              <input type="password" id="registerPassword" placeholder="პაროლი (6+ სიმბოლო)" minlength="6" required />
+              <input type="password" id="registerPassword" placeholder="შეიყვანე პაროლი"/>
               <img src="images/eye.png" class="toggle-password" data-target="registerPassword" alt="eye" />
             </div>
+            <small class="error-message"></small>
           </div>
-          <label class="aprove"><input type="checkbox" required /> ვეთანხმები საკითხავის წესებს და პირობებს</label>
+          <label class="aprove"><input type="checkbox" id="termsCheckbox"/> ვეთანხმები საკითხავის წესებს და პირობებს</label>
+          <small class="error-message"></small>
           <button type="submit" class="primary">გაგრძელება</button>
           <div class="divider">ან</div>
           <button type="button" class="google-btn">
