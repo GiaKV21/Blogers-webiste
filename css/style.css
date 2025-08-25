@@ -232,7 +232,7 @@ input[type="checkbox"] {
   border: 0;
   cursor: pointer;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 10px;
   background: #282624;
   color: #FFFFFF;
 }
@@ -303,6 +303,16 @@ input[type="checkbox"] {
   position: absolute;
   right: 12px;
   cursor: pointer;
+}
+
+.error-message {
+  display: none;
+  font-size: 13px;
+  color: #FF4343;
+  margin-top: 4px;
+}
+input.error {
+  border: 1px solid #FF4343 !important;
 }
 
 /* პაროლის შეცვლა */
