@@ -609,3 +609,35 @@ input[type="checkbox"] {
 .footer-text {
   font-size: 16px;
 }
+
+/* პოპულარული */
+
+.popular-margin{
+  margin: 100px 0;
+}
+
+.div-popular{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.slider-card-popular{
+  max-width: 360px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.h1-popular{
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.favorite-card{
+  max-width: 360px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
