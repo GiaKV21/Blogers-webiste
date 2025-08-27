@@ -159,7 +159,7 @@ function registerUser(event) {
 
   // წესები და პირობები
   if (!terms.checked) {
-    termsError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> გთხოვთ დაეთანხმეთ წესებს და პირობებს`;
+    termsError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> გთხოვთ დაეთანხმოთ წესებს და პირობებს`;
     termsError.style.display = "flex";
     isValid = false;
   } else {
