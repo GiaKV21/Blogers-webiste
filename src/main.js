@@ -1,39 +1,61 @@
 // მთავარი გვერდი
 
-document.querySelectorAll(".slider-section").forEach(section => {
-  const sliderTrack = section.querySelector(".slider-track");
-  const prevBtn = section.querySelector(".slider-btn.prev");
-  const nextBtn = section.querySelector(".slider-btn.next");
+document.querySelectorAll('.slider-container').forEach(container => {
+  const cards = Array.from(container.querySelectorAll('.slider-card'));
+  const prevBtn = container.querySelector('.slider-btn.prev');
+  const nextBtn = container.querySelector('.slider-btn.next');
 
-  let currentIndex = 0;
-  const visibleCards = 3;
-  const moveBy = 2;
-  const totalCards = sliderTrack.querySelectorAll(".slider-card").length;
+  const visible = 3;
+  let startIndex = 0;
+  let isAnimating = false;
 
-  function updateSlider() {
-    const cardWidth = sliderTrack.querySelector(".slider-card").offsetWidth;
-    sliderTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  function updateArrows() {
+    prevBtn.style.display = startIndex > 0 ? "block" : "none";
+    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
   }
 
-  nextBtn.addEventListener("click", () => {
-    if (currentIndex + visibleCards < totalCards) {
-      currentIndex += moveBy;
-      if (currentIndex + visibleCards > totalCards) {
-        currentIndex = totalCards - visibleCards;
-      }
-      updateSlider();
+  function showCards(newIndex) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const currentCards = cards.slice(startIndex, startIndex + visible);
+    currentCards.forEach(card => card.style.opacity = "0");
+
+    setTimeout(() => {
+      currentCards.forEach(card => card.style.display = "none");
+
+      startIndex = newIndex;
+      const nextCards = cards.slice(startIndex, startIndex + visible);
+      nextCards.forEach(card => {
+        card.style.display = "block";
+        setTimeout(() => card.style.opacity = "1", 50);
+      });
+
+      setTimeout(() => {
+        isAnimating = false;
+        updateArrows();
+      }, 300);
+    }, 300);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (startIndex + visible < cards.length) {
+      showCards(startIndex + visible);
     }
   });
 
-  prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex -= moveBy;
-      if (currentIndex < 0) currentIndex = 0;
-      updateSlider();
+  prevBtn.addEventListener('click', () => {
+    if (startIndex - visible >= 0) {
+      showCards(startIndex - visible);
     }
   });
 
-  window.addEventListener("resize", updateSlider);
+  cards.slice(0, visible).forEach(c => {
+    c.style.display = "block";
+    c.style.opacity = "1";
+  });
+
+  updateArrows();
 });
 
 // რეგისტაცია

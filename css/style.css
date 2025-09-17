@@ -5,7 +5,7 @@
 }
 
 .wrapper{
-  max-width: 1280px;
+  max-width: 1141px;
   margin: auto;
 }
 
@@ -91,7 +91,7 @@ header {
 }
 
 .footer-div-p{
-  width: 333px;
+  width: 441px;
   line-height: 26px;
 }
 
@@ -446,7 +446,7 @@ input.error {
 }
 
 .hero-content {
-  max-width: 1280px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -501,23 +501,31 @@ input.error {
   position: relative;
 }
 
-.slider-wrapper {
-  overflow: hidden;
-}
-
 .slider-track {
   display: flex;
-  transition: transform 0.4s ease-in-out;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .slider-card {
-  box-sizing: border-box;
-  padding: 0 5px;
+  flex: 0 0 calc(33.333% - 20px);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slider-card.active {
+  display: block;
+  opacity: 1;
+}
+
+.slider-card-inner{
+  max-width: 367px;
+  width: 100%;
 }
 
 .slider-card-cover {
-  max-width: 360px;
-  height: 200px;
+  max-width: 367px;
   border-radius: 8px;
 }
 
@@ -590,7 +598,7 @@ input.error {
 /* პიროვნებები */
 
 .card {
-  padding: 24px;
+  padding: 22px;
   border: 1px solid #B8B8B8;    
   border-radius: 8px;
   display: flex;
