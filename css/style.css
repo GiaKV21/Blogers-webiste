@@ -551,6 +551,12 @@ input.error {
   margin-bottom: 10px;
 }
 
+.img-user{
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
 .slider-card-meta {
   display: flex;
   align-items: center;
