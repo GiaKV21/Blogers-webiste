@@ -42,12 +42,6 @@ header {
   text-decoration: none;
 }
 
-.header-right{
-  display:flex;
-  flex-direction:row;
-  gap:15px;
-}
-
 .header-right-enter{
   display:flex;
   flex-direction:row;
