@@ -521,7 +521,6 @@ input.error {
 
 .slider-track {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -608,16 +607,15 @@ input.error {
 
 .slider-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 45%;
   cursor: pointer;
   z-index: 10;
   border: transparent;
   background: transparent;
 }
 
-.slider-btn.prev { left: -75px; }
-.slider-btn.next { right: -75px; }
+.slider-btn.prev { left: -65px; }
+.slider-btn.next { right: -65px; }
 
 /* პიროვნებები */
 
