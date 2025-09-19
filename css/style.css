@@ -442,7 +442,7 @@ input.error {
 
 .hero {
   background: #E3E3E3;
-  padding: 120px 0;
+  padding: 120px 0 185px;
 }
 
 .hero-content {
@@ -478,7 +478,7 @@ input.error {
 
 /* Slider Section */
 .slider-section {
-  padding: 40px 0;
+  padding: 75px 0;
 }
 
 .slider-section-header {
