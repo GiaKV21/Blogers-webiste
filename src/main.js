@@ -62,6 +62,60 @@ document.querySelectorAll('.slider-container').forEach(container => {
 
 // სერჩი
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById('searchToggle');
+  const dropdown = document.getElementById('searchDropdown');
+  const overlay = document.getElementById('overlay');
+  const input = document.getElementById('theSearchInput');
+  const submit = document.getElementById('searchSubmit');
+
+  function openSearch() {
+    dropdown.classList.add('open');
+    overlay.classList.add('visible');
+    setTimeout(() => input.focus(), 200);
+  }
+
+  function closeSearch() {
+    dropdown.classList.remove('open');
+    overlay.classList.remove('visible');
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (dropdown.classList.contains('open')) {
+      closeSearch();
+    } else {
+      openSearch();
+    }
+  });
+
+  overlay.addEventListener('click', closeSearch);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      closeSearch();
+    }
+  });
+
+  submit.addEventListener('click', () => {
+    console.log("Searching:", input.value);
+    closeSearch();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const chips = document.querySelectorAll(".chip");
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+
+      console.log("Selected filter:", chip.dataset.filter);
+    });
+  });
+});
+
 // რეგისტაცია
 
 function switchTab(tab) {

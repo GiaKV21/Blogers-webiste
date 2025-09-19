@@ -48,6 +48,105 @@ header {
   gap:15px;
 }
 
+.search-toggle{
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 98;
+}
+.overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-dropdown {
+  position: fixed;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1140px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transition: top 0.35s ease, opacity 0.3s ease;
+  z-index: 99;
+}
+.search-dropdown.open {
+  top: 100px;
+  opacity: 1;
+}
+
+.search-pill {
+  flex: 1;
+  background: #FDFCF9;
+  border: 1px solid #ACACAC;
+  border-radius: 28px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-gr {
+  margin-right: 11px;
+}
+
+.search-pill input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-pill input::placeholder {
+  color: #ACACAC;
+}
+
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 12px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #FDFCF9;
+  background: #FDFCF9;
+  color: #C8C8C8;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .2s;
+}
+
+.chip.active {
+  color: #191919;
+  border-color: #E3E3E3;
+}
+
+.search-submit {
+  background: #191919;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 300px;
+  padding: 17px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 /* ფუტერი */
 
 .footer{
@@ -454,7 +553,7 @@ input.error {
 
 .hero {
   background: #E3E3E3;
-  padding: 120px 0 185px;
+  padding: 185px 0;
 }
 
 .hero-content {
