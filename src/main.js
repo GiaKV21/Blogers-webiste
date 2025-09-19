@@ -1,5 +1,7 @@
 // მთავარი გვერდი
 
+// სლაიდერი
+
 document.querySelectorAll('.slider-container').forEach(container => {
   const cards = Array.from(container.querySelectorAll('.slider-card'));
   const prevBtn = container.querySelector('.slider-btn.prev');
@@ -57,6 +59,8 @@ document.querySelectorAll('.slider-container').forEach(container => {
 
   updateArrows();
 });
+
+// სერჩი
 
 // რეგისტაცია
 
