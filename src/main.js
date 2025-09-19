@@ -34,8 +34,8 @@ document.querySelectorAll('.slider-container').forEach(container => {
       setTimeout(() => {
         isAnimating = false;
         updateArrows();
-      }, 300);
-    }, 300);
+      }, 200);
+    }, 200);
   }
 
   nextBtn.addEventListener('click', () => {
