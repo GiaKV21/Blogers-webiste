@@ -19,9 +19,9 @@
               <li><a href="">ჩვენ შესახებ</a></li>
             </ul>
         </nav>
-        <a class="" href="">
-            <img src="images/Magnifer.png" alt="" />
-          </a>
+        <button id="searchToggle" class="search-toggle" aria-label="Search open">
+          <img src="images/Magnifer.png" alt="" />
+        </button>
         <div class="header-right">
           <a class="" href="">
             <img src="images/Bell.png" alt="" />
@@ -31,14 +31,27 @@
           </a>
         </div>
         <div class="header-right-enter">
-          <a class="" href="">
-            <img src="images/Global.png" alt="" />
-          </a>
           <a class="" href="enter.html">
             შესვლა
           </a>
         </div>
       </div>
+
+      <div id="overlay" class="overlay"></div>
+      <div id="searchDropdown" class="search-dropdown">
+        <div class="search-pill">
+          <span class="icon-gr">
+            <img src="images/Magnifer-gr.png" alt="icon" />
+          </span>
+          <input id="theSearchInput" type="search" placeholder="მოძებნე სახელი ან ავტორი" />
+          <div class="right-controls">
+            <button class="chip active" type="button" data-filter="sakithxavi">საკითხავი</button>
+            <button class="chip" type="button" data-filter="avtori">ავტორი</button>
+          </div>
+        </div>
+        <button id="searchSubmit" class="search-submit" type="button">ძებნა</button>
+      </div>
+
     </header>
     <section class="wrapper">
       <div class="popular-margin">
