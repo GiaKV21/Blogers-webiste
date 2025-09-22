@@ -326,9 +326,14 @@ label.aprove{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
   font-size: 14px;
   cursor: pointer;
+  margin: 10px 0;
+}
+
+.span-aprove{
+  color: #1B7CDE;
 }
 
 input[type="checkbox"] {
@@ -364,7 +369,7 @@ input[type="checkbox"] {
   position: relative;
   text-align: center;
   margin: 14px 0;
-  color: #6b7280;
+  color: rgba(40, 38, 36, 0.3);
   font-size: 12px;
 }
 
@@ -375,7 +380,7 @@ input[type="checkbox"] {
   top: 50%;
   width: 45%;
   height: 1px;
-  background: #e5e7eb;
+  background: rgba(40, 38, 36, 0.3);
 }
 
 .divider::before { 
@@ -394,7 +399,7 @@ input[type="checkbox"] {
 }
 
 .helper a { 
-  color: #000000; 
+  color: #1B7CDE; 
   text-decoration: none; 
   font-size: 14px;
 }
@@ -440,25 +445,36 @@ input.error {
 }
 
 .password-container {
-  width: 540px;
-  text-align: center;
+  max-width: 360px;
+  width: 100%;
+}
+
+.div-password{
+ text-align: center;
 }
 
 .h2-steps {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 24px;
 }
 
 .p-steps {
   color: rgba(0, 0, 0, 0.5);
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
+}
+
+.field-password{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 36px 0 20px;
 }
 
 .email-input {
   width: 100%;
   padding: 16px;
-  margin: 15px 0;
+  margin-top: 8px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   font-size: 14px;
@@ -477,7 +493,6 @@ input.error {
   border-radius: 8px;
   cursor: pointer;
   font-size: 20px;
-  margin-top: 10px;
   text-decoration: none;
   display: inline-block;
 }
@@ -488,10 +503,11 @@ input.error {
 
 .back-link {
   display: block;
-  margin-top: 15px;
+  margin-top: 36px;
   font-size: 14px;
-  color: #444;
+  color: #565656;
   text-decoration: none;
+  text-align: center;
 }
 
 .code-inputs {
@@ -502,18 +518,19 @@ input.error {
 }
 
 .code {
-  width: 120px;
-  height: 120px;
+  width: 78px;
+  height: 80px;
   text-align: center;
   font-size: 40px;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 
 .password-field {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin: 8px 0;
+  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -535,9 +552,10 @@ input.error {
 }
 
 .small-text {
-  margin-top: 10px;
+  margin-top: 36px;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .a-small-text{
