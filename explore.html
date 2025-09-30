@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogger's Website — Explore</title>
+    <link rel="stylesheet" href="css/explore.page.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header" role="banner" aria-label="Primary header">
+      <div class="container header-inner">
+        <button
+          class="hamburger"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Open menu"
+        >
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </button>
+
+        <a href="index.html" class="logo-link">
+          <img src="images/sakitxavi1 1.png" alt="logo" class="logo-img" />
+        </a>
+
+        <nav class="nav-desktop" aria-label="Main">
+          <a href="index.html">მთავარი</a>
+          <a href="explore.html" aria-current="page" class="active"
+            >აღმოაჩინე</a
+          >
+          <a href="index.html#about">ჩვენს შესახებ</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="ძებნა">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M20 20L16.65 16.65"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <!-- GUEST: shows before login -->
+          <a class="login-link auth-guest" href="enter.html" id="loginLink"
+            >შესვლა</a
+          >
+
+          <!-- AUTH: hidden by default; will be shown when body has .is-auth -->
+          <div class="auth-user">
+            <button class="icon-btn" aria-label="შეტყობინებები">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 22a2 2 0 0 0 2-2H10a2 2 0 0 0 2 2Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M19 16V11a7 7 0 1 0-14 0వ5l-2 2వ1h18వ-1l-2-2Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <a class="avatar" href="#" aria-label="პროფილი"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile drawer + backdrop -->
+      <div class="mobile-drawer" id="mobileNav" hidden>
+        <nav class="drawer-nav" aria-label="Mobile">
+          <a href="index.html">მთავარი</a>
+          <a href="explore.html" aria-current="page" class="active"
+            >აღმოაჩინე</a
+          >
+          <a href="index.html#about">ჩვენს შესახებ</a>
+        </nav>
+      </div>
+      <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+    </header>
+
+    <!-- Slider placeholder section -->
+    <section class="hero-slider" aria-label="Featured slider">
+      <div class="container">
+        <div class="slider-ph" role="img" aria-label="Slider placeholder"></div>
+      </div>
+    </section>
+
+    <!-- ===== Explore Content ===== -->
+    <section class="explore-section" aria-labelledby="explore-heading">
+      <div class="container">
+        <!-- Filter pills -->
+        <nav class="filter-bar" aria-label="Categories">
+          <ul class="filter-list" id="filterList">
+            <li>
+              <button class="pill is-active" data-filter="all">
+                ჩვენ გირჩევთ
+              </button>
+            </li>
+            <li>
+              <button class="pill" data-filter="popular">პიროვნული ზრდა</button>
+            </li>
+            <li>
+              <button class="pill" data-filter="professional">
+                პროფესიული ზრდა
+              </button>
+            </li>
+            <li>
+              <button class="pill" data-filter="creative">
+                კრეატიული ინდუსტრია
+              </button>
+            </li>
+            <li>
+              <button class="pill" data-filter="technology">ტექნოლოგია</button>
+            </li>
+            <li>
+              <button class="pill" data-filter="innovation">ინოვაცია</button>
+            </li>
+            <li>
+              <button class="pill" data-filter="marketing">მარკეტინგი</button>
+            </li>
+            <li>
+              <button class="pill" data-filter="business">ბიზნესი</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Title -->
+        <h2 id="explore-heading" class="explore-title">ჩვენ გირჩევთ</h2>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid" id="cardsGrid" role="list">
+          <!-- Card 1 -->
+          <article class="card" role="listitem" data-cat="popular technology">
+            <img
+              class="card-img"
+              src="images/sample-1.jpg"
+              alt="კარგად გაფორმებული ლაპტოპის ეკრანი"
+            />
+            <div class="card-body">
+              <div class="card-author">
+                <img class="avatar-sm" src="images/author-1.jpg" alt="" />
+                <span>სანდრო ქარჩავა</span>
+              </div>
+              <h3 class="card-title">ის, რაც მართლა აქსოვდა — არ იყო რუტინა</h3>
+              <p class="card-excerpt">
+                ყველაფერი დასაწყისებიდან იწყება იქიდან, როდესაც მიზნის განცდა
+                ნათელია. მკვრივი სლაიდები და ბუტი...
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">2 სექტემბერი, 2025</span>
+                <span class="meta-dot">•</span>
+                <span class="meta-item">256</span>
+                <span class="meta-item">1185</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article
+            class="card"
+            role="listitem"
+            data-cat="professional creative"
+          >
+            <img
+              class="card-img"
+              src="images/sample-2.jpg"
+              alt="დიზაინის წიგნების კოლაჟი"
+            />
+            <div class="card-body">
+              <div class="card-author">
+                <img class="avatar-sm" src="images/author-2.jpg" alt="" />
+                <span>სანდრო ქარჩავა</span>
+              </div>
+              <h3 class="card-title">ის, რაც მართლა აქსოვდა — არ იყო რუტინა</h3>
+              <p class="card-excerpt">
+                სწორი პროცესები ქმნის ხარისხს: პატარა ნაბიჯებით, სტაბილურად და
+                ცხადად მიმავალი პროგრესი...
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">2 სექტემბერი, 2025</span>
+                <span class="meta-dot">•</span>
+                <span class="meta-item">256</span>
+                <span class="meta-item">1185</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" role="listitem" data-cat="popular business">
+            <img
+              class="card-img"
+              src="images/sample-3.jpg"
+              alt="ლაპტოპის ეკრანზე პროექტი"
+            />
+            <div class="card-body">
+              <div class="card-author">
+                <img class="avatar-sm" src="images/author-3.jpg" alt="" />
+                <span>სანდრო ქარჩავა</span>
+              </div>
+              <h3 class="card-title">ის, რაც მართლა აქსოვდა — არ იყო რუტინა</h3>
+              <p class="card-excerpt">
+                გუნდური მუშაობა უკეთეს შედეგს იძლევა, როცა ჩარჩოები და
+                პასუხისმგებლობები ნათელია...
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">2 სექტემბერი, 2025</span>
+                <span class="meta-dot">•</span>
+                <span class="meta-item">256</span>
+                <span class="meta-item">1185</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Extra cards (same structure) -->
+          <article class="card" role="listitem" data-cat="creative marketing">
+            <img class="card-img" src="images/sample-2.jpg" alt="" />
+            <div class="card-body">
+              <div class="card-author">
+                <img class="avatar-sm" src="images/author-2.jpg" alt="" />
+                <span>სანდრო ქარჩავა</span>
+              </div>
+              <h3 class="card-title">სათაური — მაგალითი</h3>
+              <p class="card-excerpt">
+                მოკლე აღწერა ტექსტი ორი ხაზით მიჭრილი...
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">2 სექტემ, 2025</span
+                ><span class="meta-dot">•</span
+                ><span class="meta-item">132</span
+                ><span class="meta-item">742</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            role="listitem"
+            data-cat="professional technology"
+          >
+            <img class="card-img" src="images/sample-1.jpg" alt="" />
+            <div class="card-body">
+              <div class="card-author">
+                <img class="avatar-sm" src="images/author-1.jpg" alt="" />
+                <span>სანდრო ქარჩავა</span>
+              </div>
+              <h3 class="card-title">სათაური — მაგალითი</h3>
+              <p class="card-excerpt">
+                მოკლე აღწერა ტექსტი ორი ხაზით მიჭრილი...
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">1 სექტემ, 2025</span
+                ><span class="meta-dot">•</span><span class="meta-item">98</span
+                ><span class="meta-item">600</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" role="listitem" data-cat="business innovation">
+            <img class="card-img" src="images/sample-3.jpg" alt="" />
+            <div class="card-body">
+              <div class="card-author">
+                <img class="avatar-sm" src="images/author-3.jpg" alt="" />
+                <span>სანდრო ქარჩავა</span>
+              </div>
+              <h3 class="card-title">სათაური — მაგალითი</h3>
+              <p class="card-excerpt">
+                მოკლე აღწერა ტექსტი ორი ხაზით მიჭრილი...
+              </p>
+              <div class="card-meta">
+                <span class="meta-item">28 აგვ, 2025</span
+                ><span class="meta-dot">•</span><span class="meta-item">76</span
+                ><span class="meta-item">510</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Empty state -->
+        <p id="emptyState" class="empty is-hidden" role="status">
+          შედეგი ვერ მოიძებნა.
+        </p>
+      </div>
+    </section>
+
+    <script src="src/explore.js" defer></script>
+  </body>
+</html>
