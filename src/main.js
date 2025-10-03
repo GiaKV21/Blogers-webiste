@@ -1,5 +1,3 @@
-// მთავარი გვერდი
-
 // სლაიდერი
 
 document.querySelectorAll('.slider-container').forEach(container => {
@@ -59,6 +57,7 @@ document.querySelectorAll('.slider-container').forEach(container => {
 
   updateArrows();
 });
+
 
 // სერჩი
 
