@@ -9,9 +9,14 @@ document.querySelectorAll('.slider-container').forEach(container => {
   let startIndex = 0;
   let isAnimating = false;
 
+  // function updateArrows() {
+  //   prevBtn.style.display = startIndex > 0 ? "block" : "none";
+  //   nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+  // }
+
   function updateArrows() {
-    prevBtn.style.display = startIndex > 0 ? "block" : "none";
-    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+    prevBtn.classList.toggle('visible', startIndex > 0);
+    nextBtn.classList.toggle('visible', startIndex + visible < cards.length);
   }
 
   function showCards(newIndex) {
@@ -34,8 +39,8 @@ document.querySelectorAll('.slider-container').forEach(container => {
       setTimeout(() => {
         isAnimating = false;
         updateArrows();
-      }, 200);
-    }, 200);
+      }, 100);
+    }, 100);
   }
 
   nextBtn.addEventListener('click', () => {
