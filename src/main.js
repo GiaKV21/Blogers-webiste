@@ -58,7 +58,6 @@ document.querySelectorAll('.slider-container').forEach(container => {
   updateArrows();
 });
 
-
 // სერჩი
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -141,34 +140,6 @@ document.querySelectorAll('.toggle-password').forEach(icon => {
     input.type = input.type === "password" ? "text" : "password";
   });
 });
-
-// შესვლის ვალიდაცია
-
-// function login(event) {
-//   event.preventDefault();
-
-//   let email = document.getElementById("loginEmail");
-//   let password = document.getElementById("loginPassword");
-//   let errorMessage = email.nextElementSibling;
-
-//   errorMessage.style.display = "none";
-//   email.classList.remove("error");
-//   password.classList.remove("error");
-
-//   let emailValid = /\S+@\S+\.\S+/.test(email.value);
-//   let passwordValid = password.value.length >= 6;
-
-//   if (!emailValid || !passwordValid) {
-//     email.classList.add("error");
-//     password.classList.add("error");
-//     errorMessage.innerText = "არასწორია ელფოსტა ან პაროლი";
-//     errorMessage.style.display = "block";
-//     return false;
-//   }
-
-//   //submit (backend-ზე)
-//   return true;
-// }
 
 function login(event) {
   event.preventDefault();
