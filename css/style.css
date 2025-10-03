@@ -9,11 +9,6 @@
   margin: 100px auto;
 }
 
-.wrapper-footer{
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -156,8 +151,11 @@ header {
 
 .footer{
   background-color: #282624;
-  width: 100%;
-  padding: 70px 0px 30px;
+}
+
+.div-footer {
+  padding: 70px 0 30px;
+  margin: 0px auto;
 }
 
 .footer-nav-logo{
