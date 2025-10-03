@@ -9,6 +9,11 @@
   margin: 100px auto;
 }
 
+.wrapper-footer{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
