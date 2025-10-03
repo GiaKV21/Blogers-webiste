@@ -38,7 +38,7 @@ header {
 .header-ul{
   display:flex;
   flex-direction:row;
-  gap:40px;
+  gap:36px;
   text-decoration: none;
 }
 
