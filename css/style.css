@@ -160,8 +160,8 @@ header {
 
 .footer-nav-logo{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -180,9 +180,8 @@ header {
 
 .footer-nav{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  gap: 10px;
+  gap: 100px;
 }
 
 .h4-nav-footer{
