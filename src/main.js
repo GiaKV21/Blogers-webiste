@@ -219,7 +219,6 @@ function registerUser(event) {
   return isValid;
 }
 
-
 // დამავიწყდა პაროლი
 
 function goToStep(step) {
@@ -268,8 +267,6 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 
 // ჩვენს შესახებ სალაიდერი
-
-// სლაიდერი
 
 document.querySelectorAll('.slider-container-about').forEach(container => {
   const cards = Array.from(container.querySelectorAll('.slider-card-about'));
