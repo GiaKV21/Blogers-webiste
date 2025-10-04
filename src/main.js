@@ -1,5 +1,3 @@
-// მთავარი გვერდი
-
 // სლაიდერი
 
 document.querySelectorAll('.slider-container').forEach(container => {
@@ -11,9 +9,14 @@ document.querySelectorAll('.slider-container').forEach(container => {
   let startIndex = 0;
   let isAnimating = false;
 
+  // function updateArrows() {
+  //   prevBtn.style.display = startIndex > 0 ? "block" : "none";
+  //   nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+  // }
+
   function updateArrows() {
-    prevBtn.style.display = startIndex > 0 ? "block" : "none";
-    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+    prevBtn.classList.toggle('visible', startIndex > 0);
+    nextBtn.classList.toggle('visible', startIndex + visible < cards.length);
   }
 
   function showCards(newIndex) {
@@ -36,8 +39,8 @@ document.querySelectorAll('.slider-container').forEach(container => {
       setTimeout(() => {
         isAnimating = false;
         updateArrows();
-      }, 200);
-    }, 200);
+      }, 100);
+    }, 100);
   }
 
   nextBtn.addEventListener('click', () => {
@@ -143,34 +146,6 @@ document.querySelectorAll('.toggle-password').forEach(icon => {
   });
 });
 
-// შესვლის ვალიდაცია
-
-// function login(event) {
-//   event.preventDefault();
-
-//   let email = document.getElementById("loginEmail");
-//   let password = document.getElementById("loginPassword");
-//   let errorMessage = email.nextElementSibling;
-
-//   errorMessage.style.display = "none";
-//   email.classList.remove("error");
-//   password.classList.remove("error");
-
-//   let emailValid = /\S+@\S+\.\S+/.test(email.value);
-//   let passwordValid = password.value.length >= 6;
-
-//   if (!emailValid || !passwordValid) {
-//     email.classList.add("error");
-//     password.classList.add("error");
-//     errorMessage.innerText = "არასწორია ელფოსტა ან პაროლი";
-//     errorMessage.style.display = "block";
-//     return false;
-//   }
-
-//   //submit (backend-ზე)
-//   return true;
-// }
-
 function login(event) {
   event.preventDefault();
 
@@ -249,7 +224,6 @@ function registerUser(event) {
   return isValid;
 }
 
-
 // დამავიწყდა პაროლი
 
 function goToStep(step) {
@@ -294,4 +268,65 @@ document.querySelectorAll('.faq-question').forEach(question => {
             content.style.display = 'block';
         }
     });
+});
+
+
+// ჩვენს შესახებ სალაიდერი
+
+document.querySelectorAll('.slider-container-about').forEach(container => {
+  const cards = Array.from(container.querySelectorAll('.slider-card-about'));
+  const prevBtn = container.querySelector('.slider-btn.prev');
+  const nextBtn = container.querySelector('.slider-btn.next');
+
+  const visible = 3;
+  let startIndex = 0;
+  let isAnimating = false;
+
+  function updateArrows() {
+    prevBtn.style.display = startIndex > 0 ? "block" : "none";
+    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+  }
+
+  function showCards(newIndex) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const currentCards = cards.slice(startIndex, startIndex + visible);
+    currentCards.forEach(card => card.style.opacity = "0");
+
+    setTimeout(() => {
+      currentCards.forEach(card => card.style.display = "none");
+
+      startIndex = newIndex;
+      const nextCards = cards.slice(startIndex, startIndex + visible);
+      nextCards.forEach(card => {
+        card.style.display = "block";
+        setTimeout(() => card.style.opacity = "1", 50);
+      });
+
+      setTimeout(() => {
+        isAnimating = false;
+        updateArrows();
+      }, 100);
+    }, 100);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (startIndex + visible < cards.length) {
+      showCards(startIndex + visible);
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (startIndex - visible >= 0) {
+      showCards(startIndex - visible);
+    }
+  });
+
+  cards.slice(0, visible).forEach(c => {
+    c.style.display = "block";
+    c.style.opacity = "1";
+  });
+
+  updateArrows();
 });

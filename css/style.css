@@ -38,7 +38,7 @@ header {
 .header-ul{
   display:flex;
   flex-direction:row;
-  gap:40px;
+  gap:36px;
   text-decoration: none;
 }
 
@@ -151,14 +151,17 @@ header {
 
 .footer{
   background-color: #282624;
-  width: 100%;
-  padding: 70px 0px 30px;
+}
+
+.div-footer {
+  padding: 70px 0 30px;
+  margin: 0px auto;
 }
 
 .footer-nav-logo{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -177,9 +180,8 @@ header {
 
 .footer-nav{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  gap: 10px;
+  gap: 100px;
 }
 
 .h4-nav-footer{
@@ -633,10 +635,11 @@ input.error {
 }
 
 .slider-card {
-  flex: 0 0 calc(33.333% - 20px);
+  max-width: 367px;
+  width: 100%;
   display: none;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.1s ease;
 }
 
 .slider-card.active {
@@ -644,13 +647,9 @@ input.error {
   opacity: 1;
 }
 
-.slider-card-inner{
-  max-width: 367px;
-  width: 100%;
-}
-
 .slider-card-cover {
   max-width: 367px;
+  width: 100%;
   border-radius: 8px;
 }
 
@@ -714,10 +713,20 @@ input.error {
 /* Arrows */
 
 .slider-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+.slider-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slider-btn {
   position: absolute;
   top: 45%;
   cursor: pointer;
-  z-index: 10;
   border: transparent;
   background: transparent;
 }
@@ -757,7 +766,6 @@ input.error {
 }
 
 .autor-p{
-  width: 320px;
   font-size: 16px;
   color: #191919;
 }
@@ -836,4 +844,97 @@ input.error {
 
 .faq-item.open .arrow {
   transform: rotate(180deg);
+}
+
+/* ჩვენს შესახებ */
+
+.about-h1{
+  font-size: 32px;
+  margin-bottom: 42px;
+}
+
+.about-p{
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.span-about-p{
+  font-weight: 700;
+}
+
+.img-about{
+  width: 100%;
+  height: 321px;
+  border-radius: 8px;
+}
+
+.slider-container-about {
+  position: relative;
+}
+
+.slider-track-about {
+  display: flex;
+  gap: 20px;
+}
+
+.slider-card-about {
+  flex: 0 0 calc(33.333% - 20px);
+  display: none;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  background-color: #FAFAFA;
+  padding: 36px 24px;
+  border-radius: 8px;
+}
+
+.slider-div-about{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.user-about{
+  border-radius: 300px;
+  width: 43px;
+  height: 43px;
+}
+
+.about-h3-h4{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-h3{
+  color: #191919;
+  font-size: 16px;
+}
+
+.about-h4{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+
+.p-slider-about{
+  color: #191919;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 32px;
+}
+
+.a-slider-linkdin{
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.span-slider-about{
+  color:#1B7CDE;
+  font-size: 14px;
+}
+
+.img-slider-link{
+  width: 8.5px;
+  height: 8.5px;
 }
