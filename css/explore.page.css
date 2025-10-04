@@ -364,9 +364,9 @@ body.is-auth .auth-guest {
 
 /* ===== Footer (pixel-tuned to mock) ===== */
 .footer {
-  background: #111; /* near-black */
+  background: #111;
   width: 100%;
-  padding: 0; /* spacing lives on .wrapper */
+  padding: 0; 
 }
 
 /* container alignment */
