@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogger's Website — Author</title>
+    <link rel="stylesheet" href="css/explore.page.css" />
+    <link rel="stylesheet" href="css/author.page.css" />
+  </head>
+  <body>
+    <header class="site-header" role="banner" aria-label="Primary header">
+      <div class="container header-inner">
+        <button
+          class="hamburger"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Open menu"
+          type="button"
+        >
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </button>
+
+        <a href="index.html" class="logo-link">
+          <img src="images/sakitxavi1 1.png" alt="logo" class="logo-img" />
+        </a>
+
+        <nav class="nav-desktop" aria-label="Main">
+          <a href="index.html">მთავარი</a>
+          <a href="explore.html">აღმოაჩინე</a>
+          <a href="index.html#about">ჩვენს შესახებ</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="ძებნა" type="button">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M20 20L16.65 16.65"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+
+          <a class="login-link auth-guest" href="enter.html" id="loginLink"
+            >შესვლა</a
+          >
+
+          <div class="auth-user">
+            <button class="icon-btn" aria-label="შეტყობინებები" type="button">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 22a2 2 0 0 0 2-2H10a2 2 0 0 0 2 2Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M18 16v-5a6 6 0 1 0-12 0v5l-2 2v1h16v-1l-2-2Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <a class="avatar" href="#" aria-label="პროფილი"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileNav" hidden>
+        <nav class="drawer-nav" aria-label="Mobile">
+          <a href="index.html">მთავარი</a>
+          <a href="explore.html">აღმოაჩინე</a>
+          <a href="index.html#about">ჩვენს შესახებ</a>
+        </nav>
+      </div>
+      <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+    </header>
+
+    <section class="author-hero">
+      <div class="container author-hero__inner">
+        <img class="author-hero__avatar" src="images/girl.jpg" alt="" />
+        <div class="author-hero__bio">
+          <h1 class="author-hero__name">ელენა მამალაძე</h1>
+          <p class="author-hero__role">
+            ილუსტრაცია, ვებდიზაინი, კომუნიკაცია — ემოციური და პრაქტიკული ხედვის
+            ბალანსი.
+          </p>
+          <a class="author-hero__link" href="#" target="_blank" rel="noopener"
+            >LinkedIn ↗</a
+          >
+          <ul class="author-hero__meta">
+            <li>დარეგისტრირდა 20.03.2024</li>
+            <li>3 სტატია</li>
+            <li>24 მიმდევარი</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contentSection"
+      class="author-section"
+      aria-labelledby="sectionTitle"
+    >
+      <div class="container">
+        <div id="contentTabs" class="author-tabs">
+          <nav class="tabs" aria-label="Author sections">
+            <button class="tab is-active" data-view="work" type="button">
+              საკითხავი
+            </button>
+            <button class="tab" data-view="about" type="button">
+              ავტორის შესახებ
+            </button>
+          </nav>
+        </div>
+
+        <h2 id="sectionTitle" class="section-title">საკითხავი</h2>
+
+        <div id="workGrid" class="cards-grid" role="list" hidden></div>
+        <article id="aboutContent" hidden></article>
+
+        <div
+          id="emptyBlock"
+          class="empty-block"
+          role="status"
+          aria-live="polite"
+        >
+          <h3 id="emptyTitle" class="empty-block__title">
+            საკითხავი ჯერ არ არის დამატებული
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <button
+      id="editFab"
+      class="edit-fab"
+      type="button"
+      aria-label="Edit"
+      title="Edit"
+    >
+      ✎
+    </button>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-nav-logo">
+          <div class="footer-logo-p">
+            <a class="footer-logo" href="index.html"
+              ><img src="images/sakitxavi2 1.png" alt="logo"
+            /></a>
+            <div class="footer-div-p">
+              "საკითხავი" - შენი მეგზური იქნება კარიერულ თავგადასავალში. <br />
+              ჩვენი, სმარტ აკადემიის კურსდამთავრებულების ამბავიც
+              <br />საკითხავთან ერთად დაიწყო...
+            </div>
+          </div>
+          <div>
+            <h4 class="h4-nav-footer">მართვა</h4>
+            <ul class="footer-ul">
+              <li><a>მთავარი</a></li>
+              <li><a>აღმოაჩინე</a></li>
+              <li><a>ჩვენ შესახებ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="h4-nav-footer">ბიბლიოთეკა</h4>
+            <ul class="footer-ul">
+              <li><a>ჩვენ გირჩევთ</a></li>
+              <li><a>უახლესი საკითხავი</a></li>
+              <li><a>გაეცანი ავტორებს</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="h4-nav-footer">დახმარება</h4>
+            <ul class="footer-ul">
+              <li><a>წესები და პირობები</a></li>
+              <li><a>“ქუქი პოლიტიკა”</a></li>
+              <li><a href="faq.html">კითხვა-პასუხი</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="div-under">
+          <p class="p-footer-down">© 2025 „საკითხავი“. ყველა უფლება დაცულია.</p>
+          <div class="div-social">
+            <a href="#" aria-label="Instagram"
+              ><img src="images/inst.png" alt="Instagram"
+            /></a>
+            <a href="#" aria-label="Facebook"
+              ><img src="images/f.png" alt="Facebook"
+            /></a>
+            <a href="#" aria-label="LinkedIn"
+              ><img src="images/in.png" alt="LinkedIn"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/author.js" defer></script>
+  </body>
+</html>
