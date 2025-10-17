@@ -1000,6 +1000,12 @@ input.error {
       gap: 35px;
     }
 
+    .div-password-settings{
+      display: flex;
+      flex-direction: column;
+      gap: 46px;
+    }
+
     .form-group {
       display: flex;
       flex-direction: column;
