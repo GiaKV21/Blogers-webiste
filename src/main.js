@@ -397,3 +397,71 @@ function togglePassword(inputId) {
   const input = document.getElementById(inputId);
   input.type = input.type === "password" ? "text" : "password";
 }
+
+// პროფილის პარამეტრები
+
+const fullNameInput = document.getElementById('fullName');
+const shortTextInput = document.getElementById('shortText');
+const linkedinInput = document.getElementById('linkedin');
+const aboutTextInput = document.getElementById('aboutText');
+
+const saveProfileBtn = document.getElementById('saveProfile');
+const cancelProfileBtn = document.getElementById('cancelProfile');
+
+const initialData = {
+  fullName: "გიორგი პეტრეიშვილი",
+  shortText: "მოკლე აღწერა: გამოცდილ და მოტივირებულ პროგრამისტი.",
+  linkedin: "https://www.linkedin.com/in/giorgi",
+  aboutText: "ჩემი სახელია გიორგი, მე ვარ გამოცდილ პროგრამისტი, რომელიც მუშაობს სხვადასხვა ტექნოლოგიებზე."
+};
+
+fullNameInput.value = initialData.fullName;
+shortTextInput.value = initialData.shortText;
+linkedinInput.value = initialData.linkedin;
+aboutTextInput.value = initialData.aboutText;
+
+const disableButtons = () => {
+  saveProfileBtn.disabled = true;
+};
+
+const enableButtons = () => {
+  saveProfileBtn.disabled = false;
+};
+
+const checkChanges = () => {
+  const isAnyFieldChanged = fullNameInput.value !== initialData.fullName || 
+                            shortTextInput.value !== initialData.shortText ||
+                            linkedinInput.value !== initialData.linkedin ||
+                            aboutTextInput.value !== initialData.aboutText;
+  
+  if (isAnyFieldChanged) {
+    enableButtons();
+  } else {
+    disableButtons();
+  }
+};
+
+[fullNameInput, shortTextInput, linkedinInput, aboutTextInput].forEach(input => {
+  input.addEventListener('input', checkChanges);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  disableButtons();
+});
+
+saveProfileBtn.addEventListener('click', () => {
+  initialData.fullName = fullNameInput.value;
+  initialData.shortText = shortTextInput.value;
+  initialData.linkedin = linkedinInput.value;
+  initialData.aboutText = aboutTextInput.value;
+  disableButtons();
+});
+
+cancelProfileBtn.addEventListener('click', () => {
+  fullNameInput.value = initialData.fullName;
+  shortTextInput.value = initialData.shortText;
+  linkedinInput.value = initialData.linkedin;
+  aboutTextInput.value = initialData.aboutText;
+  
+  disableButtons();
+});

@@ -80,8 +80,14 @@
         <div id="profile" class="tab-content active">
 
           <div class="avatar-box">
-            <input type="file" id="avatarUpload" accept="image/*">
-            <label>E.machabeli@gmail.com</label>
+            <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+            <div class="avatar-wrapper">
+              <img id="avatarImage" src="images/girl.jpg" alt="avatar" class="avatar-img">
+              <label for="avatarUpload" class="avatar-edit-icon">
+                <img src="images/Pen-setting.png" alt="Edit" />
+              </label>
+            </div>
+            <label class="label-user">E.machabeli@gmail.com</label>
           </div>
 
           <div class="div-profile-flex">
@@ -94,7 +100,7 @@
 
               <div class="form-group">
                 <label class="form-label">მოკლე აღწერა</label>
-                <textarea class="form-textarea char-count" id="shortText" placeholder="შეიყვანე მოკლე აღწერა" maxlength="50"></textarea>
+                <textarea class="form-short char-count" id="shortText" placeholder="შეიყვანე მოკლე აღწერა" maxlength="50"></textarea>
                 <div class="char-counter" id="shortTextCounter">0/50</div>
               </div>
 
