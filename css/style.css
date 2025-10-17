@@ -637,6 +637,8 @@ input.error {
 .slider-card {
   max-width: 367px;
   width: 100%;
+  display: none;
+  opacity: 0;
   transition: opacity 0.1s ease;
 }
 
@@ -709,6 +711,11 @@ input.error {
 }
 
 /* Arrows */
+
+.slider-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 .slider-btn {
   position: absolute;
@@ -865,6 +872,9 @@ input.error {
 }
 
 .slider-card-about {
+  flex: 0 0 calc(33.333% - 20px);
+  display: none;
+  opacity: 0;
   transition: opacity 0.1s ease;
   background-color: #FAFAFA;
   padding: 36px 24px;
