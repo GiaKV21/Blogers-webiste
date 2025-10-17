@@ -964,7 +964,7 @@ input.error {
   font-weight: 700;
 }
 
-.divider {
+.divider-setting {
   width: 1px;
   background: #ACACAC;
   margin: 0 24px;
@@ -1166,4 +1166,9 @@ input[type="file"] {
   right: 17.5px;
   cursor: pointer;
   user-select: none;
+}
+
+#newPasswordError, #confirmPasswordError {
+  font-size: 14px;
+  margin-top: 8px;
 }

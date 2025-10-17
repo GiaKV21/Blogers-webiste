@@ -361,7 +361,7 @@ function togglePassword(inputId) {
   input.type = input.type === "password" ? "text" : "password";
 }
 
-// პაროლის ინფუთები და ღილაკი
+// პაროლის ინფუთები და ღილაკი და ერორ
 
 const oldPassword = document.getElementById("oldPassword");
 const newPassword = document.getElementById("newPassword");
@@ -369,28 +369,56 @@ const confirmPassword = document.getElementById("confirmPassword");
 const saveBtn = document.getElementById("savePassword");
 const cancelBtn = document.getElementById("cancelPassword");
 
+const newPasswordError = document.getElementById("newPasswordError");
+const confirmPasswordError = document.getElementById("confirmPasswordError");
+
 oldPassword.value = "12345678";
 
-const activateSaveButton = () => {
+const disableSaveButton = () => {
+  saveBtn.disabled = true;
+};
+const enableSaveButton = () => {
   saveBtn.disabled = false;
 };
 
+const checkPasswordConditions = () => {
+  const newPasswordValue = newPassword.value.trim();
+  const confirmPasswordValue = confirmPassword.value.trim();
+  let isValid = true;
+
+  newPasswordError.textContent = "";
+  confirmPasswordError.textContent = "";
+
+  if (newPasswordValue !== confirmPasswordValue) {
+    confirmPasswordError.textContent = "ახალი პაროლი არ ემთხვევა";
+    confirmPasswordError.style.color = "#FF4343";
+    isValid = false;
+  }
+
+  return isValid;
+};
+
 [oldPassword, newPassword, confirmPassword].forEach(input => {
-  input.addEventListener("focus", activateSaveButton);
-  input.addEventListener("input", activateSaveButton);
+  input.addEventListener("focus", enableSaveButton);
 });
 
 saveBtn.addEventListener("click", () => {
-  oldPassword.value = newPassword.value.trim();
-  newPassword.value = "";
-  confirmPassword.value = "";
-  saveBtn.disabled = true;
+  const isValid = checkPasswordConditions();
+  if (isValid) {
+    oldPassword.value = newPassword.value.trim();
+    newPassword.value = "";
+    confirmPassword.value = "";
+    disableSaveButton();
+    newPasswordError.textContent = "";
+    confirmPasswordError.textContent = "";
+  }
 });
 
 cancelBtn.addEventListener("click", () => {
   newPassword.value = "";
   confirmPassword.value = "";
-  saveBtn.disabled = true;
+  newPasswordError.textContent = "";
+  confirmPasswordError.textContent = "";
 });
 
 function togglePassword(inputId) {
