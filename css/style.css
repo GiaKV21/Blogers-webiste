@@ -968,6 +968,7 @@ input.error {
   width: 1px;
   background: #ACACAC;
   margin: 0 24px;
+  border-radius: 0.5px;
 }
 
 .settings-content {
@@ -991,6 +992,8 @@ input.error {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  max-width: 366px;
+  width: 100%;
 }
 
 .div-password-settings{
@@ -1005,25 +1008,41 @@ input.error {
   gap: 8px;
 }
 
+.form-group-about{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 628px;
+  width: 100%;
+}
+
 .form-label {
   font-size: 14px;
   color: #000000;
 }
 
+.password-wrapper-settings{
+  max-width: 366px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .form-input,
 .form-textarea {
-  max-width: 366px;
   width: 100%;
   border: 1px solid #B8B8B8;
   border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 15px;
+  padding: 16px;
+  font-size: 14px;
   background: #FAFAFA;
 }
 
 .form-about{
-  max-width: 628px;
   width: 100%;
+  max-height: 379px;
+  height: 100%;
   border: 1px solid #B8B8B8;
   border-radius: 8px;
   padding: 20px 16px;
@@ -1036,6 +1055,12 @@ input.error {
 .form-about:focus {
   border-color: #313131;
   outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder,
+.form-about::placeholder {
+  color: #B8B8B8;
 }
 
 .avatar-box {
@@ -1072,6 +1097,15 @@ input.error {
   transition: 0.3s;
 }
 
+.form-input[disabled] {
+  background-color: #f0f0f0;
+}
+
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn-primary:hover {
   background: #3D3D3D;
 }
@@ -1087,4 +1121,17 @@ input.error {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+}
+
+.char-counter {
+  font-size: 14px;
+  color: #3D3D3D;
+  text-align: right;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 17.5px;
+  cursor: pointer;
+  user-select: none;
 }

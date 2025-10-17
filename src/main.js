@@ -337,3 +337,63 @@ tabs.forEach(tab => {
     document.getElementById(tab.dataset.tab).classList.add("active");
   });
 });
+
+// სიმბოლოების დათვლა
+
+window.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".char-count");
+
+  inputs.forEach(input => {
+    const counter = document.getElementById(input.id + "Counter");
+    const maxLength = input.getAttribute("maxlength");
+
+    const updateCharCount = () => {
+      const length = input.value.length;
+      counter.textContent = `${length}/${maxLength}`;
+    };
+    updateCharCount();
+    input.addEventListener("input", updateCharCount);
+  });
+});
+
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  input.type = input.type === "password" ? "text" : "password";
+}
+
+// პაროლის ინფუთები და ღილაკი
+
+const oldPassword = document.getElementById("oldPassword");
+const newPassword = document.getElementById("newPassword");
+const confirmPassword = document.getElementById("confirmPassword");
+const saveBtn = document.getElementById("savePassword");
+const cancelBtn = document.getElementById("cancelPassword");
+
+oldPassword.value = "12345678";
+
+const activateSaveButton = () => {
+  saveBtn.disabled = false;
+};
+
+[oldPassword, newPassword, confirmPassword].forEach(input => {
+  input.addEventListener("focus", activateSaveButton);
+  input.addEventListener("input", activateSaveButton);
+});
+
+saveBtn.addEventListener("click", () => {
+  oldPassword.value = newPassword.value.trim();
+  newPassword.value = "";
+  confirmPassword.value = "";
+  saveBtn.disabled = true;
+});
+
+cancelBtn.addEventListener("click", () => {
+  newPassword.value = "";
+  confirmPassword.value = "";
+  saveBtn.disabled = true;
+});
+
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  input.type = input.type === "password" ? "text" : "password";
+}

@@ -88,23 +88,26 @@
             <div class="div-profile">
               <div class="form-group">
                 <label class="form-label">სრული სახელი</label>
-                <input type="text" class="form-input" id="fullName">
+                  <input type="text" class="form-input char-count" id="fullName" placeholder="შეიყვანე სრული სახელი" maxlength="50">
+                  <div class="char-counter" id="fullNameCounter">0/50</div>
               </div>
 
               <div class="form-group">
                 <label class="form-label">მოკლე აღწერა</label>
-                <textarea class="form-textarea" id="shortText"></textarea>
+                <textarea class="form-textarea char-count" id="shortText" placeholder="შეიყვანე მოკლე აღწერა" maxlength="50"></textarea>
+                <div class="char-counter" id="shortTextCounter">0/50</div>
               </div>
 
               <div class="form-group">
                 <label class="form-label">LinkedIn</label>
-                <input type="url" class="form-input" id="linkedin">
+                <input type="url" class="form-input" id="linkedin" placeholder="შეიყვანე ლინკდინის ლინკი">
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-about">
               <label class="form-label">ჩემ შესახებ</label>
-              <textarea class="form-about" id="aboutText"></textarea>
+              <textarea class="form-about char-count" id="aboutText" placeholder="შეიყვანე შენს შესახებ" maxlength="750"></textarea>
+              <div class="char-counter" id="aboutTextCounter">0/750</div>
             </div>
           </div>
 
@@ -116,25 +119,36 @@
 
         <div id="password" class="tab-content">
           <div class="div-password-settings">
-            <div class="form-group">
+
+            <div class="form-group password-group">
               <label class="form-label">ძველი პაროლი</label>
-              <input type="password" class="form-input" id="oldPassword">
+              <div class="password-wrapper-settings">
+                <input type="password" class="form-input password-input" id="oldPassword" value="12345678">
+                <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('oldPassword')">
+              </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group password-group">
               <label class="form-label">ახალი პაროლი (6+ სიმბოლო)</label>
-              <input type="password" class="form-input" id="newPassword">
+              <div class="password-wrapper-settings">
+                <input type="password" class="form-input password-input" id="newPassword" placeholder="შეიყვანე ახალი პაროლი">
+                <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('newPassword')">
+              </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group password-group">
               <label class="form-label">გაიმეორე ახალი პაროლი</label>
-              <input type="password" class="form-input" id="confirmPassword">
+              <div class="password-wrapper-settings">
+                <input type="password" class="form-input password-input" id="confirmPassword" placeholder="გაიმეორე ახალი პაროლი">
+                <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('confirmPassword')">
+              </div>
             </div>
 
             <div class="actions-password">
               <button class="btn" id="cancelPassword">გაუქმება</button>
-              <button class="btn btn-primary" id="savePassword">შენახვა</button>
+              <button class="btn btn-primary" id="savePassword" disabled>შენახვა</button>
             </div>
+
           </div>
         </div>
       </div>
