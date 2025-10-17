@@ -938,3 +938,154 @@ input.error {
   width: 8.5px;
   height: 8.5px;
 }
+
+/* პარამეტრები */
+
+
+    .settings-container {
+      display: flex;
+    }
+
+    .settings-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .settings-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .settings-tab {
+      color: #191919;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 15px;
+      text-align: left;
+      font-weight: 400;
+    }
+
+    .settings-tab.active {
+      font-weight: 700;
+    }
+
+    .divider {
+      width: 1px;
+      background: #ACACAC;
+      margin: 0 24px;
+    }
+
+    .settings-content {
+      flex: 1;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .div-profile-flex{
+      display: flex;
+      gap: 16px;
+    }
+
+    .div-profile{
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-label {
+      font-size: 14px;
+      color: #000000;
+    }
+
+    .form-input,
+    .form-textarea {
+      max-width: 366px;
+      width: 100%;
+      border: 1px solid #B8B8B8;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 15px;
+      background: #FAFAFA;
+    }
+
+    .form-about{
+      max-width: 628px;
+      width: 100%;
+      border: 1px solid #B8B8B8;
+      border-radius: 8px;
+      padding: 20px 16px;
+      font-size: 14px;
+      background: #FAFAFA;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-about:focus {
+      border-color: #313131;
+      outline: none;
+    }
+
+    .avatar-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .avatar-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 3px solid #f0f0f0;
+    }
+
+    .btn {
+      border: 1px solid #ACACAC;
+      width: 180px;
+      height: 49px;
+      font-weight: 700;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #FDFCF9;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #191919;
+      color: #FFFFFF;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #3D3D3D;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .actions-password {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }

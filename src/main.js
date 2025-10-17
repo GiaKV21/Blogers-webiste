@@ -9,14 +9,69 @@ document.querySelectorAll('.slider-container').forEach(container => {
   let startIndex = 0;
   let isAnimating = false;
 
-  // function updateArrows() {
-  //   prevBtn.style.display = startIndex > 0 ? "block" : "none";
-  //   nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
-  // }
+  function updateArrows() {
+    prevBtn.style.display = startIndex > 0 ? "block" : "none";
+    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+  }
+
+  function showCards(newIndex) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const currentCards = cards.slice(startIndex, startIndex + visible);
+    currentCards.forEach(card => card.style.opacity = "0");
+
+    setTimeout(() => {
+      currentCards.forEach(card => card.style.display = "none");
+
+      startIndex = newIndex;
+      const nextCards = cards.slice(startIndex, startIndex + visible);
+      nextCards.forEach(card => {
+        card.style.display = "block";
+        setTimeout(() => card.style.opacity = "1", 50);
+      });
+
+      setTimeout(() => {
+        isAnimating = false;
+        updateArrows();
+      }, 100);
+    }, 100);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (startIndex + visible < cards.length) {
+      showCards(startIndex + visible);
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (startIndex - visible >= 0) {
+      showCards(startIndex - visible);
+    }
+  });
+
+  cards.slice(0, visible).forEach(c => {
+    c.style.display = "block";
+    c.style.opacity = "1";
+  });
+
+  updateArrows();
+});
+
+// ჩვენს შესახებ სალაიდერი
+
+document.querySelectorAll('.slider-container-about').forEach(container => {
+  const cards = Array.from(container.querySelectorAll('.slider-card-about'));
+  const prevBtn = container.querySelector('.slider-btn.prev');
+  const nextBtn = container.querySelector('.slider-btn.next');
+
+  const visible = 3;
+  let startIndex = 0;
+  let isAnimating = false;
 
   function updateArrows() {
-    prevBtn.classList.toggle('visible', startIndex > 0);
-    nextBtn.classList.toggle('visible', startIndex + visible < cards.length);
+    prevBtn.style.display = startIndex > 0 ? "block" : "none";
+    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
   }
 
   function showCards(newIndex) {
@@ -270,63 +325,15 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
+// პარამეტრები
 
-// ჩვენს შესახებ სალაიდერი
-
-document.querySelectorAll('.slider-container-about').forEach(container => {
-  const cards = Array.from(container.querySelectorAll('.slider-card-about'));
-  const prevBtn = container.querySelector('.slider-btn.prev');
-  const nextBtn = container.querySelector('.slider-btn.next');
-
-  const visible = 3;
-  let startIndex = 0;
-  let isAnimating = false;
-
-  function updateArrows() {
-    prevBtn.style.display = startIndex > 0 ? "block" : "none";
-    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
-  }
-
-  function showCards(newIndex) {
-    if (isAnimating) return;
-    isAnimating = true;
-
-    const currentCards = cards.slice(startIndex, startIndex + visible);
-    currentCards.forEach(card => card.style.opacity = "0");
-
-    setTimeout(() => {
-      currentCards.forEach(card => card.style.display = "none");
-
-      startIndex = newIndex;
-      const nextCards = cards.slice(startIndex, startIndex + visible);
-      nextCards.forEach(card => {
-        card.style.display = "block";
-        setTimeout(() => card.style.opacity = "1", 50);
-      });
-
-      setTimeout(() => {
-        isAnimating = false;
-        updateArrows();
-      }, 100);
-    }, 100);
-  }
-
-  nextBtn.addEventListener('click', () => {
-    if (startIndex + visible < cards.length) {
-      showCards(startIndex + visible);
-    }
+const tabs = document.querySelectorAll(".settings-tab");
+const contents = document.querySelectorAll(".tab-content");
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    contents.forEach(c => c.classList.remove("active"));
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
   });
-
-  prevBtn.addEventListener('click', () => {
-    if (startIndex - visible >= 0) {
-      showCards(startIndex - visible);
-    }
-  });
-
-  cards.slice(0, visible).forEach(c => {
-    c.style.display = "block";
-    c.style.opacity = "1";
-  });
-
-  updateArrows();
 });
