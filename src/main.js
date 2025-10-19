@@ -9,14 +9,69 @@ document.querySelectorAll('.slider-container').forEach(container => {
   let startIndex = 0;
   let isAnimating = false;
 
-  // function updateArrows() {
-  //   prevBtn.style.display = startIndex > 0 ? "block" : "none";
-  //   nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
-  // }
+  function updateArrows() {
+    prevBtn.style.display = startIndex > 0 ? "block" : "none";
+    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+  }
+
+  function showCards(newIndex) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const currentCards = cards.slice(startIndex, startIndex + visible);
+    currentCards.forEach(card => card.style.opacity = "0");
+
+    setTimeout(() => {
+      currentCards.forEach(card => card.style.display = "none");
+
+      startIndex = newIndex;
+      const nextCards = cards.slice(startIndex, startIndex + visible);
+      nextCards.forEach(card => {
+        card.style.display = "block";
+        setTimeout(() => card.style.opacity = "1", 50);
+      });
+
+      setTimeout(() => {
+        isAnimating = false;
+        updateArrows();
+      }, 100);
+    }, 100);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (startIndex + visible < cards.length) {
+      showCards(startIndex + visible);
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (startIndex - visible >= 0) {
+      showCards(startIndex - visible);
+    }
+  });
+
+  cards.slice(0, visible).forEach(c => {
+    c.style.display = "block";
+    c.style.opacity = "1";
+  });
+
+  updateArrows();
+});
+
+// ჩვენს შესახებ სალაიდერი
+
+document.querySelectorAll('.slider-container-about').forEach(container => {
+  const cards = Array.from(container.querySelectorAll('.slider-card-about'));
+  const prevBtn = container.querySelector('.slider-btn.prev');
+  const nextBtn = container.querySelector('.slider-btn.next');
+
+  const visible = 3;
+  let startIndex = 0;
+  let isAnimating = false;
 
   function updateArrows() {
-    prevBtn.classList.toggle('visible', startIndex > 0);
-    nextBtn.classList.toggle('visible', startIndex + visible < cards.length);
+    prevBtn.style.display = startIndex > 0 ? "block" : "none";
+    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
   }
 
   function showCards(newIndex) {
@@ -270,63 +325,192 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
+// პარამეტრები
 
-// ჩვენს შესახებ სალაიდერი
+const tabs = document.querySelectorAll(".settings-tab");
+const contents = document.querySelectorAll(".tab-content");
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    contents.forEach(c => c.classList.remove("active"));
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  });
+});
 
-document.querySelectorAll('.slider-container-about').forEach(container => {
-  const cards = Array.from(container.querySelectorAll('.slider-card-about'));
-  const prevBtn = container.querySelector('.slider-btn.prev');
-  const nextBtn = container.querySelector('.slider-btn.next');
+// სიმბოლოების დათვლა
 
-  const visible = 3;
-  let startIndex = 0;
-  let isAnimating = false;
+window.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".char-count");
 
-  function updateArrows() {
-    prevBtn.style.display = startIndex > 0 ? "block" : "none";
-    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+  inputs.forEach(input => {
+    const counter = document.getElementById(input.id + "Counter");
+    const maxLength = input.getAttribute("maxlength");
+
+    const updateCharCount = () => {
+      const length = input.value.length;
+      counter.textContent = `${length}/${maxLength}`;
+    };
+    updateCharCount();
+    input.addEventListener("input", updateCharCount);
+  });
+});
+
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  input.type = input.type === "password" ? "text" : "password";
+}
+
+// პაროლის ინფუთები და ღილაკი და ერორ
+
+const oldPassword = document.getElementById("oldPassword");
+const newPassword = document.getElementById("newPassword");
+const confirmPassword = document.getElementById("confirmPassword");
+const saveBtn = document.getElementById("savePassword");
+const cancelBtn = document.getElementById("cancelPassword");
+
+const newPasswordError = document.getElementById("newPasswordError");
+const confirmPasswordError = document.getElementById("confirmPasswordError");
+
+oldPassword.value = "12345678";
+
+const disableSaveButton = () => {
+  saveBtn.disabled = true;
+};
+const enableSaveButton = () => {
+  saveBtn.disabled = false;
+};
+
+const checkPasswordConditions = () => {
+  const newPasswordValue = newPassword.value.trim();
+  const confirmPasswordValue = confirmPassword.value.trim();
+  let isValid = true;
+
+  newPasswordError.textContent = "";
+  confirmPasswordError.textContent = "";
+
+  if (newPasswordValue !== confirmPasswordValue) {
+    confirmPasswordError.textContent = "ახალი პაროლი არ ემთხვევა";
+    confirmPasswordError.style.color = "#FF4343";
+    isValid = false;
   }
 
-  function showCards(newIndex) {
-    if (isAnimating) return;
-    isAnimating = true;
+  return isValid;
+};
 
-    const currentCards = cards.slice(startIndex, startIndex + visible);
-    currentCards.forEach(card => card.style.opacity = "0");
+[oldPassword, newPassword, confirmPassword].forEach(input => {
+  input.addEventListener("focus", enableSaveButton);
+});
 
-    setTimeout(() => {
-      currentCards.forEach(card => card.style.display = "none");
-
-      startIndex = newIndex;
-      const nextCards = cards.slice(startIndex, startIndex + visible);
-      nextCards.forEach(card => {
-        card.style.display = "block";
-        setTimeout(() => card.style.opacity = "1", 50);
-      });
-
-      setTimeout(() => {
-        isAnimating = false;
-        updateArrows();
-      }, 100);
-    }, 100);
+saveBtn.addEventListener("click", () => {
+  const isValid = checkPasswordConditions();
+  if (isValid) {
+    oldPassword.value = newPassword.value.trim();
+    newPassword.value = "";
+    confirmPassword.value = "";
+    disableSaveButton();
+    newPasswordError.textContent = "";
+    confirmPasswordError.textContent = "";
   }
+});
 
-  nextBtn.addEventListener('click', () => {
-    if (startIndex + visible < cards.length) {
-      showCards(startIndex + visible);
-    }
-  });
+cancelBtn.addEventListener("click", () => {
+  newPassword.value = "";
+  confirmPassword.value = "";
+  newPasswordError.textContent = "";
+  confirmPasswordError.textContent = "";
+});
 
-  prevBtn.addEventListener('click', () => {
-    if (startIndex - visible >= 0) {
-      showCards(startIndex - visible);
-    }
-  });
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  input.type = input.type === "password" ? "text" : "password";
+}
 
-  cards.slice(0, visible).forEach(c => {
-    c.style.display = "block";
-    c.style.opacity = "1";
-  });
+// პროფილის პარამეტრები
 
-  updateArrows();
+const fullNameInput = document.getElementById('fullName');
+const shortTextInput = document.getElementById('shortText');
+const linkedinInput = document.getElementById('linkedin');
+const aboutTextInput = document.getElementById('aboutText');
+
+const saveProfileBtn = document.getElementById('saveProfile');
+const cancelProfileBtn = document.getElementById('cancelProfile');
+
+const initialData = {
+  fullName: "გიორგი პეტრეიშვილი",
+  shortText: "მოკლე აღწერა: გამოცდილ და მოტივირებულ პროგრამისტი.",
+  linkedin: "https://www.linkedin.com/in/giorgi",
+  aboutText: "ჩემი სახელია გიორგი, მე ვარ გამოცდილ პროგრამისტი, რომელიც მუშაობს სხვადასხვა ტექნოლოგიებზე."
+};
+
+fullNameInput.value = initialData.fullName;
+shortTextInput.value = initialData.shortText;
+linkedinInput.value = initialData.linkedin;
+aboutTextInput.value = initialData.aboutText;
+
+const disableButtons = () => {
+  saveProfileBtn.disabled = true;
+};
+
+const enableButtons = () => {
+  saveProfileBtn.disabled = false;
+};
+
+const checkChanges = () => {
+  const isAnyFieldChanged = fullNameInput.value !== initialData.fullName || 
+                            shortTextInput.value !== initialData.shortText ||
+                            linkedinInput.value !== initialData.linkedin ||
+                            aboutTextInput.value !== initialData.aboutText;
+  
+  if (isAnyFieldChanged) {
+    enableButtons();
+  } else {
+    disableButtons();
+  }
+};
+
+[fullNameInput, shortTextInput, linkedinInput, aboutTextInput].forEach(input => {
+  input.addEventListener('input', checkChanges);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  disableButtons();
+});
+
+saveProfileBtn.addEventListener('click', () => {
+  initialData.fullName = fullNameInput.value;
+  initialData.shortText = shortTextInput.value;
+  initialData.linkedin = linkedinInput.value;
+  initialData.aboutText = aboutTextInput.value;
+  disableButtons();
+});
+
+cancelProfileBtn.addEventListener('click', () => {
+  fullNameInput.value = initialData.fullName;
+  shortTextInput.value = initialData.shortText;
+  linkedinInput.value = initialData.linkedin;
+  aboutTextInput.value = initialData.aboutText;
+  
+  disableButtons();
+});
+
+// საიდბარის ჩამშლა
+function toggleDropdown(event) {
+  event.preventDefault();
+  const container = event.currentTarget.parentElement;
+  container.classList.toggle('open');
+}
+
+// ბურგერ მენიუ
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('open');
+}
+document.addEventListener('click', function(event) {
+  const sidebar = document.querySelector('.sidebar');
+  const toggleBtn = document.querySelector('.menu-toggle');
+
+  if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
+    sidebar.classList.remove('open');
+  }
 });

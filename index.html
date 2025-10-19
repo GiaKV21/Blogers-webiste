@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <title>Blogers Webiste</title>
     <script src="src/main.js" defer></script>
   </head>
   <body>
     <header>
       <div class="header wrapper">
-        <a href="index.html"
-          ><img src="images/sakitxavi1 1.png" alt="logo"
-        /></a>
+        <div class="div-burger-a">
+          <button class="menu-toggle" onclick="toggleSidebar()"><img src="images/burger.png" alt="button" /></button>
+          <a href="index.html"><img src="images/sakitxavi1 1.png" alt="logo"/></a>
+        </div>
         <nav class="head-nav">
           <ul class="header-ul">
             <li><a href="index.html">მთავარი</a></li>
@@ -66,7 +68,20 @@
         </button>
       </div>
     </header>
-
+    <aside class="sidebar">
+      <nav class="menu">
+          <div class="menu-container">
+              <div class="menu-header" onclick="toggleDropdown(event)">
+                <p class="p-sidebar">123</p>
+              </div>
+              <div class="dropdown" id="dropdown">
+                  <a href="">123</a>
+                  <a href="">123</a>
+                  <a href="">123</a>
+              </div>
+          </div>
+      </nav>
+    </aside>
     <section class="hero">
       <div class="hero-content">
         <h1 class="hero-title">აქციე სითყვა შესაძლებლობად</h1>
@@ -110,7 +125,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -139,7 +154,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -168,7 +183,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -197,7 +212,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -226,7 +241,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -272,7 +287,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -301,7 +316,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -330,7 +345,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -359,7 +374,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -388,7 +403,7 @@
                     <img src="images/heart.png" /> 256
                   </div>
                   <div class="span-images">
-                    <img src="images/save.png" /> 85
+                    <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
               </div>
@@ -426,18 +441,43 @@
                 იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
                 ისტორიებად....
               </p>
-              <div class="slider-card-meta">
-                <div class="div-date">
-                  <span>2 სექტემბერი, 2025</span>
-                </div>
-                <div class="div-images">
-                  <div class="span-images">
-                    <img src="images/heart.png" /> 256
-                  </div>
-                  <div class="span-images">
-                    <img src="images/Document.png" /> 85
-                  </div>
-                </div>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <div class="card">
+              <div class="autor-img-h3">
+                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
+                <h3 class="name">ელენე მარიაბელი</h3>
+              </div>
+              <p class="autor-p">
+                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
+                ისტორიებად....
+              </p>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <div class="card">
+              <div class="autor-img-h3">
+                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
+                <h3 class="name">ელენე მარიაბელი</h3>
+              </div>
+              <p class="autor-p">
+                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
+                ისტორიებად....
+              </p>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
               </div>
             </div>
           </div>
@@ -456,14 +496,10 @@
                 <div class="div-date">
                   <span>2 სექტემბერი, 2025</span>
                 </div>
-                <div class="div-images">
-                  <div class="span-images">
-                    <img src="images/heart.png" /> 256
-                  </div>
-                  <div class="span-images">
-                    <img src="images/Document.png" /> 85
-                  </div>
-                </div>
+                <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
               </div>
             </div>
           </div>
@@ -478,70 +514,9 @@
                 იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
                 ისტორიებად....
               </p>
-              <div class="slider-card-meta">
-                <div class="div-date">
-                  <span>2 სექტემბერი, 2025</span>
-                </div>
-                <div class="div-images">
-                  <div class="span-images">
-                    <img src="images/heart.png" /> 256
-                  </div>
-                  <div class="span-images">
-                    <img src="images/Document.png" /> 85
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="slider-card">
-            <div class="card">
-              <div class="autor-img-h3">
-                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
-                <h3 class="name">ელენე მარიაბელი</h3>
-              </div>
-              <p class="autor-p">
-                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
-                ისტორიებად....
-              </p>
-              <div class="slider-card-meta">
-                <div class="div-date">
-                  <span>2 სექტემბერი, 2025</span>
-                </div>
-                <div class="div-images">
-                  <div class="span-images">
-                    <img src="images/heart.png" /> 256
-                  </div>
-                  <div class="span-images">
-                    <img src="images/Document.png" /> 85
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="slider-card">
-            <div class="card">
-              <div class="autor-img-h3">
-                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
-                <h3 class="name">ელენე მარიაბელი</h3>
-              </div>
-              <p class="autor-p">
-                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
-                ისტორიებად....
-              </p>
-              <div class="slider-card-meta">
-                <div class="div-date">
-                  <span>2 სექტემბერი, 2025</span>
-                </div>
-                <div class="div-images">
-                  <div class="span-images">
-                    <img src="images/heart.png" /> 256
-                  </div>
-                  <div class="span-images">
-                    <img src="images/Document.png" /> 85
-                  </div>
-                </div>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
               </div>
             </div>
           </div>
@@ -571,15 +546,15 @@
             <div>
               <h4 class="h4-nav-footer">მართვა</h4>
               <ul class="footer-ul">
-                <li><a>მთავარი</a></li>
-                <li><a>აღმოაჩინე</a></li>
-                <li><a>ჩვენ შესახებ</a></li>
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="explore.html">აღმოაჩინე</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
               </ul>
             </div>
             <div>
               <h4 class="h4-nav-footer">ბიბლიოთეკა</h4>
               <ul class="footer-ul">
-                <li><a>ჩვენ გირჩევთ</a></li>
+                <li><a>თვის საკითხავი</a></li>
                 <li><a>უახლესი საკითხავი</a></li>
                 <li><a>გაეცანი ავტორებს</a></li>
               </ul>
@@ -588,7 +563,6 @@
               <h4 class="h4-nav-footer">დახმარება</h4>
               <ul class="footer-ul">
                 <li><a>წესები და პირობები</a></li>
-                <li><a>“ქუქი პოლიტიკა”</a></li>
                 <li><a href="faq.html">კითხვა-პასუხი</a></li>
               </ul>
             </div>

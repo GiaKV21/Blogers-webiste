@@ -82,65 +82,97 @@
           </div>
       </nav>
     </aside>
-    <section class="wrapper">
-      <div class="faq-div-h1-img">
-        <img src="images/Lightbulb.png">
-        <h1>კითხვა-პასუხი</h1>
+    <section class="wrapper settings-container">
+
+      <div class="settings-sidebar">
+        <div class="settings-tab active" data-tab="profile">პროფილი</div>
+        <div class="settings-tab" data-tab="password">პაროლი</div>
       </div>
-      <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>მკითხველთა და მსგავსი სერვისების მომსახურების განაკვეთი?</span>
-                <img class="arrow" src="images/arrow.png" alt="arrow">
+
+      <div class="divider-setting"></div>
+
+      <div class="settings-content">
+
+        <div id="profile" class="tab-content active">
+
+          <div class="avatar-box">
+            <input type="file" id="avatarUpload" accept="image/*" style="display: none;">
+            <div class="avatar-wrapper">
+              <img id="avatarImage" src="images/girl.jpg" alt="avatar" class="avatar-img">
+              <label for="avatarUpload" class="avatar-edit-icon">
+                <img src="images/Pen-setting.png" alt="Edit" />
+              </label>
             </div>
-            <div class="faq-content">
-                <p>როდესაც საკითხავს გამოაქვეყნებ, ტექსტის წაშლას შეძლებ, თუმცა ვერ დაარედაქტირებ.</p>
+            <label class="label-user">E.machabeli@gmail.com</label>
+          </div>
+
+          <div class="div-profile-flex">
+            <div class="div-profile">
+              <div class="form-group">
+                <label class="form-label">სრული სახელი</label>
+                  <input type="text" class="form-input char-count" id="fullName" placeholder="შეიყვანე სრული სახელი" maxlength="50">
+                  <div class="char-counter" id="fullNameCounter">0/50</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">მოკლე აღწერა</label>
+                <textarea class="form-short char-count" id="shortText" placeholder="შეიყვანე მოკლე აღწერა" maxlength="50"></textarea>
+                <div class="char-counter" id="shortTextCounter">0/50</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">LinkedIn</label>
+                <input type="url" class="form-input" id="linkedin" placeholder="შეიყვანე ლინკდინის ლინკი">
+              </div>
             </div>
+
+            <div class="form-group-about">
+              <label class="form-label">ჩემ შესახებ</label>
+              <textarea class="form-about char-count" id="aboutText" placeholder="შეიყვანე შენს შესახებ" maxlength="750"></textarea>
+              <div class="char-counter" id="aboutTextCounter">0/750</div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn" id="cancelProfile">გაუქმება</button>
+            <button class="btn btn-primary" id="saveProfile">შენახვა</button>
+          </div>
         </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>შეიძლება თუ არა ინკოგნიტოდ გამოქვეყნება ან ფსევდონიმის გამოყენება? </span>
-                <img class="arrow" src="images/arrow.png" alt="arrow">
+
+        <div id="password" class="tab-content">
+          <div class="div-password-settings">
+
+            <div class="form-group password-group">
+              <label class="form-label">ძველი პაროლი</label>
+              <div class="password-wrapper-settings">
+                <input type="password" class="form-input password-input" id="oldPassword" value="12345678">
+                <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('oldPassword')">
+              </div>
             </div>
-            <div class="faq-content">
-                <p>როდესაც საკითხავს გამოაქვეყნებ, ტექსტის წაშლას შეძლებ, თუმცა ვერ დაარედაქტირებ.</p>
+
+            <div class="form-group password-group">
+              <label class="form-label">ახალი პაროლი (6+ სიმბოლო)</label>
+              <div class="password-wrapper-settings">
+                <input type="password" class="form-input password-input" id="newPassword" placeholder="შეიყვანე ახალი პაროლი">
+                <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('newPassword')">
+              </div>
             </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>რა მოთხოვნებს უნდა აკმაყოფილებდეს ტექსტი, რომ გამოქვეყნდეს? (სიტყვათა რაოდენობა, თემატიკა, ენობრივი სისუფთავე და ა.შ.)</span>
-                <img class="arrow" src="images/arrow.png" alt="arrow">
+
+            <div class="form-group password-group">
+              <label class="form-label">გაიმეორე ახალი პაროლი</label>
+              <div class="password-wrapper-settings">
+                <input type="password" class="form-input password-input" id="confirmPassword" placeholder="გაიმეორე ახალი პაროლი">
+                <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('confirmPassword')">
+              </div>
+              <div id="confirmPasswordError"></div>
             </div>
-            <div class="faq-content">
-                <p>როდესაც საკითხავს გამოაქვეყნებ, ტექსტის წაშლას შეძლებ, თუმცა ვერ დაარედაქტირებ.</p>
+
+            <div class="actions-password">
+              <button class="btn" id="cancelPassword">გაუქმება</button>
+              <button class="btn btn-primary" id="savePassword" disabled>შენახვა</button>
             </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>ვინ ხედავს ჩემს ბლოგს – საჯარო არის თუ პირადიც შეიძლება იყოს?</span>
-                <img class="arrow" src="images/arrow.png" alt="arrow">
-            </div>
-            <div class="faq-content">
-                <p>როდესაც საკითხავს გამოაქვეყნებ, ტექსტის წაშლას შეძლებ, თუმცა ვერ დაარედაქტირებ.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>პლაგიატის შემოწმება ხდება?</span>
-                <img class="arrow" src="images/arrow.png" alt="arrow">
-            </div>
-            <div class="faq-content">
-                <p>როდესაც საკითხავს გამოაქვეყნებ, ტექსტის წაშლას შეძლებ, თუმცა ვერ დაარედაქტირებ.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">
-                <span>შემიძლია, თუ არა სტატიისთვის კომენტარის ფუნქციის გათიშვა?</span>
-                <img class="arrow" src="images/arrow.png" alt="arrow">
-            </div>
-            <div class="faq-content">
-                <p>როდესაც საკითხავს გამოაქვეყნებ, ტექსტის წაშლას შეძლებ, თუმცა ვერ დაარედაქტირებ.</p>
-            </div>
+
+          </div>
         </div>
       </div>
     </section>
