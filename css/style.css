@@ -18,6 +18,12 @@ li {
   list-style: none;
 }
 
+.div-burger-a{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 header {
   background-color: white;
   position: fixed; 

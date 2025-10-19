@@ -493,3 +493,4 @@ cancelProfileBtn.addEventListener('click', () => {
   
   disableButtons();
 });
+
