@@ -1,0 +1,11 @@
+/* საიდბარი */
+@media (max-width: 425px) and (min-width: 320px) {
+   
+  .menu-toggle {
+    display: flex;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+}

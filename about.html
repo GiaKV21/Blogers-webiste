@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, JavaScript"/>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <title>Blogers Webiste</title>
     <script src="src/main.js" defer></script>
   </head>
   <body>
     <header>
       <div class="header wrapper">
-        <a href="index.html"
-          ><img src="images/sakitxavi1 1.png" alt="logo"
-        /></a>
+        <div class="div-burger-a">
+          <button class="menu-toggle" onclick="toggleSidebar()"><img src="images/burger.png" alt="button" /></button>
+          <a href="index.html"><img src="images/sakitxavi1 1.png" alt="logo"/></a>
+        </div>
         <nav class="head-nav">
           <ul class="header-ul">
             <li><a href="index.html">მთავარი</a></li>
@@ -66,6 +68,20 @@
         </button>
       </div>
     </header>
+    <aside class="sidebar">
+      <nav class="menu">
+          <div class="menu-container">
+              <div class="menu-header" onclick="toggleDropdown(event)">
+                <p class="p-sidebar">123</p>
+              </div>
+              <div class="dropdown" id="dropdown">
+                  <a href="">123</a>
+                  <a href="">123</a>
+                  <a href="">123</a>
+              </div>
+          </div>
+      </nav>
+    </aside>
     <section class="wrapper">
       <h1 class="about-h1">ჩვენ შესახებ</h1>
       <p class="about-p">
