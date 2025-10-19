@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileDrawer();
   initContentTabs();
   setView(qs.get("view") === "about" ? "about" : "work");
-  guardEditFab();
   const loginLink = document.getElementById("loginLink");
   if (loginLink && qs.get("demo") === "1") {
     loginLink.addEventListener("click", (e) => {
@@ -65,11 +64,6 @@ function setView(view) {
       emptyBlock.hidden = false;
     }
   }
-}
-
-function guardEditFab() {
-  const fab = document.getElementById("editFab");
-  if (fab) fab.hidden = !variant.loggedIn;
 }
 
 function initMobileDrawer() {
