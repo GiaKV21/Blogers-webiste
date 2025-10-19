@@ -109,7 +109,7 @@
           <div class="div-profile-flex">
             <div class="div-profile">
               <div class="form-group">
-                <label class="form-label">სრული სახელი</label>
+                <label class="form-label">სახელი, გვარი</label>
                   <input type="text" class="form-input char-count" id="fullName" placeholder="შეიყვანე სრული სახელი" maxlength="50">
                   <div class="char-counter" id="fullNameCounter">0/50</div>
               </div>
@@ -136,6 +136,20 @@
           <div class="actions">
             <button class="btn" id="cancelProfile">გაუქმება</button>
             <button class="btn btn-primary" id="saveProfile">შენახვა</button>
+          </div>
+
+          <button class="delete-settings"><img src="images/Trash Bin Minimalistic.png"> ანგარიშის წაშლა</button>
+          <div class="modal-overlay" id="deleteModal">
+            <div class="modal-content">
+              <button class="close-modal" id="closeModal"><img src="images/Close Circle.png"></button>
+              <img src="images/Trash Bin Minimalistic-black.png" alt="Trash Icon" class="modal-icon">
+              <p class="modal-text">დარწმუნებული ხარ, რომ გსურს ანგარიშის წაშლა?</p>
+              <p  class="modal-text-2">წაშლის შემდეგ ანგარიშს ვეღარ აღადგენ</p>
+              <div class="modal-actions">
+                <button class="btn cancel-delete" id="cancelDelete">გაუქმება</button>
+                <button class="btn btn-primary confirm-delete" id="confirmDelete">წაშლა</button>
+              </div>
+            </div>
           </div>
         </div>
 

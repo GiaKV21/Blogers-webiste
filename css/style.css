@@ -1241,3 +1241,68 @@ input[type="file"] {
   font-size: 14px;
   margin-top: 8px;
 }
+
+.delete-settings{
+  color: #FF4343;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  margin-top: 78px;
+}
+
+/* ანგარიშის წაშლი მოდალი */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 72px 117px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.close-modal {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191919;
+}
+
+.modal-text-2{
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 24px 0px 36px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

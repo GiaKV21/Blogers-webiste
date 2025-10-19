@@ -1,3 +1,26 @@
+// ბურგერ ღილაკი
+
+// საიდბარის ჩამშლა
+function toggleDropdown(event) {
+  event.preventDefault();
+  const container = event.currentTarget.parentElement;
+  container.classList.toggle('open');
+}
+
+// ბურგერ მენიუ
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('open');
+}
+document.addEventListener('click', function(event) {
+  const sidebar = document.querySelector('.sidebar');
+  const toggleBtn = document.querySelector('.menu-toggle');
+
+  if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
+    sidebar.classList.remove('open');
+  }
+});
+
 // სლაიდერი
 
 document.querySelectorAll('.slider-container').forEach(container => {
@@ -327,6 +350,8 @@ document.querySelectorAll('.faq-question').forEach(question => {
 
 // პარამეტრები
 
+// გადრათვა
+
 const tabs = document.querySelectorAll(".settings-tab");
 const contents = document.querySelectorAll(".tab-content");
 tabs.forEach(tab => {
@@ -494,23 +519,34 @@ cancelProfileBtn.addEventListener('click', () => {
   disableButtons();
 });
 
-// საიდბარის ჩამშლა
-function toggleDropdown(event) {
-  event.preventDefault();
-  const container = event.currentTarget.parentElement;
-  container.classList.toggle('open');
-}
+// ანგარიშის წაშლის მოდალი
 
-// ბურგერ მენიუ
-function toggleSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.classList.toggle('open');
-}
-document.addEventListener('click', function(event) {
-  const sidebar = document.querySelector('.sidebar');
-  const toggleBtn = document.querySelector('.menu-toggle');
+const deleteBtn = document.querySelector(".delete-settings");
+const deleteModal = document.getElementById("deleteModal");
+const closeModal = document.getElementById("closeModal");
+const cancelDelete = document.getElementById("cancelDelete");
+const confirmDelete = document.getElementById("confirmDelete");
 
-  if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
-    sidebar.classList.remove('open');
-  }
+deleteBtn.addEventListener("click", () => {
+  deleteModal.classList.add("active");
+});
+
+const closeDeleteModal = () => {
+  deleteModal.classList.remove("active");
+};
+
+closeModal.addEventListener("click", closeDeleteModal);
+cancelDelete.addEventListener("click", closeDeleteModal);
+
+confirmDelete.addEventListener("click", () => {
+  fullNameInput.value = "";
+  shortTextInput.value = "";
+  linkedinInput.value = "";
+  aboutTextInput.value = "";
+  newPassword.value = "";
+  confirmPassword.value = "";
+
+  disableButtons();
+  disableSaveButton();
+  closeDeleteModal();
 });
