@@ -770,6 +770,8 @@ input.error {
 .span-images{
   display: flex;
   align-items: center;
+  color: #7B7B7B;
+  font-size: 14px;
   gap: 5px;
 }
 
