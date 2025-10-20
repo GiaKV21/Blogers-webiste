@@ -253,6 +253,14 @@ header {
   font-size: 14px;
 }
 
+/* //////////////////// */
+
+.notification{
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 /* საიდბარი */
 
 .sidebar {
