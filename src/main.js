@@ -386,70 +386,110 @@ function togglePassword(inputId) {
   input.type = input.type === "password" ? "text" : "password";
 }
 
-// პაროლის ინფუთები და ღილაკი და ერორ
+// ელემენტები
 
 const oldPassword = document.getElementById("oldPassword");
 const newPassword = document.getElementById("newPassword");
 const confirmPassword = document.getElementById("confirmPassword");
+
 const saveBtn = document.getElementById("savePassword");
 const cancelBtn = document.getElementById("cancelPassword");
 
-const newPasswordError = document.getElementById("newPasswordError");
+const oldPasswordError = document.getElementById("oldPasswordError");
 const confirmPasswordError = document.getElementById("confirmPasswordError");
 
-oldPassword.value = "12345678";
+let newPasswordError = document.getElementById("newPasswordError");
+if (!newPasswordError) {
+  newPasswordError = document.createElement("div");
+  newPasswordError.id = "newPasswordError";
+  newPassword.parentElement.parentElement.appendChild(newPasswordError);
+}
 
-const disableSaveButton = () => {
+let realOldPassword = "12345678";
+
+const disablePasswordButtons = () => {
   saveBtn.disabled = true;
+  cancelBtn.disabled = true;
 };
-const enableSaveButton = () => {
+
+const enablePasswordButtons = () => {
   saveBtn.disabled = false;
+  cancelBtn.disabled = false;
 };
 
-const checkPasswordConditions = () => {
-  const newPasswordValue = newPassword.value.trim();
-  const confirmPasswordValue = confirmPassword.value.trim();
-  let isValid = true;
-
+const clearPasswordErrors = () => {
+  oldPasswordError.textContent = "";
   newPasswordError.textContent = "";
   confirmPasswordError.textContent = "";
 
-  if (newPasswordValue !== confirmPasswordValue) {
-    confirmPasswordError.textContent = "ახალი პაროლი არ ემთხვევა";
-    confirmPasswordError.style.color = "#FF4343";
-    isValid = false;
-  }
+  oldPasswordError.style.color = "";
+  newPasswordError.style.color = "";
+  confirmPasswordError.style.color = "";
+};
 
-  return isValid;
+const checkPasswordChanges = () => {
+  const oldVal = oldPassword.value.trim();
+  const newVal = newPassword.value.trim();
+  const confVal = confirmPassword.value.trim();
+
+  const isChanged = oldVal || newVal || confVal;
+  if (isChanged) {
+    enablePasswordButtons();
+  } else {
+    disablePasswordButtons();
+  }
 };
 
 [oldPassword, newPassword, confirmPassword].forEach(input => {
-  input.addEventListener("focus", enableSaveButton);
+  input.addEventListener("input", checkPasswordChanges);
 });
 
 saveBtn.addEventListener("click", () => {
-  const isValid = checkPasswordConditions();
-  if (isValid) {
-    oldPassword.value = newPassword.value.trim();
-    newPassword.value = "";
-    confirmPassword.value = "";
-    disableSaveButton();
-    newPasswordError.textContent = "";
-    confirmPasswordError.textContent = "";
+  clearPasswordErrors();
+
+  const oldVal = oldPassword.value.trim();
+  const newVal = newPassword.value.trim();
+  const confVal = confirmPassword.value.trim();
+
+  let valid = true;
+
+  if (oldVal !== realOldPassword) {
+    oldPasswordError.textContent = "ძველი პაროლი არასწორია";
+    oldPasswordError.style.color = "#FF4343";
+    valid = false;
   }
+
+  if (newVal.length < 6) {
+    newPasswordError.textContent = "პაროლი უნდა შეიცავდეს მინიმუმ 6 სიმბოლოს";
+    newPasswordError.style.color = "#FF4343";
+    valid = false;
+  }
+
+  if (newVal !== confVal) {
+    confirmPasswordError.textContent = "ახალი პაროლი არ ემთხვევა";
+    confirmPasswordError.style.color = "#FF4343";
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  realOldPassword = newVal;
+  oldPassword.value = "";
+  newPassword.value = "";
+  confirmPassword.value = "";
+  clearPasswordErrors();
+  disablePasswordButtons();
 });
 
 cancelBtn.addEventListener("click", () => {
+  oldPassword.value = "";
   newPassword.value = "";
   confirmPassword.value = "";
-  newPasswordError.textContent = "";
-  confirmPasswordError.textContent = "";
+  clearPasswordErrors();
+  disablePasswordButtons();
 });
 
-function togglePassword(inputId) {
-  const input = document.getElementById(inputId);
-  input.type = input.type === "password" ? "text" : "password";
-}
+window.addEventListener("DOMContentLoaded", disablePasswordButtons);
 
 // პროფილის პარამეტრები
 
@@ -475,17 +515,20 @@ aboutTextInput.value = initialData.aboutText;
 
 const disableButtons = () => {
   saveProfileBtn.disabled = true;
+  cancelProfileBtn.disabled = true;
 };
 
 const enableButtons = () => {
   saveProfileBtn.disabled = false;
+  cancelProfileBtn.disabled = false;
 };
 
 const checkChanges = () => {
-  const isAnyFieldChanged = fullNameInput.value !== initialData.fullName || 
-                            shortTextInput.value !== initialData.shortText ||
-                            linkedinInput.value !== initialData.linkedin ||
-                            aboutTextInput.value !== initialData.aboutText;
+  const isAnyFieldChanged = 
+    fullNameInput.value !== initialData.fullName || 
+    shortTextInput.value !== initialData.shortText ||
+    linkedinInput.value !== initialData.linkedin ||
+    aboutTextInput.value !== initialData.aboutText;
   
   if (isAnyFieldChanged) {
     enableButtons();
@@ -498,9 +541,7 @@ const checkChanges = () => {
   input.addEventListener('input', checkChanges);
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  disableButtons();
-});
+window.addEventListener("DOMContentLoaded", disableButtons);
 
 saveProfileBtn.addEventListener('click', () => {
   initialData.fullName = fullNameInput.value;
@@ -515,7 +556,6 @@ cancelProfileBtn.addEventListener('click', () => {
   shortTextInput.value = initialData.shortText;
   linkedinInput.value = initialData.linkedin;
   aboutTextInput.value = initialData.aboutText;
-  
   disableButtons();
 });
 

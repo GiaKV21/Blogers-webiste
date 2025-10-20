@@ -134,8 +134,8 @@
           </div>
 
           <div class="actions">
-            <button class="btn" id="cancelProfile">გაუქმება</button>
-            <button class="btn btn-primary" id="saveProfile">შენახვა</button>
+            <button class="btn" id="cancelProfile" disabled>გაუქმება</button>
+            <button class="btn-primary" id="saveProfile" disabled>შენახვა</button>
           </div>
 
           <button class="delete-settings"><img src="images/Trash Bin Minimalistic.png"> ანგარიშის წაშლა</button>
@@ -147,7 +147,7 @@
               <p  class="modal-text-2">წაშლის შემდეგ ანგარიშს ვეღარ აღადგენ</p>
               <div class="modal-actions">
                 <button class="btn cancel-delete" id="cancelDelete">გაუქმება</button>
-                <button class="btn btn-primary confirm-delete" id="confirmDelete">წაშლა</button>
+                <button class="btn-primary confirm-delete" id="confirmDelete">წაშლა</button>
               </div>
             </div>
           </div>
@@ -155,23 +155,22 @@
 
         <div id="password" class="tab-content">
           <div class="div-password-settings">
-
             <div class="form-group password-group">
               <label class="form-label">ძველი პაროლი</label>
               <div class="password-wrapper-settings">
-                <input type="password" class="form-input password-input" id="oldPassword" value="12345678">
+                <input type="password" class="form-input password-input" id="oldPassword" placeholder="შეიყვანე ძველი პაროლი">
                 <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('oldPassword')">
               </div>
+              <div id="oldPasswordError"></div>
             </div>
-
             <div class="form-group password-group">
               <label class="form-label">ახალი პაროლი (6+ სიმბოლო)</label>
               <div class="password-wrapper-settings">
                 <input type="password" class="form-input password-input" id="newPassword" placeholder="შეიყვანე ახალი პაროლი">
                 <img src="images/Eye Closed.png" alt="show/hide" class="toggle-password" onclick="togglePassword('newPassword')">
               </div>
+              <div id="newPasswordError"></div>
             </div>
-
             <div class="form-group password-group">
               <label class="form-label">გაიმეორე ახალი პაროლი</label>
               <div class="password-wrapper-settings">
@@ -180,12 +179,10 @@
               </div>
               <div id="confirmPasswordError"></div>
             </div>
-
             <div class="actions-password">
-              <button class="btn" id="cancelPassword">გაუქმება</button>
-              <button class="btn btn-primary" id="savePassword" disabled>შენახვა</button>
+              <button class="btn" id="cancelPassword" disabled>გაუქმება</button>
+              <button class="btn-primary" id="savePassword" disabled>შენახვა</button>
             </div>
-
           </div>
         </div>
       </div>
