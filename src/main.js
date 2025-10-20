@@ -21,6 +21,31 @@ document.addEventListener('click', function(event) {
   }
 });
 
+// უზერ მოდალი
+
+document.addEventListener('DOMContentLoaded', () => {
+  const userBtn = document.querySelector('.icon-btn');
+  const userModal = document.getElementById('user-modal');
+
+  if (userBtn && userModal) {
+    userBtn.addEventListener('click', () => {
+      userModal.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!userBtn.contains(event.target) && !userModal.contains(event.target)) {
+        userModal.classList.add('hidden');
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        userModal.classList.add('hidden');
+      }
+    });
+  }
+});
+
 // სლაიდერი
 
 document.querySelectorAll('.slider-container').forEach(container => {
