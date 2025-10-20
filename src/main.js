@@ -381,9 +381,19 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ხილვადობა ინფუთების
+
 function togglePassword(inputId) {
   const input = document.getElementById(inputId);
-  input.type = input.type === "password" ? "text" : "password";
+  const icon = input.parentElement.querySelector(".toggle-password");
+
+  if (input.type === "password") {
+    input.type = "text";
+    icon.src = "images/Eye.png";
+  } else {
+    input.type = "password";
+    icon.src = "images/Eye Closed.png";
+  }
 }
 
 // ელემენტები
