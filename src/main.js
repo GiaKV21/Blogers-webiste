@@ -647,6 +647,5 @@ confirmDelete.addEventListener("click", () => {
   confirmPassword.value = "";
 
   disableButtons();
-  disableSaveButton();
   closeDeleteModal();
 });

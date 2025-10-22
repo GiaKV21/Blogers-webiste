@@ -46,7 +46,7 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
 .header{
@@ -178,7 +178,7 @@ header {
 
 .user-modal {
   position: absolute;
-  top: 70px; 
+  top: 84px; 
   right: 40px;
   background-color: #FDFCF9;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -263,7 +263,7 @@ header {
 
 .notification-modal {
   position: absolute;
-  top: 90px;
+  top: 84px;
   right: 90px;
   background-color: #FDFCF9;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -295,7 +295,7 @@ header {
 }
 
 .not-p{
-  font-size: 14px;
+  font-size: 13px;
   color: #191919;
   font-weight: 700;
 }
@@ -306,7 +306,7 @@ header {
   font-weight: 500;
 }
 .not-time {
-  font-size: 10px;
+  font-size: 11px;
   color: #ACACAC;
 }
 
@@ -1303,7 +1303,7 @@ input.error {
 
 .form-about{
   width: 100%;
-  height: 390px;
+  height: 386px;
   border: 1px solid #B8B8B8;
   border-radius: 8px;
   padding: 20px 16px;
@@ -1396,6 +1396,7 @@ input[type="file"] {
   font-size: 14px;
   color: #FFFFFF;
   border: none;
+  cursor: pointer;
 }
 
 .btn-primary[disabled] {
