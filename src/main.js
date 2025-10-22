@@ -1,13 +1,5 @@
-// ბურგერ ღილაკი
-
-// საიდბარის ჩამშლა
-function toggleDropdown(event) {
-  event.preventDefault();
-  const container = event.currentTarget.parentElement;
-  container.classList.toggle('open');
-}
-
 // ბურგერ მენიუ
+
 function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
   sidebar.classList.toggle('open');
@@ -15,9 +7,19 @@ function toggleSidebar() {
 document.addEventListener('click', function(event) {
   const sidebar = document.querySelector('.sidebar');
   const toggleBtn = document.querySelector('.menu-toggle');
+  const innerToggle = document.querySelector('.burger-toggle');
 
   if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
     sidebar.classList.remove('open');
+  }
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const innerToggle = document.querySelector('.burger-toggle');
+  if (innerToggle) {
+    innerToggle.addEventListener('click', () => {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.remove('open');
+    });
   }
 });
 

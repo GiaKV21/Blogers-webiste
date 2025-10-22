@@ -365,50 +365,40 @@ header {
 
 .sidebar {
   position: fixed;
-  top: 79px;
+  top: 0px;
   left: -340px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: #FDFCF9;
   overflow: hidden;
   transition: left 0.3s ease;
   z-index: 999;
 }
 
-.menu {
+.div-burger-header{
   display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 20px 45px 20px 16px;
+  border-bottom: 0.5px solid #D7D7D7;
 }
 
-.menu-header {
+.li-burger{
+  padding: 20px 16px;
+  border-bottom: 0.5px solid #D7D7D7;
+}
+
+.div-icons-burger{
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+}
+
+.burger-toggle{
   cursor: pointer;
-  padding: 10px;
-}
-
-.dropdown {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0 16px;
-}
-
-.menu-container.open .dropdown {
-  max-height: 200px;
-  opacity: 1;
-  padding-bottom: 12px;
-}
-
-.dropdown a {
-  font-size: 14px;
-  padding: 10px;
-  display: inline-block;
-  width: auto;
 }
 
 /* ფუტერი */
