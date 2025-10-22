@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+.rules-h1{
+  color: #191919;
+  font-size: 20px;
+  margin-bottom: 36px;
+}
+
 body{
   background-color: #FDFCF9;
 }

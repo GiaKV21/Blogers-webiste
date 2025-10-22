@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Blogers Webiste</title>
+    <script src="src/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header wrapper">
+        <div class="div-burger-a">
+          <button class="menu-toggle" onclick="toggleSidebar()"><img src="images/burger.png" alt="button" /></button>
+          <a href="index.html"><img src="images/sakitxavi1 1.png" alt="logo"/></a>
+        </div>
+        <nav class="head-nav">
+          <ul class="header-ul">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="explore.html">აღმოაჩინე</a></li>
+            <li><a href="about.html">ჩვენ შესახებ</a></li>
+          </ul>
+        </nav>
+        <button
+          id="searchToggle"
+          class="search-toggle"
+          aria-label="Search open"
+        >
+          <img src="images/Magnifer.png" alt="" />
+        </button>
+        <div class="header-right">
+          <button class="notification" id="notificationBtn">
+            <img src="images/Bell.png" alt="" />
+          </button>
+          <div id="notification-modal" class="notification-modal hidden">
+            <h3 class="notif-title">ცნობის ფურცელი</h3>
+            <div class="notif-list">
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p"><span class="not-what">შენი საკითხავი </span>“ის, რაც მართლა ახსოვთ...” <span class="not-what">გამოქვეყნდა.</span> <span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p"><span class="not-what">აი სწორედ აქედან იწყება შენი ამბავი! </span>დაიწყე წერა <span class="not-time">6 საათის წინ</span></p>
+              </a>
+            </div>
+          </div>
+          <button class="icon-btn">
+            <img src="images/User Circle.png" alt="User Icon">
+          </button>
+          <div id="user-modal" class="user-modal hidden">
+            <div class="div-user-img-info">
+              <img class="user-img" src="images/girl.jpg">
+              <div class="user-name-mail">
+                <p class="user-name">ელენე მაჩაბელი</p>
+                <p class="user-mail">E.machabeli@gmail.com</p>
+              </div>
+            </div>
+            <div class="line-user"></div>
+            <ul class="div-header-modal-nav">
+              <li class="li-user"><a href="#" class="user-a">დაიწყე წერა</a></li>
+              <li class="li-user"><a href="settings.html" class="user-a">პარამეტრები</a></li>
+              <li class="li-user"><button class="button-log-out">გასვლა</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-right-enter">
+          <a class="" href="enter.html"> შესვლა </a>
+        </div>
+      </div>
+      <div id="overlay" class="overlay"></div>
+      <div id="searchDropdown" class="search-dropdown">
+        <div class="search-pill">
+          <span class="icon-gr">
+            <img src="images/Magnifer-gr.png" alt="icon" />
+          </span>
+          <input
+            id="theSearchInput"
+            type="search"
+            placeholder="მოძებნე სახელი ან ავტორი"
+          />
+          <div class="right-controls">
+            <button class="chip active" type="button" data-filter="sakithxavi">
+              საკითხავი
+            </button>
+            <button class="chip" type="button" data-filter="avtori">
+              ავტორი
+            </button>
+          </div>
+        </div>
+        <button id="searchSubmit" class="search-submit" type="button">
+          ძებნა
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav class="menu">
+          <div class="menu-container">
+              <div class="menu-header" onclick="toggleDropdown(event)">
+                <p class="p-sidebar">123</p>
+              </div>
+              <div class="dropdown" id="dropdown">
+                  <a href="">123</a>
+                  <a href="">123</a>
+                  <a href="">123</a>
+              </div>
+          </div>
+      </nav>
+    </aside>
+
+    <section class="wrapper">
+
+      <h1 class="rules-h1">წესები და პირობები</h1>
+
+      1. ზოგადი ინფორმაცია <br>
+      ეს დოკუმენტი განსაზღვრავს პირობებს, რომლის მიხედვითაც შეგიძლია გამოიყენო ,,საკითხავი’’.<br> 
+      საკითხავი შექმნილია სტატიების გასაზიარებლად, ავტორებისთვის პორტფოლიოს შესაქმნელად და ტექნოლოგიურ თემებზე საწერად.<br> 
+      პლატფორმის გამოყენება ნიშნავს, რომ სრულად ეთანხმები აღნიშნულ პირობებს.<br><br>
+
+      2. მომხმარებლის რეგისტრაცია და ანგარიშის უსაფრთხოება<br>
+      2.1 პლატფორმაზე რეგისტრაციის დროს საჭიროა რეალური მონაცემების გამოყენება.<br>
+      2.2 მომხმარებელი პასუხისმგებელია საკუთარ ანგარიშზე წვდომისა და პაროლის უსაფრთხოებაზე.<br>
+      2.3 ნებისმიერი აქტივობა, რომელიც განხორციელდება შენი ანგარიშით, გეკუთვნის შენ.<br><br>
+
+      3. კონტენტის შექმნა და პასუხისმგებლობა<br>
+      3.1 ყველა ავტორი პასუხისმგებელია საკუთარ სტატიებზე, მათ სიმართლესა და ინტელექტუალურ საკუთრებაზე.<br>
+      3.2 აკრძალულია უკანონო, ზიანის მომტანი, ძალადობრივი, რასისტული, სექსისტური ან პორნოგრაფიული კონტენტის გამოქვეყნება.<br>
+      3.3. ადმინისტრაცია ინარჩუნებს უფლებას წაშალოს ან დაბლოკოს კონტენტი, რომელიც არღვევს წესებს, წინასწარი გაფრთხილების გარეშე.<br><br>
+
+      4. ინტელექტუალური საკუთრება<br>
+      4.1 პლატფორმაზე გამოქვეყნებული ყველა სტატია, ტექსტი, სურათი, ვიდეო და სხვა შინაარსობრივი მასალა („კონტენტი“) არის ავტორის ინტელექტუალური საკუთრება.<br>
+      4.2 ავტორი ინარჩუნებს ყველა საავტორო და სხვა დაკავშირებულ უფლებას საკუთარ მასალაზე.<br>
+      4.3 ავტორი ანიჭებს საკითხავს არაექსკლუზიურ, უსასყიდლო, დროით და ტერიტორიულად შეუზღუდავ უფლებას თავისი მასალის გამოყენებაზე მხოლოდ შემდეგი მიზნებისთვის:<br><br>
+
+      პლატფორმის ფუნქციონირების უზრუნველყოფა;<br>
+      პლატფორმის მარკეტინგული და საინფორმაციო კამპანიები;<br>
+      პლატფორმის განვითარების და მომსახურების გაუმჯობესება.<br><br>
+
+      4.4 საკითხავი ვალდებულია არ შეცვალოს და არ გააყალბოს ავტორის მასალა მისი ნებართვის გარეშე, გარდა იმ შემთხვევებისა, როდესაც ეს აუცილებელია ტექნიკური ან დიზაინის შესაბამისობისთვის (მაგ.: ზომების შეცვლა, ფორმატირება).<br>
+      4.5 ავტორი პასუხისმგებელია, რომ პლატფორმაზე ატვირთული მასალა არ არღვევდეს მესამე მხარის ინტელექტუალური საკუთრების უფლებებს. დარღვევის შემთხვევაში, სრული პასუხისმგებლობა ეკისრება ავტორს.<br><br>
+
+      5. აკრძალვები<br>
+      5.1 აკრძალულია პლატფორმის გამოყენება კომერციული საქმიანობისთვის მომხმარებელთა ან ადმინისტრაციის წინასწარი თანხმობის გარეშე.<br>
+      5.2 ნებადართულია, რომ ავტორმა პლატფორმაზე გამოქვეყნებული საკუთარი მასალა გამოიყენოს პერსონალური პორტფოლიოს შექმნისა და დასაქმების მიზნებისთვის, მათ შორის მისი გაზიარება სხვა პლატფორმებსა და დამსაქმებლებთან.<br>
+      5.3 აკრძალულია პლატფორმის უსაფრთხოების სისტემების გვერდის ავლა, სპამის გავრცელება, ჰაკერული აქტივობები ან სხვა მომხმარებლების ანგარიშზე დაუკითხავი წვდომა.<br><br>
+
+      6. პასუხისმგებლობა პლატფორმის მიერ<br>
+      6.1 საკითხავი არ აგებს პასუხს ზარალზე, რომელიც შეიძლება წარმოიშვას კონტენტის შექმნის, წაშლის ან ტექნიკური პრობლემების გამო. 6.2 ჩვენ ვმუშაობთ პლატფორმის სტაბილურობისთვის, თუმცა გამოყენების დროს რაიმე შეცდომის ან შეფერხების გამო პასუხისგება არ შეგვიძლია<br><br>
+
+      7. ცვლილებები პირობებში<br>
+      7.1 საკითხავი ინარჩუნებს უფლებას ნებისმიერ დროს შეცვალოს ეს პირობები. 7.2 ცვლილებები ძალაში შედის გამოქვეყნებიდან.<br><br>
+
+      8. კონფიდენციალურობა<br>
+      8.1 მომხმარებლის პერსონალური ინფორმაცია დაცულია საკითხავის Privacy Policy-ის მიხედვით.<br>
+    </section>
+
+    <footer class="footer">
+      <div class="div-footer wrapper">
+        <div class="footer-nav-logo">
+          <div class="footer-logo-p">
+            <a class="footer-logo" href="index.html"
+              ><img src="images/sakitxavi2 1.png" alt="logo"
+            /></a>
+            <div class="footer-div-p">
+              საკითხავი არის სივრცე, სადაც შეგიძლია ნამუშევრები გააზიარო, შექმნა
+              პორტფოლიო და დაუკავშირდე საერთო ინტერესების მქონე ავტორებს.
+            </div>
+          </div>
+          <div class="footer-nav">
+            <div>
+              <h4 class="h4-nav-footer">მართვა</h4>
+              <ul class="footer-ul">
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="explore.html">აღმოაჩინე</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="h4-nav-footer">ბიბლიოთეკა</h4>
+              <ul class="footer-ul">
+                <li><a>თვის საკითხავი</a></li>
+                <li><a>უახლესი საკითხავი</a></li>
+                <li><a>გაეცანი ავტორებს</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="h4-nav-footer">დახმარება</h4>
+              <ul class="footer-ul">
+                <li><a>წესები და პირობები</a></li>
+                <li><a href="faq.html">კითხვა-პასუხი</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="div-under">
+          <p class="p-footer-down">© 2025 „საკითხავი“. ყველა უფლება დაცულია.</p>
+          <div class="div-social">
+            <a class="" href="">
+              <img src="images/inst.png" alt="" />
+            </a>
+            <a class="" href="">
+              <img src="images/f.png" alt="" />
+            </a>
+            <a class="" href="">
+              <img src="images/in.png" alt="" />
+            </a>
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>
