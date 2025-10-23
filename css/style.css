@@ -1332,6 +1332,7 @@ input.error {
 }
 
 .form-input:focus,
+.form-short:focus,
 .form-textarea:focus,
 .form-about:focus {
   border-color: #313131;
@@ -1434,10 +1435,15 @@ input[type="file"] {
   margin-top: 20px;
 }
 
+.error-counter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .char-counter {
   font-size: 14px;
   color: #3D3D3D;
-  text-align: right;
 }
 
 .toggle-password {

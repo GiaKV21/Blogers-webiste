@@ -606,10 +606,29 @@ const checkChanges = () => {
 window.addEventListener("DOMContentLoaded", disableButtons);
 
 saveProfileBtn.addEventListener('click', () => {
+  document.querySelectorAll('.profile-error').forEach(err => err.textContent = '');
+
+  let valid = true;
+
+  if (fullNameInput.value.trim() === '') {
+    const errorDiv = fullNameInput.closest('.form-group').querySelector('.profile-error');
+    errorDiv.textContent = 'შეიყვანე სახელი და გვარი';
+    errorDiv.style.color = '#FF4343';
+    valid = false;
+  }
+
+  if (shortTextInput.value.trim() === '') {
+    const errorDiv = shortTextInput.closest('.form-group').querySelector('.profile-error');
+    errorDiv.textContent = 'შეიყვანე მოკლე აღწერა';
+    errorDiv.style.color = '#FF4343';
+    valid = false;
+  }
+  if (!valid) return;
   initialData.fullName = fullNameInput.value;
   initialData.shortText = shortTextInput.value;
   initialData.linkedin = linkedinInput.value;
   initialData.aboutText = aboutTextInput.value;
+
   disableButtons();
 });
 
