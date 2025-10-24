@@ -6,6 +6,7 @@
 
 .start {
   position: relative;
+  /* position: fixed; */
   text-align: right;
   right: 37px;
   bottom: 152px;
