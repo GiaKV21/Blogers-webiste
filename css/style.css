@@ -1574,3 +1574,31 @@ input[type="file"] {
   align-items: center;
   gap: 4px;
 }
+
+.nav-user {
+  border-top: 0.5px solid #ACACAC;
+  border-bottom: 1px solid #ACACAC;
+  padding: 26px 0;
+  display: flex;
+  gap: 24px;
+  margin: 42px 0 30px;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-weight: 400;
+  color: #191919;
+}
+
+.active {
+  color: #191919;
+  font-weight: 700;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
