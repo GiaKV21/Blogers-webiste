@@ -1522,3 +1522,55 @@ input[type="file"] {
   justify-content: center;
   gap: 10px;
 }
+
+/* მომხმარებლის პროფილი */
+
+.div-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.img-user{
+  width: 89px;
+  height: 89px;
+  border-radius: 300px;
+  object-fit: cover;
+}
+
+.img-user{
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.user-p{
+  color: #252525;
+  font-size: 16px;
+  text-align: center;
+  max-width: 724px;
+  width: 100%;
+}
+
+.a-user-link{
+  font-size: 14px;
+  color: #1B7CDE;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.div-user-info{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #7B7B7B;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
