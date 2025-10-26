@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Blogers Webiste</title>
+    <script src="src/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header wrapper">
+        <div class="div-burger-a">
+          <button class="menu-toggle" onclick="toggleSidebar()"><img src="images/burger.png" alt="button" /></button>
+          <a href="index.html"><img src="images/sakitxavi1 1.png" alt="logo"/></a>
+        </div>
+        <nav class="head-nav">
+          <ul class="header-ul">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="explore.html">აღმოაჩინე</a></li>
+            <li><a href="about.html">ჩვენ შესახებ</a></li>
+          </ul>
+        </nav>
+        <button
+          id="searchToggle"
+          class="search-toggle"
+          aria-label="Search open"
+        >
+          <img src="images/Magnifer.png" alt="" />
+        </button>
+        <div class="header-right">
+          <button class="notification" id="notificationBtn">
+            <img src="images/Bell.png" alt="" />
+          </button>
+          <div id="notification-modal" class="notification-modal hidden">
+            <h3 class="notif-title">ცნობის ფურცელი</h3>
+            <div class="notif-list">
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p"><span class="not-what">შენი საკითხავი </span>“ის, რაც მართლა ახსოვთ...” <span class="not-what">გამოქვეყნდა.</span> <span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p"><span class="not-what">აი სწორედ აქედან იწყება შენი ამბავი! </span>დაიწყე წერა <span class="not-time">6 საათის წინ</span></p>
+              </a>
+            </div>
+          </div>
+          <button class="icon-btn">
+            <img src="images/User Circle.png" alt="User Icon">
+          </button>
+          <div id="user-modal" class="user-modal hidden">
+            <div class="div-user-img-info">
+              <img class="user-img" src="images/girl.jpg">
+              <div class="user-name-mail">
+                <p class="user-name">ელენე მაჩაბელი</p>
+                <p class="user-mail">E.machabeli@gmail.com</p>
+              </div>
+            </div>
+            <div class="line-user"></div>
+            <ul class="div-header-modal-nav">
+              <li class="li-user"><a href="#" class="user-a">დაიწყე წერა</a></li>
+              <li class="li-user"><a href="settings.html" class="user-a">პარამეტრები</a></li>
+              <li class="li-user"><button class="button-log-out">გასვლა</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-right-enter">
+          <a class="" href="enter.html"> შესვლა </a>
+        </div>
+      </div>
+      <div id="overlay" class="overlay"></div>
+      <div id="searchDropdown" class="search-dropdown">
+        <div class="search-pill">
+          <span class="icon-gr">
+            <img src="images/Magnifer-gr.png" alt="icon" />
+          </span>
+          <input
+            id="theSearchInput"
+            type="search"
+            placeholder="მოძებნე სახელი ან ავტორი"
+          />
+          <div class="right-controls">
+            <button class="chip active" type="button" data-filter="sakithxavi">
+              საკითხავი
+            </button>
+            <button class="chip" type="button" data-filter="avtori">
+              ავტორი
+            </button>
+          </div>
+        </div>
+        <button id="searchSubmit" class="search-submit" type="button">
+          ძებნა
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <div>
+        <div class="div-burger-header">
+          <img class="burger-toggle" src="images/burger.png" >
+          <a href="index.html"><img src="images/sakitxavi1 1.png" alt="logo"/></a>
+        </div>
+        <nav class="div-burger-nav">
+          <ul>
+            <li class="li-burger"><a hr>მთავარი</a></li>
+            <li class="li-burger"><a>აღმოაჩინე</a></li>
+            <li class="li-burger"><a>ჩვენ შესახებ</a></li>
+            <li class="li-burger"><a>გაეცანი ავტორებს</a></li>
+            <li class="li-burger"><a>დაიწყე წერა</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="div-icons-burger">
+        <img src="images/Letter-burger.png">
+        <img src="images/in-burger.png">
+        <img src="images/inst-burger.png">
+        <img src="images/f-burger.png">
+      </div>
+    </aside>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">აქციე სითყვა შესაძლებლობად</h1>
+        <p class="hero-text">
+          დაწერე, გააზიარე, შექმენი პროფილური და იპოვე შენი აუდიტორია
+          საინტერესოს თემებზე
+        </p>
+        <a href="#" class="hero-button"
+          ><img src="images/Pen.png" /> დაიწყე წერა</a
+        >
+      </div>
+    </section>
+
+    <section class="slider-section wrapper">
+      <div class="slider-section-header">
+        <h2 class="slider-section-title">ჩვენ გირჩევთ</h2>
+        <a class="a-slider" href="popular.html">აღმოაჩინე მეტი</a>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider-track">
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <button class="slider-btn prev">
+          <img src="images/arrow-left.png" alt="Prev" />
+        </button>
+        <button class="slider-btn next">
+          <img src="images/arrow-right.png" alt="Next" />
+        </button>
+      </div>
+    </section>
+
+    <section class="slider-section wrapper">
+      <div class="slider-section-header">
+        <h2 class="slider-section-title">უახლესი საკითხავი</h2>
+        <a class="a-slider" href="new.html">აღმოაჩნე მეტი</a>
+      </div>
+      <div class="slider-container">
+        <div class="slider-track">
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="slider-btn prev">
+          <img src="images/arrow-left.png" alt="Prev" />
+        </button>
+        <button class="slider-btn next">
+          <img src="images/arrow-right.png" alt="Next" />
+        </button>
+      </div>
+    </section>
+
+    <section class="slider-section wrapper">
+      <div class="slider-section-header">
+        <h2 class="slider-section-title font">გაეცანი ავტორებს</h2>
+        <a class="a-slider" href="favorite.html">აღმოაჩინე მეტი</a>
+      </div>
+
+      <div class="slider-container">
+
+        <div class="slider-track">
+
+          <div class="slider-card">
+            <div class="card">
+              <div class="autor-img-h3">
+                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
+                <h3 class="name">ელენე მარიაბელი</h3>
+              </div>
+              <p class="autor-p">
+                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
+                ისტორიებად....
+              </p>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <div class="card">
+              <div class="autor-img-h3">
+                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
+                <h3 class="name">ელენე მარიაბელი</h3>
+              </div>
+              <p class="autor-p">
+                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
+                ისტორიებად....
+              </p>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <div class="card">
+              <div class="autor-img-h3">
+                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
+                <h3 class="name">ელენე მარიაბელი</h3>
+              </div>
+              <p class="autor-p">
+                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
+                ისტორიებად....
+              </p>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <div class="card">
+              <div class="autor-img-h3">
+                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
+                <h3 class="name">ელენე მარიაბელი</h3>
+              </div>
+              <p class="autor-p">
+                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
+                ისტორიებად....
+              </p>
+              <div class="slider-card-meta">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <div class="card">
+              <div class="autor-img-h3">
+                <img src="images/girl.jpg" alt="Profile" class="profile-img" />
+                <h3 class="name">ელენე მარიაბელი</h3>
+              </div>
+              <p class="autor-p">
+                იდეებს ვაქცევ სიტყვებად, სიტყვებს — ემოციებად, ემოციებს —
+                ისტორიებად....
+              </p>
+              <div class="span-images">
+                <img src="images/Document.png" /> 85
+                <p>საკითხავი</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn prev">
+          <img src="images/arrow-left.png" alt="Prev" />
+        </button>
+        <button class="slider-btn next">
+          <img src="images/arrow-right.png" alt="Next" />
+        </button>
+      </div>
+    </section>
+    <div class="start"><a href="#"><img src="images/start.png"></a></div>
+    <footer class="footer">
+      <div class="div-footer wrapper">
+        <div class="footer-nav-logo">
+          <div class="footer-logo-p">
+            <a class="footer-logo" href="index.html"
+              ><img src="images/sakitxavi2 1.png" alt="logo"
+            /></a>
+            <div class="footer-div-p">
+              საკითხავი არის სივრცე, სადაც შეგიძლია ნამუშევრები გააზიარო, შექმნა
+              პორტფოლიო და დაუკავშირდე საერთო ინტერესების მქონე ავტორებს.
+            </div>
+          </div>
+          <div class="footer-nav">
+            <div>
+              <h4 class="h4-nav-footer">მართვა</h4>
+              <ul class="footer-ul">
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="explore.html">აღმოაჩინე</a></li>
+                <li><a href="about.html">ჩვენ შესახებ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="h4-nav-footer">ბიბლიოთეკა</h4>
+              <ul class="footer-ul">
+                <li><a>თვის საკითხავი</a></li>
+                <li><a>უახლესი საკითხავი</a></li>
+                <li><a>გაეცანი ავტორებს</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="h4-nav-footer">დახმარება</h4>
+              <ul class="footer-ul">
+                <li><a>წესები და პირობები</a></li>
+                <li><a href="faq.html">კითხვა-პასუხი</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="div-under">
+          <p class="p-footer-down">© 2025 „საკითხავი“. ყველა უფლება დაცულია.</p>
+          <div class="div-social">
+            <a class="" href="">
+              <img src="images/inst.png" alt="" />
+            </a>
+            <a class="" href="">
+              <img src="images/f.png" alt="" />
+            </a>
+            <a class="" href="">
+              <img src="images/in.png" alt="" />
+            </a>
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>
