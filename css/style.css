@@ -936,6 +936,8 @@ input.error {
 
 .slider-card-text {
   font-size: 16px;
+  color: #191919;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -1533,14 +1535,14 @@ input[type="file"] {
   gap: 12px;
 }
 
-.img-user{
+.img-user-inner{
   width: 89px;
   height: 89px;
   border-radius: 300px;
   object-fit: cover;
 }
 
-.img-user{
+.h1-user{
   font-size: 20px;
   font-weight: 500;
   color: #000000;
@@ -1601,4 +1603,83 @@ input[type="file"] {
 
 .page.active {
   display: block;
+}
+
+.h2-user{
+  font-size: 24px;
+  font-weight: 700;
+  color: #191919;
+  margin-bottom: 20px;
+}
+
+.div-reader{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.div-about{
+  color: #191919;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.div-saved{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.div-liked{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.div-work{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.div-road{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.div-create{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #B8B8B8;
+  border-radius: 8px;
+  max-width: 360px;
+  width: 100%;
+  height: 448px;
+}
+
+.create-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.h3-create{
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 8px;
+}
+
+.p-create{
+  font-size: 16px;
+  font-weight: 400;
+  color: #7B7B7B;
 }
