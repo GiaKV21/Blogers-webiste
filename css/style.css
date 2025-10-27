@@ -890,6 +890,10 @@ input.error {
 
 /* Slider Section */
 
+.main-wrapper{
+  margin: 75px auto 150px;
+}
+
 .slider-section-header {
   display: flex;
   justify-content: space-between;
