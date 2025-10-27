@@ -1756,6 +1756,31 @@ input[type="file"] {
   color: #7B7B7B;
 }
 
+.hidden-option{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  padding: 196px 0 250px;
+  color: #B8B8B8;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.button-tell{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: 1px solid #ACACAC;
+  padding: 18px 21px;
+  color: #191919;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
 /* წესები და პირობების რეკომენდაცია */
 
 .recommendation{
