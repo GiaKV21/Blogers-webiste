@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.wrapper{
+  max-width: 1141px;
+  margin: 75px auto 150px;
+}
+
 .start {
   position: fixed;
   text-align: right;
@@ -16,15 +21,15 @@
   color: #191919;
   font-size: 20px;
   margin-bottom: 36px;
+  font-weight: 700;
+}
+
+.rules-wrapper{
+  margin: 0 auto 150px;
 }
 
 body{
   background-color: #FDFCF9;
-}
-
-.wrapper{
-  max-width: 1141px;
-  margin: 75px auto 150px;
 }
 
 a {
@@ -482,28 +487,26 @@ header {
   gap: 15px;
 }
 
-
-
 /* რეგისტრაცი/შესვლა */
 
 .enter-header{
-  position: relative;
-  padding-left: 50px;
-  padding-top: 20px;
+  position: absolute;
+  padding-left: 72px;
+  padding-top: 24px;
   border-bottom: none;
 }
 
 .enter-footer{
   position: absolute;
-  padding-left: 50px;
+  padding-left: 74px;
   font-size: 14px;
-  bottom: 20px;
+  bottom: 24px;
 }
 
 .enter-section{
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 100px 0 124px;
 }
 
 .container {
@@ -512,10 +515,10 @@ header {
 }
 
 .enter-reg {
-  margin: 0 0 18px;
+  margin-bottom: 36px;
   font-size: 20px;
-  line-height: 1.2;
   text-align: center;
+  font-weight: 700;
 }
 
 .tabs {
@@ -525,7 +528,7 @@ header {
 
 .tab {
   flex: 1;
-  padding: 10px 8px;
+  padding-bottom: 22px;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -551,14 +554,14 @@ header {
 .field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin: 10px 0;
+  gap: 8px;
+  margin: 12px 0;
 }
 
 .field input {
   width: 100%;
-  padding: 12px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  border: 1px solid #ACACAC;
   border-radius: 10px;
   font-size: 14px;
   outline: none;
@@ -566,6 +569,7 @@ header {
 
 .field h3{
   font-size: 14px;
+  font-weight: 400;
 }
 
 .field input:focus { 
@@ -577,6 +581,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
+  margin-top: 8px;
 }
 
 label.inline {
@@ -584,8 +589,8 @@ label.inline {
   align-items: center;
   gap: 5px;
   font-size: 14px;
-  margin-top: 6px;
   cursor: pointer;
+  font-weight: 400;
 }
 
 label.aprove{
@@ -596,6 +601,7 @@ label.aprove{
   font-size: 14px;
   cursor: pointer;
   margin: 10px 0;
+  font-weight: 400;
 }
 
 .span-aprove{
@@ -614,9 +620,10 @@ input[type="checkbox"] {
   border: 0;
   cursor: pointer;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 8px;
   background: #282624;
   color: #FFFFFF;
+  font-weight: 700;
 }
 
 
@@ -628,13 +635,14 @@ input[type="checkbox"] {
   background: #FFFFFF;
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #ACACAC;
+  font-weight: 700;
 }
 
 .divider {
   position: relative;
   text-align: center;
-  margin: 14px 0;
+  margin: 16px 0;
   color: rgba(40, 38, 36, 0.3);
   font-size: 12px;
 }
@@ -661,13 +669,13 @@ input[type="checkbox"] {
   font-size: 13px;
   color: #374151;
   text-align: center;
-  margin-top: 10px;
 }
 
 .helper a { 
   color: #1B7CDE; 
   text-decoration: none; 
   font-size: 14px;
+  font-weight: 400;
 }
 
 .password-wrapper {
@@ -721,7 +729,7 @@ input.error {
 
 .h2-steps {
   font-size: 20px;
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 
 .p-steps {
@@ -733,8 +741,18 @@ input.error {
 .field-password{
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   margin: 36px 0 20px;
+}
+
+.field-password h3{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.password-field h3{
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .email-input {
@@ -761,6 +779,7 @@ input.error {
   font-size: 20px;
   text-decoration: none;
   display: inline-block;
+  font-weight: 700;
 }
 
 .showemail{
@@ -774,6 +793,7 @@ input.error {
   color: #565656;
   text-decoration: none;
   text-align: center;
+  font-weight: 700;
 }
 
 .code-inputs {
@@ -790,6 +810,7 @@ input.error {
   font-size: 40px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
+  background-color: #FDFCF9;
 }
 
 .password-field {
@@ -809,17 +830,13 @@ input.error {
   outline: none;
 }
 
-.password-field h3{
-  font-size: 14px;
-}
-
 .password-field input:focus { 
   border-color: #c7cad1; 
 }
 
 .small-text {
   margin-top: 36px;
-  font-size: 16px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
   text-align: center;
 }
@@ -1733,4 +1750,17 @@ input[type="file"] {
   font-size: 16px;
   font-weight: 400;
   color: #7B7B7B;
+}
+
+/* წესები და პირობების რეკომენდაცია */
+
+.recommendation{
+  background-color: #F2F2F2;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 76px 0 56px;
+  font-size: 14px;
+  font-weight: 500;
 }
