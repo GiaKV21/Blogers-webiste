@@ -23,26 +23,91 @@
             <li><a href="about.html">ჩვენ შესახებ</a></li>
           </ul>
         </nav>
-        <button
-          id="searchToggle"
-          class="search-toggle"
-          aria-label="Search open"
-        >
-          <img src="images/Magnifer.png" alt="" />
-        </button>
         <div class="header-right">
-          <a class="" href="">
+          <button id="searchToggle" class="search-toggle" aria-label="Search open">
+            <img src="images/Magnifer.png" alt="" />
+          </button>
+          <button class="notification" id="notificationBtn">
             <img src="images/Bell.png" alt="" />
-          </a>
-          <a class="" href="">
-            <img src="images/User Circle.png" alt="" />
-          </a>
+          </button>
+          <div id="notification-modal" class="notification-modal hidden">
+            <h3 class="notif-title">ცნობის ფურცელი</h3>
+            <div class="notif-list">
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p">ელენე მაჩაბელი <span class="not-what">დაიწყო შენი გამომწერობა. </span><span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p"><span class="not-what">შენი საკითხავი </span>“ის, რაც მართლა ახსოვთ...” <span class="not-what">გამოქვეყნდა.</span> <span class="not-time">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p"><span class="not-what">აი სწორედ აქედან იწყება შენი ამბავი! </span>დაიწყე წერა <span class="not-time">6 საათის წინ</span></p>
+              </a>
+            </div>
+          </div>
+          <button class="icon-btn">
+            <img src="images/User Circle.png" alt="User Icon">
+          </button>
+          <div id="user-modal" class="user-modal hidden">
+            <div class="div-user-img-info">
+              <img class="user-img" src="images/girl.jpg">
+              <div class="user-name-mail">
+                <p class="user-name">ელენე მაჩაბელი</p>
+                <p class="user-mail">E.machabeli@gmail.com</p>
+              </div>
+            </div>
+            <div class="line-user"></div>
+            <ul class="div-header-modal-nav">
+              <li class="li-user"><a href="#" class="user-a">დაიწყე წერა</a></li>
+              <li class="li-user"><a href="settings.html" class="user-a">პარამეტრები</a></li>
+              <li class="li-user"><button class="button-log-out">გასვლა</button></li>
+            </ul>
+          </div>
         </div>
         <div class="header-right-enter">
           <a class="" href="enter.html"> შესვლა </a>
         </div>
       </div>
-
       <div id="overlay" class="overlay"></div>
       <div id="searchDropdown" class="search-dropdown">
         <div class="search-pill">
@@ -68,6 +133,7 @@
         </button>
       </div>
     </header>
+
     <aside class="sidebar">
       <nav class="menu">
           <div class="menu-container">

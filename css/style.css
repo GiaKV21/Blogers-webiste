@@ -77,10 +77,10 @@ header {
   text-decoration: none;
 }
 
-.header-right-enter{
+.header-right{
   display:flex;
   flex-direction:row;
-  gap:15px;
+  gap:24px;
 }
 
 .search-toggle{
