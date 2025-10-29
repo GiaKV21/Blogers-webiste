@@ -325,8 +325,8 @@ body.is-auth .auth-guest {
   margin-bottom: 6px;
 }
 .avatar-sm {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -356,17 +356,31 @@ body.is-auth .auth-guest {
 .empty {
   color: var(--muted);
   text-align: center;
-  margin: 16px 0 0;
+  margin-bottom: 150px;
 }
 .is-hidden {
   display: none !important;
 }
 
+/*edit fab button*/
+.edit-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 0;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
 /* ===== Footer (pixel-tuned to mock) ===== */
 .footer {
   background: #111;
   width: 100%;
-  padding: 0; 
+  padding: 0;
 }
 
 /* container alignment */
@@ -376,10 +390,16 @@ body.is-auth .auth-guest {
   color: #fff;
 }
 
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 80px;
+}
 .footer-nav-logo {
   display: flex;
   justify-content: space-between;
   padding-top: 80px;
+  width: 100%;
 }
 
 /* left block */

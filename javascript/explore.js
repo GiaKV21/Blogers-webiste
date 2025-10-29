@@ -123,3 +123,13 @@
   // Initial
   applyFilter("all");
 })();
+
+//create fab button functionality
+function initContentTabs() {
+  const bar = document.getElementById("contentTabs");
+  if (!bar) return;
+  bar.querySelectorAll(".tab").forEach((btn) => {
+    btn.type = "button";
+    btn.addEventListener("click", () => setView(btn.dataset.view));
+  });
+}
