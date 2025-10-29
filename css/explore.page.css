@@ -452,7 +452,8 @@ body.is-auth .auth-guest {
   justify-content: space-between;
   align-items: center;
   margin-top: 64px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 .p-footer-down {
