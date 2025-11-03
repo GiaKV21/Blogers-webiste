@@ -5,8 +5,27 @@
 }
 
 .wrapper{
-  max-width: 1141px;
+  max-width: 1140px;
   margin: 75px auto 150px;
+}
+
+.main-wrapper{
+  max-width: 1252px;
+  margin: 75px auto 150px;
+}
+
+.about-slider-wrapper{
+  max-width: 1314px;
+  margin: 75px auto 150px;
+}
+
+.active-link {
+  font-weight: 700;
+}
+
+.footer-right a.a-nav.active-link,
+.footer-right a.a-FAQ-nav.active-link {
+  font-weight: 700;
 }
 
 .start {
@@ -890,15 +909,12 @@ input.error {
 
 /* Slider Section */
 
-.main-wrapper{
-  margin: 75px auto 150px;
-}
-
 .slider-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding: 0 56px;
 }
 
 .slider-section-title {
@@ -911,7 +927,10 @@ input.error {
 }
 
 .slider-container {
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  gap: 36px;
 }
 
 .slider-track {
@@ -1009,15 +1028,15 @@ input.error {
 }
 
 .slider-btn {
-  position: absolute;
-  top: 45%;
+  /* position: absolute;
+  top: 45%; */
   cursor: pointer;
   border: transparent;
   background: transparent;
 }
 
-.slider-btn.prev { left: -65px; }
-.slider-btn.next { right: -65px; }
+/* .slider-btn.prev { left: -65px; }
+.slider-btn.next { right: -65px; } */
 
 /* პიროვნებები */
 
@@ -1194,7 +1213,9 @@ input.error {
 }
 
 .slider-container-about {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 65px;
 }
 
 .slider-track-about {

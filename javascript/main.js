@@ -1,3 +1,23 @@
+// ფერის ცვლა
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname.replace(/\/$/, "");
+
+  const selectors = [
+    ".header-ul li a",
+    ".footer-ul li a"
+  ];
+
+  selectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(link => {
+      const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+      if (linkPath === currentPath) {
+        link.classList.add("active-link");
+      }
+    });
+  });
+});
+
 // სლაიდერი
 
 document.querySelectorAll('.slider-container').forEach(container => {
@@ -10,8 +30,21 @@ document.querySelectorAll('.slider-container').forEach(container => {
   let isAnimating = false;
 
   function updateArrows() {
-    prevBtn.style.display = startIndex > 0 ? "block" : "none";
-    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+    if (startIndex > 0) {
+      prevBtn.style.opacity = "1";
+      prevBtn.style.pointerEvents = "auto";
+    } else {
+      prevBtn.style.opacity = "0";
+      prevBtn.style.pointerEvents = "none";
+    }
+
+    if (startIndex + visible < cards.length) {
+      nextBtn.style.opacity = "1";
+      nextBtn.style.pointerEvents = "auto";
+    } else {
+      nextBtn.style.opacity = "0";
+      nextBtn.style.pointerEvents = "none";
+    }
   }
 
   function showCards(newIndex) {
@@ -70,8 +103,21 @@ document.querySelectorAll('.slider-container-about').forEach(container => {
   let isAnimating = false;
 
   function updateArrows() {
-    prevBtn.style.display = startIndex > 0 ? "block" : "none";
-    nextBtn.style.display = startIndex + visible < cards.length ? "block" : "none";
+    if (startIndex > 0) {
+      prevBtn.style.opacity = "1";
+      prevBtn.style.pointerEvents = "auto";
+    } else {
+      prevBtn.style.opacity = "0";
+      prevBtn.style.pointerEvents = "none";
+    }
+
+    if (startIndex + visible < cards.length) {
+      nextBtn.style.opacity = "1";
+      nextBtn.style.pointerEvents = "auto";
+    } else {
+      nextBtn.style.opacity = "0";
+      nextBtn.style.pointerEvents = "none";
+    }
   }
 
   function showCards(newIndex) {

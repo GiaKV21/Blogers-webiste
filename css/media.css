@@ -1,3 +1,5 @@
+
+
 /* საიდბარი */
 @media (max-width: 425px) and (min-width: 320px) {
    
@@ -7,5 +9,17 @@
 
   .sidebar.open {
     left: 0;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 426px) {
+   .wrapper{
+    padding: 0px 20px
+  }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+   .wrapper{
+    padding: 0px 10px
   }
 }
