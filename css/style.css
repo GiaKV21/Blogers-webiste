@@ -36,17 +36,6 @@
   z-index: 10;
 }
 
-.rules-h1{
-  color: #191919;
-  font-size: 20px;
-  margin-bottom: 36px;
-  font-weight: 700;
-}
-
-.rules-wrapper{
-  margin: 0 auto 150px;
-}
-
 body{
   background-color: #FDFCF9;
 }
@@ -1144,7 +1133,7 @@ input.error {
 }
 
 .faq-container {
-  margin: 50px auto;
+  margin-top: 42px;
 }
 
 .faq-item {
@@ -1811,13 +1800,25 @@ input[type="file"] {
 
 /* წესები და პირობების რეკომენდაცია */
 
+.rules-h1{
+  color: #191919;
+  font-size: 20px;
+  margin-bottom: 36px;
+  font-weight: 700;
+}
+
+.rules-wrapper{
+  margin: 0 auto 150px;
+  font-size: 16px;
+}
+
 .recommendation{
   background-color: #F2F2F2;
-  height: 48px;
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 76px 0 56px;
+  margin: 76px auto 56px;
   font-size: 14px;
   font-weight: 500;
 }
