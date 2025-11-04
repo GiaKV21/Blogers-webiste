@@ -873,12 +873,11 @@ input.error {
 
 .hero {
   background: #E3E3E3;
-  padding: 195px 0 185px;
 }
 
-.hero-content {
-  max-width: 1140px;
-  margin: 0 auto;
+.hero-wrapper {
+  padding: 195px 0 185px;
+  margin: 0 auto 0;
 }
 
 .hero-title {
