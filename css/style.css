@@ -441,7 +441,7 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 28px;
 }
 
 .footer-logo-p{
@@ -451,7 +451,7 @@ header {
 }
 
 .footer-div-p{
-  width: 441px;
+  max-width: 441px;
   line-height: 28px;
   font-size: 16px;
   color: #FFFFFF;
@@ -470,8 +470,8 @@ header {
 }
 
 .footer-ul li{
-  color: #F8F8F8;
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-ul{
