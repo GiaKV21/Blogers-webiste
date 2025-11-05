@@ -482,9 +482,11 @@ header {
 
 .div-under{
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
+  gap: 10px;
 }
 
 .p-footer-down{
@@ -496,7 +498,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 /* რეგისტრაცი/შესვლა */
