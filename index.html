@@ -28,11 +28,42 @@
           <button id="searchToggle" class="search-toggle" aria-label="Search open">
             <img src="images/Magnifer.png" alt="" />
           </button>
+          <div id="overlay" class="overlay"></div>
+          <div id="searchDropdown" class="search-dropdown">
+            <div class="search-pill">
+              <span class="icon-gr">
+                <img src="images/Magnifer-gr.png" alt="icon" />
+              </span>
+              <input
+                id="theSearchInput"
+                type="search"
+                placeholder="მოძებნე სახელი ან ავტორი"
+              />
+              <div class="right-controls">
+                <div class="filter-dropdown" id="filterDropdown">
+                  <img src="images/arrow-gray.png" alt="arrow" class="dropdown-arrow" />
+                </div>
+
+                <div class="filter-options" id="filterOptions">
+                  <button class="chip active" type="button" data-filter="sakithxavi">საკითხავი</button>
+                  <button class="chip" type="button" data-filter="avtori">ავტორი</button>
+                </div>
+              </div>
+            </div>
+            <button id="searchSubmit" class="search-submit" type="button">
+              ძებნა
+            </button>
+          </div>
           <button class="notification" id="notificationBtn">
             <img src="images/Bell.png" alt="" />
           </button>
           <div id="notification-modal" class="notification-modal hidden">
-            <h3 class="notif-title">ცნობის ფურცელი</h3>
+            <div class="h3-button-notif">
+              <h3 class="notif-title">ცნობის ფურცელი</h3>
+              <button class="close-notif">
+                <img src="images/Close Circle.png">
+              </button>
+            </div>
             <div class="notif-list">
 
               <a href="#"class="notif-item">
@@ -109,30 +140,6 @@
           <a class="" href="enter.html"> შესვლა </a>
         </div>
       </div>
-      <div id="overlay" class="overlay"></div>
-      <div id="searchDropdown" class="search-dropdown">
-        <div class="search-pill">
-          <span class="icon-gr">
-            <img src="images/Magnifer-gr.png" alt="icon" />
-          </span>
-          <input
-            id="theSearchInput"
-            type="search"
-            placeholder="მოძებნე სახელი ან ავტორი"
-          />
-          <div class="right-controls">
-            <button class="chip active" type="button" data-filter="sakithxavi">
-              საკითხავი
-            </button>
-            <button class="chip" type="button" data-filter="avtori">
-              ავტორი
-            </button>
-          </div>
-        </div>
-        <button id="searchSubmit" class="search-submit" type="button">
-          ძებნა
-        </button>
-      </div>
     </header>
 
     <aside class="sidebar">
@@ -159,7 +166,7 @@
       </div>
     </aside>
 
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="hero-wrapper wrapper">
         <h1 class="hero-title">აქციე სიტყვა გამოცდილებად</h1>
         <p class="hero-text">
@@ -658,6 +665,6 @@
           </div>
           <p class="p-footer-down">© 2025 „საკითხავი“. ყველა უფლება დაცულია.</p>
         </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

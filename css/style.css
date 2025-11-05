@@ -106,6 +106,9 @@ header {
   cursor: pointer;
 }
 
+
+/* სერჩი */
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -169,7 +172,15 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 12px;
+}
+
+.filter-dropdown {
+  display: none;
+}
+
+.filter-options {
+  display: flex;
+  gap: 4px;
 }
 
 .chip {
@@ -209,8 +220,8 @@ header {
 
 .user-modal {
   position: absolute;
-  top: 84px; 
-  right: 40px;
+  top: 84px;
+  right: 50px;
   background-color: #FDFCF9;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -295,7 +306,7 @@ header {
 .notification-modal {
   position: absolute;
   top: 84px;
-  right: 90px;
+  right: 50px;
   background-color: #FDFCF9;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -306,18 +317,34 @@ header {
   max-height: 368px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 6.5px;
 }
 
 .notification-modal.hidden {
   display: none;
 }
 
+.h3-button-notif{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid #D7D7D7;
+  padding: 20px 20px 16px 20px;
+}
+
 .notif-title {
   font-size: 16px;
   font-weight: 700;
   color: #191919;
-  padding: 20px 0 16px 20px;
-  border-bottom: 0.5px solid #D7D7D7;
+}
+
+.close-notif{
+  background: transparent;
+  cursor: pointer;
+  border: transparent;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .notif-list {
@@ -326,18 +353,18 @@ header {
 }
 
 .not-p{
-  font-size: 13px;
+  font-size: 14px;
   color: #191919;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .not-what{
-  font-size: 12px;
+  font-size: 14px;
   color: #191919;
-  font-weight: 500;
+  font-weight: 400;
 }
 .not-time {
-  font-size: 10px;
+  font-size: 12px;
   color: #ACACAC;
 }
 
@@ -351,7 +378,7 @@ header {
 }
 
 .notif-item:hover{
-  background-color: pink;
+  background-color: #F8F8F8;
 }
 
 .notif-item:last-child {
@@ -407,7 +434,7 @@ header {
   display: flex;
   gap: 8px;
   align-items: center;
-  padding: 20px 45px 20px 16px;
+  padding: 18px 45px 18px 16px;
   border-bottom: 0.5px solid #D7D7D7;
 }
 

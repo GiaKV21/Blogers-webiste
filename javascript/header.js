@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById('overlay');
   const input = document.getElementById('theSearchInput');
   const submit = document.getElementById('searchSubmit');
+  const filterDropdown = document.getElementById('filterDropdown');
+  const filterOptions = document.getElementById('filterOptions');
+  const chips = document.querySelectorAll('.chip');
 
   function openSearch() {
     dropdown.classList.add('open');
@@ -18,40 +21,69 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove('visible');
   }
 
-  toggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (dropdown.classList.contains('open')) {
-      closeSearch();
-    } else {
-      openSearch();
-    }
-  });
+  if (toggle) {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+      overlay.classList.toggle('visible');
+      if (dropdown.classList.contains('open')) {
+        setTimeout(() => input.focus(), 200);
+      }
+    });
+  }
 
-  overlay.addEventListener('click', closeSearch);
+  if (overlay) {
+    overlay.addEventListener('click', closeSearch);
+  }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape") closeSearch();
+  });
+
+  if (submit) {
+    submit.addEventListener('click', () => {
+      console.log("Searching:", input.value);
       closeSearch();
-    }
-  });
+    });
+  }
 
-  submit.addEventListener('click', () => {
-    console.log("Searching:", input.value);
-    closeSearch();
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const chips = document.querySelectorAll(".chip");
+  if (input) {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        console.log("Searching:", input.value);
+        closeSearch();
+      }
+    });
+  }
 
   chips.forEach(chip => {
     chip.addEventListener("click", () => {
       chips.forEach(c => c.classList.remove("active"));
       chip.classList.add("active");
-
       console.log("Selected filter:", chip.dataset.filter);
     });
   });
+
+  if (filterDropdown && filterOptions) {
+
+    filterDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+      filterOptions.classList.toggle("open");
+      filterDropdown.classList.toggle("open");
+    });
+
+    filterOptions.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!filterDropdown.contains(e.target) && !filterOptions.contains(e.target)) {
+        filterOptions.classList.remove("open");
+        filterDropdown.classList.remove("open");
+      }
+    });
+  }
 });
 
 // შეტყობინებების მოდალი
@@ -59,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('DOMContentLoaded', () => {
   const notifBtn = document.getElementById('notificationBtn');
   const notifModal = document.getElementById('notification-modal');
+  const closeNotif = document.querySelector('.close-notif');
 
   if (notifBtn && notifModal) {
     notifBtn.addEventListener('click', () => {
@@ -66,7 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('click', (event) => {
-      if (!notifBtn.contains(event.target) && !notifModal.contains(event.target)) {
+      if (
+        !notifBtn.contains(event.target) &&
+        !notifModal.contains(event.target)
+      ) {
         notifModal.classList.add('hidden');
       }
     });
@@ -76,9 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
         notifModal.classList.add('hidden');
       }
     });
+
+    if (closeNotif) {
+      closeNotif.addEventListener('click', () => {
+        notifModal.classList.add('hidden');
+      });
+    }
   }
 });
-
 
 // უზერ მოდალი
 
