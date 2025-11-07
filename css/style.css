@@ -13,11 +13,6 @@
   margin: 114px auto 150px;
 }
 
-.about-slider-wrapper{
-  max-width: 1314px;
-  margin: 75px auto 150px;
-}
-
 .active-link {
   font-weight: 700;
 }
@@ -1215,17 +1210,30 @@ input.error {
 
 /* ჩვენს შესახებ */
 
+.slider-dots-about{
+  display: none;
+}
+
 .about-wrapper{
   margin: 150px auto 56px;
 }
 
-.slider-section{
+.about-slider-wrapper{
+  max-width: 1314px;
   margin: 0px auto 150px;
 }
 
 .about-h1{
   font-size: 32px;
   margin-bottom: 42px;
+}
+
+.h2-about{
+  font-size: 24px;
+  font-weight: 700;
+  color: #191919;
+  padding-left: 87px;
+  margin-bottom: 20px;
 }
 
 .about-p{
@@ -1263,6 +1271,8 @@ input.error {
   background-color: #FAFAFA;
   padding: 36px 24px;
   border-radius: 8px;
+  max-width: 367px;
+  width: 100%;
 }
 
 .slider-div-about{

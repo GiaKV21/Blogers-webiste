@@ -208,31 +208,29 @@ document.querySelectorAll('.slider-container-about').forEach(container => {
   const cards = Array.from(container.querySelectorAll('.slider-card-about'));
   const prevBtn = container.querySelector('.slider-btn.prev');
   const nextBtn = container.querySelector('.slider-btn.next');
-
-  const visible = 3;
+  const dotsContainer = container.parentElement.querySelector('.slider-dots-about');
+  let dots = [];
   let startIndex = 0;
   let isAnimating = false;
 
+  const visible = 3;
+
   function updateArrows() {
-    if (startIndex > 0) {
-      prevBtn.style.opacity = "1";
-      prevBtn.style.pointerEvents = "auto";
+    if (window.innerWidth >= 769) {
+      prevBtn.style.opacity = startIndex > 0 ? "1" : "0";
+      prevBtn.style.pointerEvents = startIndex > 0 ? "auto" : "none";
+      nextBtn.style.opacity = (startIndex + visible < cards.length) ? "1" : "0";
+      nextBtn.style.pointerEvents = (startIndex + visible < cards.length) ? "auto" : "none";
     } else {
       prevBtn.style.opacity = "0";
       prevBtn.style.pointerEvents = "none";
-    }
-
-    if (startIndex + visible < cards.length) {
-      nextBtn.style.opacity = "1";
-      nextBtn.style.pointerEvents = "auto";
-    } else {
       nextBtn.style.opacity = "0";
       nextBtn.style.pointerEvents = "none";
     }
   }
 
   function showCards(newIndex) {
-    if (isAnimating) return;
+    if (window.innerWidth < 769 || isAnimating) return;
     isAnimating = true;
 
     const currentCards = cards.slice(startIndex, startIndex + visible);
@@ -256,23 +254,100 @@ document.querySelectorAll('.slider-container-about').forEach(container => {
   }
 
   nextBtn.addEventListener('click', () => {
-    if (startIndex + visible < cards.length) {
-      showCards(startIndex + visible);
-    }
+    if (startIndex + visible < cards.length) showCards(startIndex + visible);
   });
 
   prevBtn.addEventListener('click', () => {
-    if (startIndex - visible >= 0) {
-      showCards(startIndex - visible);
-    }
+    if (startIndex - visible >= 0) showCards(startIndex - visible);
   });
 
-  cards.slice(0, visible).forEach(c => {
-    c.style.display = "block";
-    c.style.opacity = "1";
-  });
+  // საწყისი ჩვენება
+  if (window.innerWidth >= 769) {
+    cards.forEach((c, i) => {
+      c.style.display = i < visible ? "block" : "none";
+      c.style.opacity = i < visible ? "1" : "0";
+    });
+  } else {
+    cards.forEach(c => {
+      c.style.display = "block";
+      c.style.opacity = "1";
+    });
+  }
 
   updateArrows();
+
+  window.addEventListener('resize', () => {
+    startIndex = 0;
+    if (window.innerWidth >= 769) {
+      cards.forEach(c => c.style.display = "none");
+      cards.slice(0, visible).forEach(c => {
+        c.style.display = "block";
+        c.style.opacity = "1";
+      });
+    } else {
+      cards.forEach(c => {
+        c.style.display = "block";
+        c.style.opacity = "1";
+      });
+    }
+    updateArrows();
+    if (window.innerWidth <= 768) createDots();
+    else dotsContainer.innerHTML = '';
+  });
+
+  // Swipe მობილურზე
+  let isDown = false, startX, scrollLeft;
+  const sliderContainer = container;
+
+  sliderContainer.addEventListener('mousedown', e => {
+    if (window.innerWidth > 768) return;
+    isDown = true;
+    startX = e.pageX - sliderContainer.offsetLeft;
+    scrollLeft = sliderContainer.scrollLeft;
+  });
+
+  sliderContainer.addEventListener('mouseleave', () => isDown = false);
+  sliderContainer.addEventListener('mouseup', () => isDown = false);
+  sliderContainer.addEventListener('mousemove', e => {
+    if (!isDown || window.innerWidth > 768) return;
+    e.preventDefault();
+    const x = e.pageX - sliderContainer.offsetLeft;
+    sliderContainer.scrollLeft = scrollLeft - (x - startX);
+  });
+
+  // მობილური წერტილები
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    dots = cards.map((_, i) => {
+      const dot = document.createElement('div');
+      dot.classList.add('slider-dot');
+      if (i === 0) dot.classList.add('active');
+      dotsContainer.appendChild(dot);
+
+      dot.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          const targetLeft = cards[i].offsetLeft - sliderContainer.offsetLeft;
+          sliderContainer.scrollTo({ left: targetLeft, behavior: 'smooth' });
+        }
+      });
+
+      return dot;
+    });
+  }
+
+  function updateDotsByScroll() {
+    if (window.innerWidth > 768) return;
+    const scrollLeft = sliderContainer.scrollLeft;
+    const cardWidth = cards[0].offsetWidth + 16;
+    const maxScroll = sliderContainer.scrollWidth - sliderContainer.clientWidth;
+
+    let index = scrollLeft + 10 >= maxScroll ? cards.length - 1 : Math.round(scrollLeft / cardWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }
+
+  sliderContainer.addEventListener('scroll', updateDotsByScroll);
+
+  if (window.innerWidth <= 768) createDots();
 });
 
 // რეგისტაცია
