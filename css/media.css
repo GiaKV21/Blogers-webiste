@@ -11,7 +11,7 @@
   }
 }
 
-@media (max-width: 1160px) and (min-width: 426px) {
+@media (max-width: 1172px) and (min-width: 426px) {
   .wrapper{
     padding: 0px 32px;
   }
@@ -361,6 +361,7 @@
 @media (max-width: 768px) and (min-width: 320px) {
   .hero-text{
     font-size: 14px;
+    width: 290px;
   }
 
   .hero-button {
@@ -371,5 +372,275 @@
 
   .hero-title{
     font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .slider-section-title {
+    font-size: 20px;
+  }
+
+  .a-slider{
+    font-size: 13px;
+  }
+
+  .card-description{
+    padding-top: 16px;
+  }
+
+  .slider-card-tag {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .img-user{
+    width: 17px;
+    height: 17px;
+  }
+
+  .slider-card-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .slider-card-text {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .slider-card-meta {
+    font-size: 13px;
+  }
+
+  .span-images{
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .profile-img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .autor-p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1311px) and (min-width: 1251px) {
+  .slider-container {
+    gap: 50px;
+  }
+
+  .slider-section-header {
+    padding: 0 69px;
+  }
+}
+
+@media (max-width: 1250px) and (min-width: 1201px) {
+  .slider-container {
+    gap: 45px;
+  }
+
+  .slider-section-header {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 1201px) and (min-width: 1151px) {
+  .slider-container {
+    gap: 40px;
+  }
+
+  .slider-section-header {
+    padding: 0 59px;
+  }
+}
+
+@media (max-width: 1150px) and (min-width: 1101px) {
+  .slider-container {
+    gap: 35px;
+  }
+
+  .slider-section-header {
+    padding: 0 54px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 1051px) {
+  .slider-container {
+    gap: 30px;
+  }
+
+  .slider-section-header {
+    padding: 0 49px;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 1001px) {
+  .slider-container {
+    gap: 25px;
+  }
+
+  .slider-section-header {
+    padding: 0 44px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 951px) {
+  .slider-container {
+    gap: 20px;
+  }
+
+  .slider-section-header {
+    padding: 0 39px;
+  }
+}
+
+@media (max-width: 951px) and (min-width: 901px) {
+  .slider-container {
+    gap: 15px;
+  }
+
+  .slider-section-header {
+    padding: 0 34px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 874px) {
+  .slider-container {
+    gap: 10px;
+  }
+
+  .slider-section-header {
+    padding: 0 29px;
+  }
+}
+
+@media (max-width: 1318px) and (min-width: 769px) {
+  .main-wrapper{
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  .main-wrapper{
+    margin: 24px auto 36px;
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+  .main-wrapper{
+    margin: 24px auto 36px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .slider-section-header {
+    margin-bottom: 12px;
+    padding: 0 0px;
+  }
+  
+  .slider-section-title {
+    font-size: 16px;
+  }
+
+  .a-slider{
+    font-size: 12px;
+  }
+
+  .slider-card {
+    max-width: 300px;
+  }
+
+  .slider-card-cover {
+    max-width: 300px;
+    max-height: 170px;
+  }
+
+  .card-description{
+    padding-top: 12px;
+  }
+
+  .slider-card-tag {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .img-user{
+    width: 14px;
+    height: 14px;
+  }
+
+  .slider-card-title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .slider-card-text {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .slider-card-meta {
+    font-size: 12px;
+  }
+
+  .span-images{
+    font-size: 12px;
+  }
+
+  .card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .profile-img{
+    width: 96px;
+    height: 96px;
+  }
+
+  .autor-p{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .slider-btn {
+    display: none;
+  }
+
+  .slider-container {
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .slider-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .slider-card {
+    flex: 0 0 auto;
+    display: block;
+    opacity: 1;
+  }
+
+  .slider-dots {
+    display: flex;
   }
 }

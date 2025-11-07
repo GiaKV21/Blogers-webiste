@@ -9,11 +9,6 @@
   margin: 75px auto 150px;
 }
 
-.main-wrapper{
-  max-width: 1252px;
-  margin: 75px auto 150px;
-}
-
 .more-wrapper{
   margin: 114px auto 150px;
 }
@@ -921,7 +916,7 @@ input.error {
   width: 200px;
   height: 49px;
   gap: 5px;
-  font-size: 16px;
+  font-size: 14px;
   background: #282624;
   color: #FFFFFF;
   border-radius: 8px;
@@ -930,12 +925,36 @@ input.error {
 
 /* Slider Section */
 
+.slider-dots {
+  display: none;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+.slider-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #D7D7D7;
+  border-radius: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+  background-color: #191919;
+}
+
+.main-wrapper{
+  max-width: 1308px;
+  margin: 75px auto 150px;
+}
+
 .slider-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding: 0 56px;
+  padding: 0 84px;
 }
 
 .slider-section-title {
@@ -951,7 +970,7 @@ input.error {
   /* position: relative; */
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 65px;
 }
 
 .slider-track {
@@ -975,6 +994,7 @@ input.error {
 .slider-card-cover {
   max-width: 367px;
   width: 100%;
+  max-height: 207px;
   border-radius: 8px;
 }
 
@@ -985,7 +1005,7 @@ input.error {
 .slider-card-tag {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-size: 16px;
   margin-bottom: 14px;
 }
