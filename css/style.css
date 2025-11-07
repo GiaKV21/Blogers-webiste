@@ -919,7 +919,7 @@ input.error {
   align-items: center;
   justify-content: center;
   width: 200px;
-  padding: 16px 0;
+  height: 49px;
   gap: 5px;
   font-size: 16px;
   background: #282624;

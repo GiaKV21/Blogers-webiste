@@ -331,3 +331,45 @@
     font-size: 12px;
   }
 }
+
+/* მთავარი გვერდი */
+
+@media (max-width: 1160px) and (min-width: 1025px) {
+  .hero-wrapper {
+    padding: 195px 32px 185px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-wrapper {
+    padding: 150px 32px 100px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  .hero-wrapper {
+    padding: 104px 32px 73px;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+  .hero-wrapper {
+    padding: 104px 16px 73px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .hero-text{
+    font-size: 14px;
+  }
+
+  .hero-button {
+    width: 144px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .hero-title{
+    font-size: 16px;
+  }
+}
