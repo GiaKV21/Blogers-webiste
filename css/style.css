@@ -1906,6 +1906,7 @@ input[type="file"] {
   gap: 6px;
   cursor: pointer;
   border: 1px solid #ACACAC;
+  background-color: #FDFCF9;
   padding: 18px 21px;
   color: #191919;
   font-size: 14px;
