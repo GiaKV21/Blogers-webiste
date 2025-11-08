@@ -548,15 +548,6 @@
     font-size: 12px;
   }
 
-  .slider-card {
-    max-width: 300px;
-  }
-
-  .slider-card-cover {
-    max-width: 300px;
-    max-height: 170px;
-  }
-
   .card-description{
     padding-top: 12px;
   }
@@ -934,5 +925,101 @@
 
   .password-wrapper-settings{
     max-width: 410px;
+  }
+}
+
+/* მომხმარებლის პროფილი */
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .user-wrapper{
+    margin: 88px auto 20px;
+  }
+
+  .img-user-inner{
+    width: 80px;
+    height: 80px;
+  }
+
+  .h1-user{
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .user-p{
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .a-user-link{
+    margin-bottom: 4px;
+  }
+
+  .div-user-info{
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .nav-user {
+    padding: 20px 0;
+    gap: 16px;
+    margin: 20px 0 20px;
+    overflow-x: auto; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .div-create{
+    min-height: 170px;
+  }
+
+  .h2-user{
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .user-add-icon{
+    width: 46px;
+    height: 46px;
+  }
+
+  .h3-create{
+    font-size: 14px;
+    margin-top: 0px;
+  }
+
+  .p-create{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1172px) and (min-width: 320px) {
+  .div-reader{
+    justify-content: center;
+  }
+
+  .div-work{
+    justify-content: center;
+  }
+
+  .div-road{
+    justify-content: center;
+  }
+
+  .div-saved{
+    justify-content: center;
+  }
+
+  .div-liked{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+  .div-user-info{
+    flex-direction: column;
+  }
+
+  .dot-user{
+    display: none;
   }
 }
