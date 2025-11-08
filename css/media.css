@@ -11,18 +11,11 @@
   }
 }
 
-@media (max-width: 1172px) and (min-width: 426px) {
-  .wrapper{
-    padding: 0px 32px;
-  }
-}
-
-@media (max-width: 425px) and (min-width: 320px) {
+@media (max-width: 1172px) and (min-width: 320px) {
   .wrapper{
     padding: 0px 16px;
   }
 }
-
 
 /* საიდბარი */
 @media (max-width: 768px) and (min-width: 320px) {
@@ -834,5 +827,112 @@
     justify-content: center;
     margin-top: 2px;
     gap: 4px;
+  }
+}
+
+/* პარამეტრები */
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .settings-wrapper{
+    margin: 87px auto 44px;
+  }
+
+  .h1-settings{
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .settings-container {
+    flex-direction: column;
+  }
+
+  .settings-sidebar {
+    flex-direction: row;
+  }
+
+  .divider-setting {
+    width: 100%;
+    height: 1px;
+    margin: 16px 0 20px;
+  }
+
+  .avatar-box {
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .avatar-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .avatar-edit-icon {
+    padding: 6px;
+  }
+
+  .label-user{
+    font-size: 12px;
+  }
+
+  .div-profile{
+    gap: 4px;
+  }
+
+  .div-password-settings{
+    gap: 34px;
+  }
+
+  .delete-settings{
+    font-size: 14px;
+    margin-top: 57px;
+  }
+
+  .modal-content {
+    padding: 36px 30px;
+  }
+
+  .modal-text {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .modal-text-2{
+    font-size: 12px;
+    margin: 12px 0px 20px;
+  }
+
+  .btn-delete {
+    width: 120px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .btn-primary-delete {
+    width: 120px;
+    height: 36px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+  .div-profile-flex{
+    justify-content: flex-start;
+    gap: 4px;
+    flex-direction: column;
+  }
+
+  .div-profile{
+    max-width: 410px;
+  }
+
+  .actions {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .password-wrapper-settings{
+    max-width: 410px;
   }
 }

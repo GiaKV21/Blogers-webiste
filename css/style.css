@@ -1405,7 +1405,7 @@ input.error {
 .div-password-settings{
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 38px;
 }
 
 .form-group {
@@ -1606,6 +1606,29 @@ input[type="file"] {
   border: transparent;
   cursor: pointer;
   margin-top: 78px;
+}
+
+.btn-delete {
+  border: 1px solid #ACACAC;
+  width: 180px;
+  height: 49px;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #FDFCF9;
+  cursor: pointer;
+}
+
+.btn-primary-delete {
+  background: #191919;
+  width: 180px;
+  height: 49px;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
 }
 
 /* ანგარიშის წაშლი მოდალი */
