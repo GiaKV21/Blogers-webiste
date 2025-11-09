@@ -737,7 +737,6 @@ input.error {
 .section-password {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
 }
 
 .password-container {
@@ -780,7 +779,6 @@ input.error {
 .email-input {
   width: 100%;
   padding: 16px;
-  margin-top: 8px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   font-size: 14px;
@@ -798,7 +796,7 @@ input.error {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 14px;
   text-decoration: none;
   display: inline-block;
   font-weight: 700;
@@ -810,7 +808,7 @@ input.error {
 
 .back-link {
   display: block;
-  margin-top: 36px;
+  margin-top: 44px;
   font-size: 14px;
   color: #565656;
   text-decoration: none;
