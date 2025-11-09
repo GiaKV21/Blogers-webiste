@@ -811,6 +811,7 @@
 
   .slider-card-about {
     min-width: 300px;
+    max-width: 367px;
   }
 
   .slider-dots-about {

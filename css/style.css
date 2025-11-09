@@ -808,7 +808,7 @@ input.error {
 
 .back-link {
   display: block;
-  margin-top: 44px;
+  margin-top: 36px;
   font-size: 14px;
   color: #565656;
   text-decoration: none;
@@ -1260,7 +1260,6 @@ input.error {
   background-color: #FAFAFA;
   padding: 36px 24px;
   border-radius: 8px;
-  max-width: 367px;
   width: 100%;
 }
 
