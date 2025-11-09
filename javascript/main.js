@@ -363,7 +363,7 @@ function switchTab(tab) {
   } else if (tab === 'register') {
     document.getElementById('registerForm').classList.add('active');
     document.querySelectorAll('.tab')[1].classList.add('active');
-    document.getElementById('formTitle').textContent = "შენი ამბავი იწყება აქ!";
+    document.getElementById('formTitle').textContent = "კეთილი იყოს შენი კალამი!";
   } else if (tab === 'reset') {
     document.getElementById('resetForm').classList.add('active');
     document.getElementById('formTitle').textContent = "პაროლის აღდგენა";
@@ -377,6 +377,8 @@ document.querySelectorAll('.toggle-password').forEach(icon => {
   });
 });
 
+// შესვლის ვალიდაციები
+
 function login(event) {
   event.preventDefault();
 
@@ -387,7 +389,7 @@ function login(event) {
   email.classList.add("error");
   password.classList.add("error");
 
-  errorMessage.innerHTML = '<img src="images/Danger Triangle.png" alt="!" class="error-icon"> არასწორია ელფოსტა ან პაროლი';
+  errorMessage.innerHTML = 'არასწორია ელფოსტა ან პაროლი';
   errorMessage.style.display = "flex";
 
   return false;
@@ -413,7 +415,7 @@ function registerUser(event) {
   // სახელი, გვარი
   if (fullName.value.trim() === "") {
     fullName.classList.add("error");
-    fullNameError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> ეს ველი სავალდებულოა`;
+    fullNameError.innerHTML = `ეს ველი სავალდებულოა`;
     fullNameError.style.display = "flex";
     isValid = false;
   } else {
@@ -424,7 +426,7 @@ function registerUser(event) {
   // ელფოსტა
   if (email.value.trim() === "") {
     email.classList.add("error");
-    emailError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> ეს ველი სავალდებულოა`;
+    emailError.innerHTML = `ეს ველი სავალდებულოა`;
     emailError.style.display = "flex";
     isValid = false;
   } else {
@@ -435,7 +437,7 @@ function registerUser(event) {
   // პაროლი
   if (password.value.trim().length < 6) {
     password.classList.add("error");
-    passwordError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> პაროლი უნდა მოიცავდეს მინიმუმ 6 სიმბოლოს`;
+    passwordError.innerHTML = `პაროლი უნდა მოიცავდეს მინიმუმ 6 სიმბოლოს`;
     passwordError.style.display = "flex";
     isValid = false;
   } else {
@@ -445,7 +447,7 @@ function registerUser(event) {
 
   // წესები და პირობები
   if (!terms.checked) {
-    termsError.innerHTML = `<img src="images/Danger Triangle.png" alt="!" class="error-icon"> გთხოვთ დაეთანხმოთ წესებს და პირობებს`;
+    termsError.innerHTML = `გთხოვთ დაეთანხმოთ წესებს და პირობებს`;
     termsError.style.display = "flex";
     isValid = false;
   } else {

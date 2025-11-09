@@ -521,23 +521,17 @@ header {
 /* რეგისტრაცი/შესვლა */
 
 .enter-header{
-  position: absolute;
-  padding-left: 72px;
-  padding-top: 24px;
   border-bottom: none;
+  background-color: transparent;
 }
 
 .enter-footer{
-  position: absolute;
-  padding-left: 74px;
   font-size: 14px;
-  bottom: 24px;
 }
 
 .enter-section{
   display: flex;
   justify-content: center;
-  margin: 100px 0 124px;
 }
 
 .container {
@@ -554,7 +548,7 @@ header {
 
 .tabs {
   display: flex;
-  margin-bottom: 18px;
+  margin-bottom: 36px;
 }
 
 .tab {
@@ -579,14 +573,14 @@ header {
 }
 
 .form.active { 
-  display: flex; 
+  display: flex;
+  gap: 24px; 
 }
 
 .field {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: 12px 0;
 }
 
 .field input {
@@ -612,7 +606,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 label.inline {
@@ -631,7 +625,6 @@ label.aprove{
   gap: 4px;
   font-size: 14px;
   cursor: pointer;
-  margin: 10px 0;
   font-weight: 400;
 }
 
@@ -651,7 +644,6 @@ input[type="checkbox"] {
   border: 0;
   cursor: pointer;
   font-size: 14px;
-  margin-top: 8px;
   background: #282624;
   color: #FFFFFF;
   font-weight: 700;
@@ -673,7 +665,6 @@ input[type="checkbox"] {
 .divider {
   position: relative;
   text-align: center;
-  margin: 16px 0;
   color: rgba(40, 38, 36, 0.3);
   font-size: 12px;
 }
