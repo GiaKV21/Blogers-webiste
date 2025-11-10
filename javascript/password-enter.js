@@ -18,13 +18,6 @@ function switchTab(tab) {
   }
 }
 
-document.querySelectorAll('.toggle-password').forEach(icon => {
-  icon.addEventListener('click', () => {
-    const input = document.getElementById(icon.dataset.target);
-    input.type = input.type === "password" ? "text" : "password";
-  });
-});
-
 // შესვლის ვალიდაციები
 
 function login(event) {
@@ -131,3 +124,25 @@ function goToStep(step) {
     });
   });
 }
+
+// თვალის გახელა დახუჭვა
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('click', (e) => {
+    const icon = e.target.closest('.toggle-password');
+    if (!icon) return;
+
+    const targetId = (icon.dataset.target || '').trim();
+    const input = document.getElementById(targetId);
+    if (!input) return;
+
+    const showing = input.type === 'text';
+    input.type = showing ? 'password' : 'text';
+
+    const openSrc = 'images/Eye.png';
+    const closedSrc = 'images/Eye Closed.png';
+    icon.src = showing ? closedSrc : openSrc;
+
+    icon.setAttribute('aria-pressed', showing ? 'false' : 'true');
+    icon.setAttribute('title', showing ? 'პაროლის ჩვენება' : 'პაროლის დამალვა');
+  });
+});

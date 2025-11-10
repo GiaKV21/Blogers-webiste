@@ -15,7 +15,7 @@
   .header-ul{
   display: none;
   }
-  
+
   .menu-toggle {
     display: flex;
   }
@@ -143,7 +143,7 @@
   }
 
   .li-user{
-    padding: 14px 0;
+    padding: 14px;
   }
 }
 
