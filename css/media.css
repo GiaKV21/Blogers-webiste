@@ -292,9 +292,9 @@
   }
 }
 
-@media (max-width: 800px) and (min-width: 644px) {
-  .footer-nav-logo{
-    justify-content: flex-start;
+@media (max-width: 800px) and (min-width: 320px) {
+  .footer-div-p{
+    max-width: 704px;
   }
 }
 
@@ -622,6 +622,7 @@
     flex: 0 0 auto;
     display: block;
     opacity: 1;
+    max-width: 300px;
   }
 
   .slider-dots {
@@ -1026,11 +1027,7 @@
 }
 
 @media (max-width: 425px) and (min-width: 320px) {
-  .div-user-info{
-    flex-direction: column;
-  }
-
-  .dot-user{
+  .user-hide-media{
     display: none;
   }
 }
