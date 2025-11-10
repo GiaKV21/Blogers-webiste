@@ -554,15 +554,31 @@ header {
 .enter-header{
   border-bottom: none;
   background-color: transparent;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 24px 0 0 72px;
+  z-index: 1000;
 }
 
 .enter-footer{
   font-size: 14px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0 0 24px 72px;
+  font-size: 14px;
+  z-index: 1000;
 }
 
 .enter-section{
   display: flex;
   justify-content: center;
+  padding: 100px 0 0px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .container {
@@ -768,6 +784,9 @@ input.error {
 .section-password {
   display: flex;
   justify-content: center;
+  padding: 145px 0 0px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .password-container {

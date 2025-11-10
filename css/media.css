@@ -1058,13 +1058,25 @@
   .tab {
     padding-bottom: 20px;
   }
+
+  .enter-header{
+    padding: 24px 0 0 16px;
+  }
+
+  .enter-footer{
+    padding: 0 0 16px 16px;
+  }
+
+  .enter-section{
+    padding: 117px 16px 0px;
+  }
 }
 
 /* პაროლის შეცვლა */
 
 @media (max-width: 376px) and (min-width: 320px) {
   .section-password {
-    padding: 0 16px;
+    padding: 117px 16px 0;
   }
 }
 
