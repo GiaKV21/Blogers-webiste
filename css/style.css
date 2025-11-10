@@ -1777,6 +1777,7 @@ input[type="file"] {
   background: #ACACAC;
   margin: 0 24px;
   border-radius: 0.5px;
+  flex-shrink: 0;
 }
 
 .nav-item {

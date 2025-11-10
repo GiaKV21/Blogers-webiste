@@ -966,6 +966,10 @@
     -ms-overflow-style: none;
   }
 
+  .divider-setting-user{
+    margin: 0 3px;
+  }
+
   .div-create{
     min-height: 170px;
   }
