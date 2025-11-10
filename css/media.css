@@ -4,13 +4,6 @@
   }
 }
 
-
-@media (max-width: 768px) and (min-width: 320px) {
-  .header-ul{
-  display: none;
-  }
-}
-
 @media (max-width: 1172px) and (min-width: 320px) {
   .wrapper{
     padding: 0px 16px;
@@ -19,7 +12,10 @@
 
 /* საიდბარი */
 @media (max-width: 768px) and (min-width: 320px) {
-   
+  .header-ul{
+  display: none;
+  }
+  
   .menu-toggle {
     display: flex;
   }
