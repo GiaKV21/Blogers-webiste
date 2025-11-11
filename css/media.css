@@ -924,6 +924,16 @@
   .password-wrapper-settings{
     max-width: 410px;
   }
+
+  .btn {
+    max-width: 191px;
+    height: 40px;
+  }
+
+  .btn-primary {
+    max-width: 191px;
+    height: 40px;
+  }
 }
 
 /* მომხმარებლის პროფილი */
