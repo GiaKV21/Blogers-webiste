@@ -28,6 +28,13 @@
   right: 37px;
   bottom: 400px;
   z-index: 10;
+  background-color: #191919;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 300px;
 }
 
 body{
@@ -1978,4 +1985,112 @@ input[type="file"] {
   margin: 76px auto 56px;
   font-size: 14px;
   font-weight: 500;
+}
+
+/* ავტორის გვერდი */
+
+.author-wrapper{
+  margin: 114px auto 150px;
+}
+
+.div-author{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.img-author-inner{
+  width: 89px;
+  height: 89px;
+  border-radius: 300px;
+  object-fit: cover;
+}
+
+.h1-author{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.author-p{
+  color: #313131;
+  font-size: 16px;
+  text-align: center;
+  max-width: 724px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.a-author-link{
+  font-size: 14px;
+  color: #1B7CDE;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.div-author-info{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #7B7B7B;
+  font-size: 14px;
+}
+
+.author-info{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-author {
+  border-top: 0.5px solid #ACACAC;
+  border-bottom: 1px solid #ACACAC;
+  padding: 26px 0;
+  display: flex;
+  gap: 24px;
+  margin: 42px 0 30px;
+}
+
+.nav-item {
+  cursor: pointer;
+  font-weight: 400;
+  color: #191919;
+  flex-shrink: 0;
+}
+
+.active {
+  color: #191919;
+  font-weight: 700;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.h2-author{
+  font-size: 24px;
+  font-weight: 700;
+  color: #191919;
+  margin-bottom: 20px;
+}
+
+.div-reader{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.div-about{
+  color: #191919;
+  font-size: 16px;
+  font-weight: 400;
 }

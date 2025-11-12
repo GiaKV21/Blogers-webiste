@@ -1,3 +1,22 @@
+// ფერის ცვლა
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname.replace(/\/$/, "");
+
+  const selectors = [
+    ".header-ul li a"
+  ];
+
+  selectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(link => {
+      const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+      if (linkPath === currentPath) {
+        link.classList.add("active-link");
+      }
+    });
+  });
+});
+
 // სერჩი
 
 document.addEventListener("DOMContentLoaded", () => {
