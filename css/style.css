@@ -903,8 +903,9 @@ input.error {
   font-size: 14px;
 }
 
-.email-input:focus { 
-  border-color: #c7cad1; 
+#youremail::placeholder,
+#newPassword::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .return-btn {
@@ -962,7 +963,7 @@ input.error {
 
 .password-field input {
   width: 100%;
-  padding: 12px 12px;
+  padding: 16px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   font-size: 14px;
@@ -983,6 +984,7 @@ input.error {
 .a-small-text{
   font-size: 16px;
   color: #000000;
+  cursor: pointer;
 }
 
 .hidden {
