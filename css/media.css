@@ -667,6 +667,13 @@
   }
 }
 
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .slider-card-about {
+    padding: 20px 10px;
+  }
+}
+
 @media (max-width: 1324px) and (min-width: 1301px) {
   .slider-container-about {
     gap: 60px;

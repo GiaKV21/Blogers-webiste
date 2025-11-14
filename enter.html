@@ -15,21 +15,21 @@
     </header>
     <section class="enter-section">
       <div class="container">
-        <h2 class="enter-reg" id="formTitle">კეთილი იყოს შენი კალამი!</h2>
+        <h2 class="enter-reg bold" id="formTitle">კეთილი იყოს შენი კალამი!</h2>
         <div class="tabs">
-          <button class="tab active" onclick="switchTab('login')">ავტორიზაცია</button>
-          <button class="tab" onclick="switchTab('register')">რეგისტრაცია</button>
+          <button class="bold tab active" onclick="switchTab('login')">ავტორიზაცია</button>
+          <button class="bold tab" onclick="switchTab('register')">რეგისტრაცია</button>
         </div>
-        <form id="loginForm" class="form active" onsubmit="return login(event)">
+        <form id="loginForm" class="regular form active" onsubmit="return login(event)">
           <div class="field">
             <h3>ელფოსტა</h3>
-            <input type="email" id="loginEmail" placeholder="შეიყვანე ელ-ფოსტა"/>
+            <input class="regular" type="email" id="loginEmail" placeholder="შეიყვანე ელ-ფოსტა"/>
             <small class="error-message"></small>
           </div>
           <div class="field">
             <h3>პაროლი</h3>
             <div class="password-wrapper">
-              <input type="password" id="loginPassword" placeholder="შეიყვანე პაროლი"/>
+              <input class="regular" type="password" id="loginPassword" placeholder="შეიყვანე პაროლი"/>
               <img src="images/Eye Closed.png" class="toggle-password" data-target="loginPassword" alt="Toggle password"/>
             </div>
             <div class="div-enter-flex">
@@ -37,45 +37,45 @@
               <p class="helper"><a href="password.html" onclick="switchTab('reset')">დაგავიწყდა პაროლი?</a></p>
             </div>
           </div>
-          <button type="submit" class="primary">შესვლა</button>
-          <div class="divider">ან</div>
-          <button type="button" class="google-btn">
+          <button type="submit" class="primary bold">შესვლა</button>
+          <div class="divider regular">ან</div>
+          <button type="button" class="google-btn bold">
             <img src="images/Google icon.png" alt="Google" />
             <span>Google-ით ავტორიზაცია</span>
           </button>
         </form>
 
-        <form id="registerForm" class="form" onsubmit="return registerUser(event)">
+        <form id="registerForm" class="form regular" onsubmit="return registerUser(event)">
           <div class="field">
             <h3>სახელი, გვარია</h3>
-            <input type="text"  id="fullName" placeholder="შეიყავნე სახელი და გვარი"/>
+            <input class="regular" type="text"  id="fullName" placeholder="შეიყავნე სახელი და გვარი"/>
             <small class="error-message"></small>
           </div>
           <div class="field">
             <h3>ელოსტა</h3>
-            <input type="email"  id="registerEmail" placeholder="შეიყვანე ელფოსტა"/>
+            <input class="regular" type="email"  id="registerEmail" placeholder="შეიყვანე ელფოსტა"/>
             <small class="error-message"></small>
           </div>
           <div class="field">
             <h3>პაროლი (6+ სიმბოლო)</h3>
             <div class="password-wrapper">
-              <input type="password" id="registerPassword" placeholder="შეიყვანე პაროლი"/>
+              <input class="regular" type="password" id="registerPassword" placeholder="შეიყვანე პაროლი"/>
               <img src="images/Eye Closed.png" class="toggle-password" data-target="registerPassword" alt="Toggle password"/>
             </div>
             <small class="error-message"></small>
           </div>
           <label class="aprove"><input type="checkbox" id="termsCheckbox"/> ვეთანხმები საკითხავის <a href="rules.html" class="span-aprove">წესებს და პირობებს</a></label>
           <small class="error-message"></small>
-          <button type="submit" class="primary">გაგრძელება</button>
-          <div class="divider">ან</div>
-          <button type="button" class="google-btn">
+          <button type="submit" class="primary bold">გაგრძელება</button>
+          <div class="divider regular">ან</div>
+          <button type="button" class="google-btn bold">
             <img src="images/Google icon.png" alt="Google" />
             <span>Google-ით რეგისტრაცია</span>
           </button>
         </form>
       </div>
     </section>
-    <footer class="enter-footer">
+    <footer class="enter-footer regular">
       <p>© 2025 „საკითხავი“. ყველა უფლება დაცულია.</p>
     </footer>
   </body>
