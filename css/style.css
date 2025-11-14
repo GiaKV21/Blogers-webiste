@@ -243,7 +243,6 @@ header {
   color: #C8C8C8;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 600;
   transition: all .2s;
 }
 
@@ -316,7 +315,6 @@ header {
 .user-name{
   font-size: 14px;
   color: #191919;
-  font-weight: 500;
 }
 
 .user-mail{
@@ -394,7 +392,6 @@ header {
 
 .notif-title {
   font-size: 16px;
-  font-weight: 700;
   color: #191919;
 }
 
@@ -434,10 +431,6 @@ header {
   padding: 8.5px 15px;
   transition: all 0.3s ease;
   background-color: #FDFCF9;
-}
-
-.notif-item:hover{
-  background-color: #F2F2F2;
 }
 
 .notif-item:last-child {
@@ -624,7 +617,6 @@ header {
 }
 
 .enter-footer{
-  font-size: 14px;
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -651,7 +643,6 @@ header {
   margin-bottom: 36px;
   font-size: 20px;
   text-align: center;
-  font-weight: 700;
 }
 
 .tabs {
@@ -702,7 +693,6 @@ header {
 
 .field h3{
   font-size: 14px;
-  font-weight: 400;
 }
 
 #loginEmail::placeholder,
@@ -731,7 +721,6 @@ label.inline {
   gap: 5px;
   font-size: 14px;
   cursor: pointer;
-  font-weight: 400;
 }
 
 label.aprove{
@@ -741,7 +730,6 @@ label.aprove{
   gap: 4px;
   font-size: 14px;
   cursor: pointer;
-  font-weight: 400;
 }
 
 .span-aprove{
@@ -762,7 +750,6 @@ input[type="checkbox"] {
   font-size: 14px;
   background: #282624;
   color: #FFFFFF;
-  font-weight: 700;
 }
 
 
@@ -775,7 +762,6 @@ input[type="checkbox"] {
   padding: 15px;
   border-radius: 8px;
   border: 1px solid #ACACAC;
-  font-weight: 700;
 }
 
 .divider {
@@ -813,7 +799,6 @@ input[type="checkbox"] {
   color: #1B7CDE; 
   text-decoration: none; 
   font-size: 14px;
-  font-weight: 400;
 }
 
 .password-wrapper {
@@ -887,12 +872,10 @@ input.error {
 
 .field-password h3{
   font-size: 14px;
-  font-weight: 400;
 }
 
 .password-field h3{
   font-size: 14px;
-  font-weight: 400;
 }
 
 .email-input {
@@ -919,7 +902,6 @@ input.error {
   font-size: 14px;
   text-decoration: none;
   display: inline-block;
-  font-weight: 700;
 }
 
 .showemail{
@@ -933,7 +915,6 @@ input.error {
   color: #565656;
   text-decoration: none;
   text-align: center;
-  font-weight: 700;
 }
 
 .code-inputs {
@@ -1123,7 +1104,6 @@ input.error {
 .slider-card-text {
   font-size: 16px;
   color: #191919;
-  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -1143,7 +1123,6 @@ input.error {
 
 .div-date{
   color: #7B7B7B;
-  font-weight: 500;
 }
 
 .div-images{
@@ -1151,7 +1130,6 @@ input.error {
   flex-direction: row;
   gap: 12px;
   color: #7B7B7B;
-  font-weight: 500;
 }
 
 .span-images{
@@ -1256,7 +1234,6 @@ input.error {
 .button{
   border: 1px solid #ACACAC;
   color: #191919;
-  font-weight: 700;
   background-color: #F8F8F8;
   padding: 17.5px 21.5px;
   font-size: 20px;
@@ -1275,6 +1252,7 @@ input.error {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 }
 
 .faq-container {
@@ -1294,7 +1272,6 @@ input.error {
   width: 100%;
   padding: 24px 0;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .faq-content {
@@ -1336,7 +1313,6 @@ input.error {
 
 .h2-about{
   font-size: 24px;
-  font-weight: 700;
   color: #191919;
   padding-left: 87px;
   margin-bottom: 20px;
@@ -1436,7 +1412,6 @@ input.error {
 
 .h1-settings{
   font-size: 32px;
-  font-weight: 700;
   color: #000000;
   margin-bottom: 72px;
 }
@@ -1453,7 +1428,6 @@ input.error {
 
 .settings-title {
   font-size: 26px;
-  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -1463,7 +1437,6 @@ input.error {
   transition: 0.2s;
   font-size: 15px;
   text-align: left;
-  font-weight: 400;
 }
 
 .settings-tab.active {
@@ -1545,7 +1518,6 @@ input.error {
   font-size: 14px;
   background: #FAFAFA;
   color: #191919;
-  font-weight: 400;
 }
 
 .form-about{
@@ -1622,7 +1594,6 @@ input[type="file"] {
 .label-user{
   color: #565656;
   font-size: 14px;
-  font-weight: 400;
 }
 
 .btn {
@@ -1642,7 +1613,6 @@ input[type="file"] {
   max-width: 180px;
   width: 100%;
   height: 49px;
-  font-weight: 700;
   border-radius: 8px;
   font-size: 14px;
   color: #FFFFFF;
@@ -1684,7 +1654,6 @@ input[type="file"] {
 .char-counter {
   font-size: 14px;
   color: #7B7B7B;
-  font-weight: 400;
 }
 
 .toggle-password {
@@ -1715,7 +1684,6 @@ input[type="file"] {
   border: 1px solid #ACACAC;
   width: 180px;
   height: 49px;
-  font-weight: 700;
   border-radius: 8px;
   font-size: 14px;
   background: #FDFCF9;
@@ -1726,7 +1694,6 @@ input[type="file"] {
   background: #191919;
   width: 180px;
   height: 49px;
-  font-weight: 700;
   border-radius: 8px;
   font-size: 14px;
   color: #FFFFFF;
@@ -1771,7 +1738,6 @@ input[type="file"] {
 
 .modal-text {
   font-size: 20px;
-  font-weight: 700;
   color: #191919;
   margin-top: 24px;
 }
@@ -1811,7 +1777,6 @@ input[type="file"] {
 
 .h1-user{
   font-size: 20px;
-  font-weight: 500;
   margin-bottom: 8px;
 }
 
@@ -1866,7 +1831,6 @@ input[type="file"] {
 
 .nav-item {
   cursor: pointer;
-  font-weight: 400;
   color: #191919;
   flex-shrink: 0;
 }
@@ -1905,12 +1869,10 @@ input[type="file"] {
 .h3-article{
   color: #191919;
   font-size: 10px;
-  font-weight: 700;
 }
 
 .p-article{
   color: #191919;
-  font-weight: 400;
   font-size: 6px;
 }
 
@@ -1930,7 +1892,6 @@ input[type="file"] {
 .div-about{
   color: #191919;
   font-size: 16px;
-  font-weight: 400;
 }
 
 .div-saved{
@@ -1981,14 +1942,12 @@ input[type="file"] {
 
 .h3-create{
   font-size: 20px;
-  font-weight: 700;
   color: #000000;
   margin-top: 8px;
 }
 
 .p-create{
   font-size: 16px;
-  font-weight: 400;
   color: #7B7B7B;
 }
 
@@ -2014,7 +1973,6 @@ input[type="file"] {
   padding: 18px 21px;
   color: #191919;
   font-size: 14px;
-  font-weight: 700;
   border-radius: 8px;
 }
 
@@ -2024,7 +1982,6 @@ input[type="file"] {
   color: #191919;
   font-size: 20px;
   margin-bottom: 36px;
-  font-weight: 700;
 }
 
 .rules-wrapper{
@@ -2040,7 +1997,6 @@ input[type="file"] {
   justify-content: center;
   margin: 76px auto 56px;
   font-size: 14px;
-  font-weight: 500;
 }
 
 /* ავტორის გვერდი */
@@ -2066,7 +2022,6 @@ input[type="file"] {
 
 .h1-author{
   font-size: 20px;
-  font-weight: 500;
   margin-bottom: 8px;
 }
 
@@ -2113,7 +2068,6 @@ input[type="file"] {
 
 .nav-item {
   cursor: pointer;
-  font-weight: 400;
   color: #191919;
   flex-shrink: 0;
 }
