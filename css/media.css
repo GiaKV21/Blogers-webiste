@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) and (min-width: 320px) {
   .faq-wrapper{
-    margin: 132px auto 42px;
+    margin: 93px auto 42px;
   }
 }
 
@@ -53,7 +53,7 @@
 
 /* მეტის ნახვა */
 
-@media (max-width: 425px) and (min-width: 320px) {
+@media (max-width: 768px) and (min-width: 320px) {
   .div-popular{
     gap: 24px;
   }
@@ -81,6 +81,14 @@
     gap: 16px;
   }
 
+  .slider-card-popular {
+    max-width: 343px;
+  }
+
+  .slider-card-cover {
+    height: 170px;
+  }
+
   .slider-card-tag {
     font-size: 14px;
     margin-bottom: 12px;
@@ -102,7 +110,7 @@
   }
 
   .more-wrapper{
-    margin: 84px auto 42px;
+    margin: 88px auto 42px;
   }
 }
 
@@ -315,7 +323,13 @@
   }
 }
 
-@media (max-width: 346px) and (min-width: 320px) {
+@media (max-width: 363px) and (min-width: 343px) {
+  .p-footer-down{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 342px) and (min-width: 320px) {
   .p-footer-down{
     font-size: 12px;
   }
@@ -337,7 +351,7 @@
 
 @media (max-width: 768px) and (min-width: 426px) {
   .hero-wrapper {
-    padding: 104px 32px 73px;
+    padding: 106px 32px 73px;
   }
 }
 

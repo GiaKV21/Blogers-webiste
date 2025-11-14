@@ -979,7 +979,7 @@ input.error {
 }
 
 .hero-wrapper {
-  padding: 195px 0 185px;
+  padding: 196px 0 184px;
   margin: 0 auto 0;
 }
 
@@ -1244,7 +1244,7 @@ input.error {
 /* faq */
 
 .faq-wrapper{
-  margin: 114px auto 258px;
+  margin: 122px auto 258px;
 }
 
 .faq-div-h1-img{
@@ -1298,7 +1298,7 @@ input.error {
 }
 
 .about-wrapper{
-  margin: 150px auto 56px;
+  margin: 118px auto 56px;
 }
 
 .about-slider-wrapper{
@@ -1390,18 +1390,12 @@ input.error {
 
 .a-slider-linkdin{
   display: flex;
-  align-items: center;
   gap: 6px;
 }
 
 .span-slider-about{
   color:#1B7CDE;
   font-size: 14px;
-}
-
-.img-slider-link{
-  width: 8.5px;
-  height: 8.5px;
 }
 
 /* პარამეტრები */
@@ -1793,7 +1787,6 @@ input[type="file"] {
   font-size: 14px;
   color: #1B7CDE;
   display: flex;
-  align-items: center;
   gap: 6px;
   margin-bottom: 12px;
 }
@@ -2041,6 +2034,11 @@ input[type="file"] {
   align-items: center;
   gap: 6px;
   margin-bottom: 12px;
+}
+
+.icon-author-user{
+  width: 14px;
+  height: 14px;
 }
 
 .div-author-info{
