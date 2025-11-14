@@ -1157,10 +1157,6 @@ input.error {
   gap: 5px;
 }
 
-.slider-card-meta img {
-  cursor: pointer;
-}
-
 /* Arrows */
 
 .slider-btn.visible {
