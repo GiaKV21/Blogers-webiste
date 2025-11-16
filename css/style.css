@@ -2102,3 +2102,30 @@ input[type="file"] {
   font-size: 16px;
   font-weight: 400;
 }
+
+/* აღმოაჩინე */
+
+.hero-explore-wrapper {
+  margin: 114px auto 24px;
+}
+
+.hero-explore {
+  background: #E3E3E3;
+  padding: 60px 120px 70px;
+  border-radius: 8px;
+}
+
+.explore-wrapper{
+  margin: 42px auto 42px;
+}
+
+.hero-title-explore{
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.hero-text-explore{
+  font-size: 18px;
+  margin-bottom: 24px;
+  width: 427px;
+}
