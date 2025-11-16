@@ -1199,7 +1199,7 @@ input.error {
 .div-popular{
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .slider-card-popular{
@@ -2128,4 +2128,53 @@ input[type="file"] {
   font-size: 18px;
   margin-bottom: 24px;
   width: 427px;
+}
+
+.explore-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  max-width: 1140px;
+  margin: 0 auto 0;
+}
+
+.explore-slider {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+.exp-item {
+  background-color: #F2F2F2;
+  color: #252525;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.exp-item.active {
+  background-color: #191919;
+  color: #fff;
+}
+
+.explore-slider.dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.slider-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.explore-slider::-webkit-scrollbar {
+  display: none;
 }
