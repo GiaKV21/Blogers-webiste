@@ -2,8 +2,8 @@
 
 const expItems = document.querySelectorAll('.exp-item');
 const exploreSlider = document.querySelector('.explore-slider');
-const btnPrev = document.querySelector('.slider-btn.prev');
-const btnNext = document.querySelector('.slider-btn.next');
+const btnPrev = document.querySelector('.slider-btn-exp.prev');
+const btnNext = document.querySelector('.slider-btn-exp.next');
 
 btnPrev.style.display = "none";
 

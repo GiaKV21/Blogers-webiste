@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <title>Blogers Webiste</title>
+    <script src="javascript/main.js" defer></script>
+    <script src="javascript/header.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header wrapper">
+        <div class="div-burger-a">
+          <button class="menu-toggle" onclick="toggleSidebar()"><img src="images/burger.png" alt="button" /></button>
+          <a href="index.html"><img class="header-logo" src="images/sakitxavi1 1.png" alt="logo"/></a>
+        </div>
+        <nav class="head-nav">
+          <ul class="header-ul regular">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="explore.html">აღმოაჩინე</a></li>
+            <li><a href="about.html">ჩვენ შესახებ</a></li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <button id="searchToggle" class="search-toggle" aria-label="Search open">
+            <img src="images/Magnifer.png" alt="" />
+          </button>
+          <div id="overlay" class="overlay"></div>
+          <div id="searchDropdown" class="search-dropdown">
+            <div class="search-pill">
+              <span class="icon-gr">
+                <img src="images/Magnifer-gr.png" alt="icon" />
+              </span>
+              <input
+                class="regular"
+                id="theSearchInput"
+                type="search"
+                placeholder="მოძებნე სახელი ან ავტორი"
+              />
+              <div class="right-controls">
+                <div class="filter-dropdown" id="filterDropdown">
+                  <img src="images/arrow-gray.png" alt="arrow" class="dropdown-arrow" />
+                </div>
+
+                <div class="filter-options" id="filterOptions">
+                  <button class="bold chip active" type="button" data-filter="sakithxavi">საკითხავი</button>
+                  <button class=" bold chip" type="button" data-filter="avtori">ავტორი</button>
+                </div>
+              </div>
+            </div>
+            <button id="searchSubmit" class="search-submit bold" type="button">
+              ძებნა
+            </button>
+          </div>
+          <button class="notification" id="notificationBtn">
+            <img src="images/Bell.png" alt="" />
+          </button>
+          <div id="notification-modal" class="notification-modal hidden">
+            <div class="h3-button-notif">
+              <h3 class="bold notif-title">ცნობის ფურცელი</h3>
+              <button class="close-notif">
+                <img src="images/Close Circle.png">
+              </button>
+            </div>
+            <div class="notif-list">
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p medium">ელენე მაჩაბელი <span class="not-what regular">მოიწონა შენი საკითხავი. </span><span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p medium">ელენე მაჩაბელი <span class="not-what regular">მოიწონა შენი საკითხავი. </span><span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p medium">ელენე მაჩაბელი <span class="not-what regular">მოიწონა შენი საკითხავი. </span><span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p medium">ელენე მაჩაბელი <span class="not-what regular">მოიწონა შენი საკითხავი. </span><span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p medium">ელენე მაჩაბელი <span class="not-what regular">მოიწონა შენი საკითხავი. </span><span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <div class="notif-avatar-wrapper">
+                  <img src="images/girl.jpg" class="notif-avatar" alt="">
+                  <img src="images/heart-icon.png" class="notif-heart" alt="">
+                </div>
+                <p class="not-p medium">ელენე მაჩაბელი <span class="not-what regular">მოიწონა შენი საკითხავი. </span><span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#" class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p bold"><span class="not-what regular">შენი საკითხავი </span>“ის, რაც მართლა ახსოვთ...” <span class="not-what regular">გამოქვეყნდა.</span> <span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+
+              <a href="#"class="notif-item">
+                <img src="images/Frame 1597882735.png">
+                <p class="not-p bold"><span class="not-what regular">აი სწორედ აქედან იწყება შენი ამბავი! </span>დაიწყე წერა <span class="not-time regular">6 საათის წინ</span></p>
+              </a>
+            </div>
+          </div>
+          <button class="icon-btn">
+            <img src="images/User Circle.png" alt="User Icon">
+          </button>
+          <div id="user-modal" class="user-modal hidden">
+            <a href="user.html" class="div-user-img-info">
+              <img class="user-img" src="images/girl.jpg">
+              <div class="user-name-mail">
+                <p class="user-name medium">ელენე მაჩაბელი</p>
+                <p class="user-mail regular">E.machabeli@gmail.com</p>
+              </div>
+            </a>
+            <div class="line-user"></div>
+            <ul class="div-header-modal-nav regular">
+              <li class="li-user"><a href="#" class="user-a">დაიწყე წერა</a></li>
+              <li class="li-user"><a href="settings.html" class="user-a">პარამეტრები</a></li>
+              <li class="li-user"><button class="button-log-out regular">გასვლა</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-right-enter regular">
+          <a class="" href="enter.html"> შესვლა </a>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <div>
+        <div class="div-burger-header">
+          <img class="burger-toggle" src="images/burger.png" >
+          <a href="index.html"><img src="images/sakitxavi1 1.png" alt="logo"/></a>
+        </div>
+        <nav class="div-burger-nav medium">
+          <ul>
+            <li class="li-burger"><a href="index.html">მთავარი</a></li>
+            <li class="li-burger"><a href="explore.html">აღმოაჩინე</a></li>
+            <li class="li-burger"><a href="about.html">ჩვენ შესახებ</a></li>
+            <li class="li-burger"><a href="favorite.html">გაეცანი ავტორებს</a></li>
+            <li class="li-burger"><a href="#">დაიწყე წერა</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="div-icons-burger">
+        <img src="images/Letter-burger.png">
+        <img src="images/in-burger.png">
+        <img src="images/inst-burger.png">
+        <img src="images/f-burger.png">
+      </div>
+    </aside>
+    <div class="overlay-side"></div>
+
+    <section class="inner-section-wrapper wrapper">
+
+      <div class="div-inner-data">
+        <a href="#" class="a-inner-img-data">
+          <img class="inner-user" src="images/girl.jpg">
+          <div class="inner-name-data">
+            <p class="inner-name medium">ელენე მაჩაბელი</p>
+            <p class="inner-data regular">15.09.2025</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="div-inner-icons">
+        <div class="heart-number medium">
+          <img src="images/inner-heart.png">
+          244
+        </div>
+        <div class="inner-funcions medium">
+          <div class="save-number">
+            <img src="images/inner-save.png">
+            12
+          </div>
+          <div class="share-number">
+            <img src="images/inner-share.png">
+            6
+          </div>
+          <div class="seen-number">
+            <img src="images/inner-seen.png">
+            12
+          </div>
+        </div>
+      </div>
+
+      <div class="inner-article">
+        <div class="div-h1-dots">
+          <h1 class="h1-article regular">ის, ვინც იყავი გუშინ — არ არის შენი ზღვარი</h1>
+          <img class="correct-article" src="images/inner-dots.png">
+        </div>
+      </div>
+
+      <div class="inner-text">
+        <div class="inner-article-introduction">
+          <p class="p-introduction regular">ცვლილება არ იწყება გარე სტიმულით. ის არ არის შედეგზე ორიენტირებული 
+            გადაწყვეტილება, არამედ შინაგანი მზაობა — იყოს ადამიანი იმაზე ცოტათი უფრო სანდო, უფრო გაწონასწორებული 
+            და უფრო მიზანდასახული, ვიდრე წინა დღეს.</p>
+        </div>
+        <div class="regular-text">
+          <p class="p-inner-text regular">
+            საფუძვლიანი ცვლილებები იშვიათად გამოიხატება ხმაურით. უფრო ხშირად, ისინი ჩნდებიან დუმილის ფონზე — მაშინ,
+            როცა ადამიანი ფიქრობს, რომ მის ცხოვრებაში თითქოს არაფერი შეცვლილა, ყველაფერი ძველ რიტმში მიდის და წინსვლის
+            ან დიდ ცვლილებათა განცდა არ აქვს. სინამდვილეში სწორედ ასეთ ფაზაში იწყება შინაგანი ცვლილებები — თანდათანობით,
+            უხმაუროდ. ეს არეალია, სადაც შინაგანი მოძრაობა იწყებს ფორმის მიღებას. <br>
+            წარსული გამოცდილება, წარუმატებლობები და შეუსრულებელი გეგმები არ განსაზღვრავს მომავალის შესაძლებლობებს. პირიქით 
+            — სწორედ მათი გააზრება ქმნის იმ სივრცეს, სადაც ახალი გადაწყვეტილებები იბადება.
+          </p>
+          <img class="inner-img" src="images/article.png">
+          <p class="p-inner-text regular">
+            მნიშვნელოვანი არ არის დღე როდის იწყება — დილით, შუადღეს, საღამოს თუ შუაღამით. ზოგჯერ ერთმა დაკვირვებულმა კითხვამაც 
+            კი შეიძლება გარდატეხა მოიტანოს: რა მაკავებს და რისთვის ვრჩები იმავე წრეში?<br>
+            ცვლილება არ იწყება გარე სტიმულით. ის არ არის შედეგზე ორიენტირებული გადაწყვეტილება, არამედ შინაგანი მზაობა — იყოს 
+            ადამიანი იმაზე ცოტათი უფრო სანდო, უფრო გაწონასწორებული და უფრო მიზანდასახული, ვიდრე წინა დღეს.<br>
+            სწორედ ეს უწყვეტი, უმეტესად უხმო მოძრაობა ქმნის განსხვავებას. არა იმიტომ, რომ ამას სხვები ხედავენ, არამედ იმიტომ, რომ 
+            ადამიანი იწყებს საკუთარი თავის სხვა კუთხით აღქმას. ეს უკვე საკმარისია იმისთვის, რომ მომდევნო ნაბიჯები გაცნობიერებულად 
+            გადაიდგას — არა წნეხით, არამედ საკუთარი დამოუკიდებელი არჩევანით.
+          </p>
+        </div>
+      </div>
+
+      <div class="div-tags">
+        <div class="tag bold">პროფესიული ზრდა</div>
+        <div class="tag bold">კრეატიული ინდუსტრია</div>
+      </div>
+
+      <div class="div-inner-icons">
+        <div class="heart-number medium">
+          <img src="images/inner-heart.png">
+          244
+        </div>
+        <div class="inner-funcions medium">
+          <div class="save-number">
+            <img src="images/inner-save.png">
+            12
+          </div>
+          <div class="share-number">
+            <img src="images/inner-share.png">
+            6
+          </div>
+          <div class="seen-number">
+            <img src="images/inner-seen.png">
+            12
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="inner-wrapper">
+      <div class="slider-section-header">
+        <h2 class="slider-inner-h2 bold">ავტორის სხვა საკითხავი</h2>
+        <a class="a-slider medium" href="#">აღმოაჩინე მეტი</a>
+      </div>
+      <div class="slider-container">
+        <button class="slider-btn prev">
+          <img src="images/arrow-left.png" alt="Prev" />
+        </button>
+        <div class="slider-track">
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag bold">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title bold">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text regular">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta medium">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag bold">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title bold">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text regular">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta medium">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag bold">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title bold">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text regular">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta medium">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag bold">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title bold">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text regular">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta medium">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-card">
+            <img class="slider-card-cover" src="images/cover.png" alt="" />
+            <div class="card-description">
+              <h3 class="slider-card-tag bold">
+                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+              </h3>
+              <h3 class="slider-card-title bold">
+                ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
+              </h3>
+              <p class="slider-card-text regular">
+                ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
+                ნამდვილს. მათ სჭირდებათ მიზეზი...
+              </p>
+              <div class="slider-card-meta medium">
+                <div class="div-date">
+                  <span>2 სექტემბერი, 2025</span>
+                </div>
+                <div class="div-images">
+                  <div class="span-images">
+                    <img src="images/heart.png" /> 256
+                  </div>
+                  <div class="span-images">
+                    <img src="images/Eye-gr.png" /> 85
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn next">
+          <img src="images/arrow-right.png" alt="Next" />
+        </button>
+      </div>
+      <div class="slider-dots"></div>
+    </section>
+
+    <a class="start" href="#"><img src="images/Pen 3.png"></a>
+
+    <footer class="footer">
+      <div class="div-footer wrapper">
+        <div class="footer-nav-logo">
+          <div class="footer-logo-p">
+            <a class="footer-logo" href="index.html"
+              ><img src="images/sakitxavi2 1.png" alt="logo"
+            /></a>
+            <div class="footer-div-p regular">
+              საკითხავი არის სივრცე, სადაც შეგიძლია ნამუშევრები გააზიარო, შექმნა
+              პორტფოლიო და დაუკავშირდე საერთო ინტერესების მქონე ავტორებს.
+            </div>
+          </div>
+          <div>
+            <h4 class="h4-nav-footer bold">მართვა</h4>
+            <ul class="footer-ul regular">
+              <li><a href="index.html">მთავარი</a></li>
+              <li><a href="explore.html">აღმოაჩინე</a></li>
+              <li><a href="about.html">ჩვენ შესახებ</a></li>
+            </ul>
+          </div>
+          <div class="footer-div-margin-right">
+            <h4 class="h4-nav-footer bold">ბიბლიოთეკა</h4>
+            <ul class="footer-ul regular">
+              <li><a href="popular.html">თვის საკითხავი</a></li>
+              <li><a href="new.html">უახლესი საკითხავი</a></li>
+              <li><a href="favorite.html">გაეცანი ავტორებს</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="h4-nav-footer bold">დახმარება</h4>
+            <ul class="footer-ul regular">
+              <li><a href="rules.html">წესები და პირობები</a></li>
+              <li><a href="faq.html">კითხვა-პასუხი</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="div-under">
+          <div class="div-social">
+            <a class="" href="">
+              <img src="images/mail-footer.png" alt="" />
+            </a>
+            <a class="" href="">
+              <img src="images/in.png" alt="" />
+            </a>
+            <a class="" href="">
+              <img src="images/inst.png" alt="" />
+            </a>
+            <a class="" href="">
+              <img src="images/f.png" alt="" />
+            </a>
+          </div>
+          <p class="p-footer-down regular">© 2025 „საკითხავი“. ყველა უფლება დაცულია.</p>
+        </div>
+    </footer>
+  </body>
+</html>
