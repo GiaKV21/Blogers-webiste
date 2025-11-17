@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
     <title>Blogers Webiste</title>
-    <script src="javascript/main.js" defer></script>
+    <script src="javascript/inner.js" defer></script>
     <script src="javascript/header.js" defer></script>
   </head>
   <body>
@@ -178,15 +178,15 @@
 
     <section class="inner-section-wrapper wrapper">
 
-      <div class="div-inner-data">
-        <a href="#" class="a-inner-img-data">
+      <a href="user.html" class="div-inner-data">
+        <div class="a-inner-img-data">
           <img class="inner-user" src="images/girl.jpg">
           <div class="inner-name-data">
             <p class="inner-name medium">ელენე მაჩაბელი</p>
             <p class="inner-data regular">15.09.2025</p>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
 
       <div class="div-inner-icons">
         <div class="heart-number medium">
@@ -199,7 +199,14 @@
             12
           </div>
           <div class="share-number">
-            <img src="images/inner-share.png">
+              <div id="shareBtn">
+                <img src="images/inner-share.png">
+                <div id="shareMenu" class="hidden">
+                  <div class="item"><img src="images/copy-inner.png">დააკოპირე ბმული</div>
+                  <div class="item"><img src="images/f-inner.png">გაზიარე Facebook-ზე</div>
+                  <div class="item"><img src="images/link-inner.png">გაზიარე Linkedin-ზე</div>
+                </div>
+              </div>
             6
           </div>
           <div class="seen-number">
@@ -228,8 +235,8 @@
           <img src="images/Trash Bin Minimalistic-black.png">
           <p class="p-delete-inner bold">დარწმუნებული ხარ, რომ გსურს საკითხავის წაშლა?</p>
           <div class="modal-buttons-inner">
-            <button class="btn-delete cancel-delete bold" id="cancelDelete">გაუქმება</button>
-            <button class="btn-primary-delete confirm-delete bold" id="confirmDelete">წაშლა</button>
+            <button class="cancel-delete bold">გაუქმება</button>
+            <button class="confirm-delete bold">წაშლა</button>
           </div>
         </div>
       </div>
@@ -300,28 +307,28 @@
           <img src="images/arrow-left.png" alt="Prev" />
         </button>
         <div class="slider-track">
-          <div class="slider-card">
-            <img class="slider-card-cover" src="images/cover.png" alt="" />
-            <div class="card-description">
-              <h3 class="slider-card-tag bold">
-                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+          <div class="slider-card-inner">
+            <img class="slider-card-cover-inner" src="images/cover.png" alt="" />
+            <div class="card-description-inner">
+              <h3 class="slider-card-tag-inner bold">
+                <img class="img-user-inner" src="images/user1.png" /> სანდრო ერაძე
               </h3>
-              <h3 class="slider-card-title bold">
+              <h3 class="slider-card-title-inner bold">
                 ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
               </h3>
-              <p class="slider-card-text regular">
+              <p class="slider-card-text-inner regular">
                 ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
                 ნამდვილს. მათ სჭირდებათ მიზეზი...
               </p>
-              <div class="slider-card-meta medium">
-                <div class="div-date">
+              <div class="slider-card-meta-inner medium">
+                <div class="div-date-inner">
                   <span>2 სექტემბერი, 2025</span>
                 </div>
-                <div class="div-images">
-                  <div class="span-images">
+                <div class="div-images-inner">
+                  <div class="span-images-inner">
                     <img src="images/heart.png" /> 256
                   </div>
-                  <div class="span-images">
+                  <div class="span-images-inner">
                     <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
@@ -329,28 +336,28 @@
             </div>
           </div>
 
-          <div class="slider-card">
-            <img class="slider-card-cover" src="images/cover.png" alt="" />
-            <div class="card-description">
-              <h3 class="slider-card-tag bold">
-                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+          <div class="slider-card-inner">
+            <img class="slider-card-cover-inner" src="images/cover.png" alt="" />
+            <div class="card-description-inner">
+              <h3 class="slider-card-tag-inner bold">
+                <img class="img-user-inner" src="images/user1.png" /> სანდრო ერაძე
               </h3>
-              <h3 class="slider-card-title bold">
+              <h3 class="slider-card-title-inner bold">
                 ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
               </h3>
-              <p class="slider-card-text regular">
+              <p class="slider-card-text-inner regular">
                 ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
                 ნამდვილს. მათ სჭირდებათ მიზეზი...
               </p>
-              <div class="slider-card-meta medium">
-                <div class="div-date">
+              <div class="slider-card-meta-inner medium">
+                <div class="div-date-inner">
                   <span>2 სექტემბერი, 2025</span>
                 </div>
-                <div class="div-images">
-                  <div class="span-images">
+                <div class="div-images-inner">
+                  <div class="span-images-inner">
                     <img src="images/heart.png" /> 256
                   </div>
-                  <div class="span-images">
+                  <div class="span-images-inner">
                     <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
@@ -358,28 +365,28 @@
             </div>
           </div>
 
-          <div class="slider-card">
-            <img class="slider-card-cover" src="images/cover.png" alt="" />
-            <div class="card-description">
-              <h3 class="slider-card-tag bold">
-                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+          <div class="slider-card-inner">
+            <img class="slider-card-cover-inner" src="images/cover.png" alt="" />
+            <div class="card-description-inner">
+              <h3 class="slider-card-tag-inner bold">
+                <img class="img-user-inner" src="images/user1.png" /> სანდრო ერაძე
               </h3>
-              <h3 class="slider-card-title bold">
+              <h3 class="slider-card-title-inner bold">
                 ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
               </h3>
-              <p class="slider-card-text regular">
+              <p class="slider-card-text-inner regular">
                 ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
                 ნამდვილს. მათ სჭირდებათ მიზეზი...
               </p>
-              <div class="slider-card-meta medium">
-                <div class="div-date">
+              <div class="slider-card-meta-inner medium">
+                <div class="div-date-inner">
                   <span>2 სექტემბერი, 2025</span>
                 </div>
-                <div class="div-images">
-                  <div class="span-images">
+                <div class="div-images-inner">
+                  <div class="span-images-inner">
                     <img src="images/heart.png" /> 256
                   </div>
-                  <div class="span-images">
+                  <div class="span-images-inner">
                     <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
@@ -387,28 +394,28 @@
             </div>
           </div>
 
-          <div class="slider-card">
-            <img class="slider-card-cover" src="images/cover.png" alt="" />
-            <div class="card-description">
-              <h3 class="slider-card-tag bold">
-                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+          <div class="slider-card-inner">
+            <img class="slider-card-cover-inner" src="images/cover.png" alt="" />
+            <div class="card-description-inner">
+              <h3 class="slider-card-tag-inner bold">
+                <img class="img-user-inner" src="images/user1.png" /> სანდრო ერაძე
               </h3>
-              <h3 class="slider-card-title bold">
+              <h3 class="slider-card-title-inner bold">
                 ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
               </h3>
-              <p class="slider-card-text regular">
+              <p class="slider-card-text-inner regular">
                 ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
                 ნამდვილს. მათ სჭირდებათ მიზეზი...
               </p>
-              <div class="slider-card-meta medium">
-                <div class="div-date">
+              <div class="slider-card-meta-inner medium">
+                <div class="div-date-inner">
                   <span>2 სექტემბერი, 2025</span>
                 </div>
-                <div class="div-images">
-                  <div class="span-images">
+                <div class="div-images-inner">
+                  <div class="span-images-inner">
                     <img src="images/heart.png" /> 256
                   </div>
-                  <div class="span-images">
+                  <div class="span-images-inner">
                     <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
@@ -416,28 +423,28 @@
             </div>
           </div>
 
-          <div class="slider-card">
-            <img class="slider-card-cover" src="images/cover.png" alt="" />
-            <div class="card-description">
-              <h3 class="slider-card-tag bold">
-                <img class="img-user" src="images/user1.png" /> სანდრო ერაძე
+          <div class="slider-card-inner">
+            <img class="slider-card-cover-inner" src="images/cover.png" alt="" />
+            <div class="card-description-inner">
+              <h3 class="slider-card-tag-inner bold">
+                <img class="img-user-inner" src="images/user1.png" /> სანდრო ერაძე
               </h3>
-              <h3 class="slider-card-title bold">
+              <h3 class="slider-card-title-inner bold">
                 ის, რაც მართლა ახსოვთ — არ იყო რეკლამა
               </h3>
-              <p class="slider-card-text regular">
+              <p class="slider-card-text-inner regular">
                 ყველაზე დასამახსოვრებელი გზავნილი ის არის, რომელიც ამბობს
                 ნამდვილს. მათ სჭირდებათ მიზეზი...
               </p>
-              <div class="slider-card-meta medium">
-                <div class="div-date">
+              <div class="slider-card-meta-inner medium">
+                <div class="div-date-inner">
                   <span>2 სექტემბერი, 2025</span>
                 </div>
-                <div class="div-images">
-                  <div class="span-images">
+                <div class="div-images-inner">
+                  <div class="span-images-inner">
                     <img src="images/heart.png" /> 256
                   </div>
-                  <div class="span-images">
+                  <div class="span-images-inner">
                     <img src="images/Eye-gr.png" /> 85
                   </div>
                 </div>
