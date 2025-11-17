@@ -225,3 +225,13 @@ document.addEventListener("click", (e) => {
         menu.classList.add("hidden");
     }
 });
+
+// დალაიქება/დასეივება
+
+document.querySelector('.liked').addEventListener('click', function () {
+  this.classList.toggle('active');
+});
+
+document.querySelector('.saved').addEventListener('click', function () {
+  this.classList.toggle('active');
+});

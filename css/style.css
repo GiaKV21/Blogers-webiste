@@ -2500,3 +2500,20 @@ input[type="file"] {
   font-size: 14px;
   gap: 5px;
 }
+
+.liked {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.liked.active {
+  filter: invert(42%) sepia(74%) saturate(612%) hue-rotate(336deg) brightness(93%) contrast(91%);
+}
+
+.saved{
+  cursor: pointer;
+  transition: 0.3s;
+}
+.saved.active {
+  filter: invert(0%) sepia(3%) saturate(200%) hue-rotate(0deg) brightness(15%) contrast(85%);
+}
