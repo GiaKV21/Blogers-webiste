@@ -629,7 +629,7 @@ header {
 .enter-section{
   display: flex;
   justify-content: center;
-  padding: 100px 0 0px;
+  padding: 100px 0 219px;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -838,7 +838,7 @@ input.error {
 .section-password {
   display: flex;
   justify-content: center;
-  padding: 145px 0 0px;
+  padding: 145px 0 287px;
   min-height: 100vh;
   box-sizing: border-box;
 }

@@ -1098,19 +1098,17 @@
   }
 
   .enter-section{
-    padding: 117px 16px 0px;
+    padding: 117px 16px 212px;
   }
 }
 
 /* პაროლის შეცვლა */
 
-@media (max-width: 376px) and (min-width: 320px) {
-  .section-password {
-    padding: 117px 16px 0;
-  }
-}
-
 @media (max-width: 768px) and (min-width: 320px) {
+  .section-password {
+    padding: 117px 16px 315px;
+  }
+
   .h2-steps {
     font-size: 16px;
     margin: 20px 0;
