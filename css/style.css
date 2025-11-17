@@ -2517,3 +2517,40 @@ input[type="file"] {
 .saved.active {
   filter: invert(0%) sepia(3%) saturate(200%) hue-rotate(0deg) brightness(15%) contrast(85%);
 }
+
+#top-notif {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F2F2F2;
+  width: 360px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  transition: top 0.3s ease;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+#top-notif.show {
+  top: 90px;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 14px;
+  color: #3D3D3D;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover{
+  color: #191919;
+}

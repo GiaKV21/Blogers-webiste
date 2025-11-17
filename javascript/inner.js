@@ -240,3 +240,18 @@ document.querySelector('.liked').addEventListener('click', function () {
 document.querySelector('.saved').addEventListener('click', function () {
   this.classList.toggle('active');
 });
+
+// დაკოპირება
+
+document.querySelector('.copy-btn').addEventListener('click', () => {
+
+  // აქ თავად კოპირების ფუნქცია
+
+  const notif = document.getElementById('top-notif');
+
+  notif.classList.add('show');
+
+  setTimeout(() => {
+    notif.classList.remove('show');
+  }, 2000); // 2 წამში დაიმალება
+});

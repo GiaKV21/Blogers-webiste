@@ -1404,4 +1404,9 @@
     opacity: 1;
     max-width: 300px;
   }
+
+  #top-notif {
+    width: 300px;
+    height: 48px;
+  }
 }
