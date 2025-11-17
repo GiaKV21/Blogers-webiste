@@ -216,8 +216,13 @@ document.addEventListener('click', function (e) {
 const btn = document.getElementById("shareBtn");
 const menu = document.getElementById("shareMenu");
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+    e.stopPropagation(); 
     menu.classList.toggle("hidden");
+});
+
+menu.addEventListener("click", (e) => {
+    e.stopPropagation();
 });
 
 document.addEventListener("click", (e) => {
