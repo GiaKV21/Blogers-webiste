@@ -2322,3 +2322,75 @@ input[type="file"] {
 .a-slider-inner{
   font-size: 14px;
 }
+
+.dots-wrapper {
+  position: relative;
+}
+
+.dots {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: #FDFCF9;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.li-inner{
+  padding: 17px 24px 13px 16px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.li-inner:hover{
+  background-color: #F2F2F2;
+}
+
+.menu.hidden,
+.delete-modal.hidden {
+  display: none;
+}
+
+.delete-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-modal-inner {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  cursor: pointer;
+}
+
+.modal-content-inner {
+  background: #FDFCF9;
+  padding: 72px 92px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.p-delete-inner{
+  font-size: 20px;
+  margin-top: 24px;
+  max-width: 366px;
+}
+
+.modal-buttons-inner{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+}

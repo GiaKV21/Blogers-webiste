@@ -212,7 +212,25 @@
       <div class="inner-article">
         <div class="div-h1-dots">
           <h1 class="h1-article regular">ის, ვინც იყავი გუშინ — არ არის შენი ზღვარი</h1>
-          <img class="correct-article" src="images/inner-dots.png">
+          <div class="dots-wrapper">
+            <img class="dots" src="images/inner-dots.png" alt="menu">
+            <ul class="menu hidden regular">
+              <li class="li-inner edit-btn">რედაქტირება</li>
+              <li class="li-inner delete-btn">წაშლა</li>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="delete-modal hidden">
+        <div class="modal-content-inner">
+          <span class="close-modal-inner"><img src="images/Close Circle.png"></span>
+          <img src="images/Trash Bin Minimalistic-black.png">
+          <p class="p-delete-inner bold">დარწმუნებული ხარ, რომ გსურს საკითხავის წაშლა?</p>
+          <div class="modal-buttons-inner">
+            <button class="btn-delete cancel-delete bold" id="cancelDelete">გაუქმება</button>
+            <button class="btn-primary-delete confirm-delete bold" id="confirmDelete">წაშლა</button>
+          </div>
         </div>
       </div>
 

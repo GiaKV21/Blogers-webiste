@@ -332,3 +332,31 @@ document.querySelectorAll('.slider-container-about').forEach(container => {
 
 // inner slider
 
+document.addEventListener('click', function (e) {
+  const menu = document.querySelector('.menu');
+  const modal = document.querySelector('.delete-modal');
+  const modalContent = document.querySelector('.modal-content-inner');
+
+  if (e.target.closest('.dots')) {
+    menu.classList.toggle('hidden');
+    return;
+  }
+
+  if (e.target.closest('.delete-btn')) {
+    modal.classList.remove('hidden');
+    return;
+  }
+
+  if (e.target.closest('.close-modal-inner') || e.target.closest('.cancel-delete')) {
+    modal.classList.add('hidden');
+    return;
+  }
+
+  if (!e.target.closest('.menu') && !e.target.closest('.dots-wrapper')) {
+    menu.classList.add('hidden');
+  }
+
+  if (!modalContent.contains(e.target) && !modal.classList.contains('hidden')) {
+    modal.classList.add('hidden');
+  }
+});

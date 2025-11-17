@@ -1288,6 +1288,21 @@
   .tag{
     font-size: 12px;
   }
+
+  .modal-content-inner {
+    padding: 36px 30px;
+  }
+
+  .p-delete-inner{
+    font-size: 14px;
+    margin-top: 12px;
+    max-width: 246px;
+  }
+
+  .modal-buttons-inner{
+    gap: 8px;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 350px) and (min-width: 320px) {
