@@ -245,13 +245,11 @@ document.querySelector('.saved').addEventListener('click', function () {
 
 document.querySelector('.copy-btn').addEventListener('click', () => {
 
-  // აქ თავად კოპირების ფუნქცია
-
   const notif = document.getElementById('top-notif');
 
   notif.classList.add('show');
 
   setTimeout(() => {
     notif.classList.remove('show');
-  }, 2000); // 2 წამში დაიმალება
+  }, 2000);
 });
