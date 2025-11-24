@@ -1070,6 +1070,11 @@ input.error {
   display: none;
   opacity: 0;
   transition: opacity 0.1s ease;
+  transition: transform 0.3s ease;
+}
+
+.slider-card:hover{
+  transform: scale(1.03);
 }
 
 .slider-card.active {
@@ -1206,6 +1211,11 @@ input.error {
   max-width: 360px;
   width: 100%;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.slider-card-popular:hover{
+  transform: scale(1.03);
 }
 
 .h1-popular{
@@ -1217,6 +1227,11 @@ input.error {
   max-width: 360px;
   width: 100%;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.favorite-card:hover{
+  transform: scale(1.03);
 }
 
 /* მეტის ნახვა */
@@ -2140,7 +2155,7 @@ input[type="file"] {
   user-select: none;
 }
 
-.slider-btn {
+.slider-btn-exp {
   background: none;
   border: none;
   cursor: pointer;
@@ -2431,6 +2446,11 @@ input[type="file"] {
   display: none;
   opacity: 0;
   transition: opacity 0.1s ease;
+  transition: transform 0.3s ease;
+}
+
+.slider-card-inner:hover{
+  transform: scale(1.03);
 }
 
 .slider-card-inner.active {
