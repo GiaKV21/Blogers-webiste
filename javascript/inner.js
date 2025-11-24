@@ -143,8 +143,7 @@ document.querySelectorAll('.slider-container').forEach(container => {
       dot.classList.add('slider-dot');
       if (i === 0) dot.classList.add('active');
       dotsContainer.appendChild(dot);
-
-      // click event
+      
       dot.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
           const targetLeft = cards[i].offsetLeft - sliderContainer.offsetLeft;

@@ -2540,11 +2540,12 @@ input[type="file"] {
 
 #top-notif {
   position: fixed;
-  top: -60px;
+  top: 100px;
   left: 50%;
+  opacity: 0;
   transform: translateX(-50%);
   background: #F2F2F2;
-  width: 360px;
+  width: 240px;
   height: 48px;
   display: flex;
   justify-content: center;
@@ -2557,7 +2558,7 @@ input[type="file"] {
 }
 
 #top-notif.show {
-  top: 90px;
+  opacity: 1;
 }
 
 .copy-btn {
