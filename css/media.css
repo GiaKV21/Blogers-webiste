@@ -1067,9 +1067,15 @@
   }
 }
 
-@media (max-width: 333px) and (min-width: 320px) {
-  label.aprove{
+@media (max-width: 358px) and (min-width: 337px) {
+  .aprove{
     font-size: 13px;
+  }
+}
+
+@media (max-width: 336px) and (min-width: 320px) {
+  .aprove{
+    font-size: 12px;
   }
 }
 

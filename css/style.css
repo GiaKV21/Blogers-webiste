@@ -700,11 +700,11 @@ header {
 #fullName::placeholder,
 #registerEmail::placeholder,
 #registerPassword::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: #ACACAC;
 }
 
 .field input:focus { 
-  border-color: #c7cad1; 
+  border-color: #3D3D3D; 
 }
 
 .div-enter-flex{
@@ -715,7 +715,7 @@ header {
   margin-top: 12px;
 }
 
-label.inline {
+.inline {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -723,7 +723,7 @@ label.inline {
   cursor: pointer;
 }
 
-label.aprove{
+.aprove{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -881,7 +881,7 @@ input.error {
 .email-input {
   width: 100%;
   padding: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #ACACAC;
   border-radius: 8px;
   font-size: 14px;
 }
@@ -929,7 +929,7 @@ input.error {
   height: 80px;
   text-align: center;
   font-size: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #ACACAC;
   border-radius: 8px;
   background-color: #FDFCF9;
 }
@@ -949,10 +949,6 @@ input.error {
   border-radius: 10px;
   font-size: 14px;
   outline: none;
-}
-
-.password-field input:focus { 
-  border-color: #c7cad1; 
 }
 
 .small-text {
