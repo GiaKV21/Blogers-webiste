@@ -1169,6 +1169,15 @@ input.error {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  position: relative;
+}
+
+.img-hand{
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
 
 .autor-img-h3{
@@ -1786,9 +1795,15 @@ input[type="file"] {
   object-fit: cover;
 }
 
+.h1-img-user{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
 .h1-user{
   font-size: 20px;
-  margin-bottom: 8px;
 }
 
 .user-p{
@@ -2008,9 +2023,15 @@ input[type="file"] {
   object-fit: cover;
 }
 
+.h1-img-author{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
 .h1-author{
   font-size: 20px;
-  margin-bottom: 8px;
 }
 
 .author-p{

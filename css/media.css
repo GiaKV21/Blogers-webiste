@@ -965,9 +965,12 @@
     height: 80px;
   }
 
+  .h1-img-user{
+    margin-bottom: 0px;
+  }
+
   .h1-user{
     font-size: 16px;
-    margin-bottom: 0px;
   }
 
   .user-p{
@@ -1138,9 +1141,12 @@
     height: 80px;
   }
 
+  .h1-img-author{
+    margin-bottom: 0px;
+  }
+
   .h1-author{
     font-size: 16px;
-    margin-bottom: 0px;
   }
 
   .author-p{
