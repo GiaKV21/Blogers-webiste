@@ -1004,6 +1004,64 @@ input.error {
 
 /* მთავარი გვერდი */
 
+/* wellcome-modal */
+
+.wellcome-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.wellcome-modal-overlay.active {
+  display: flex;
+}
+
+.wellcome-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 72px 80px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.wellcome-close-modal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-icon-wellcome{
+  width: 48px;
+  height: 48px;
+}
+
+.wellcome-modal-text {
+  font-size: 20px;
+  color: #191919;
+  max-width: 436px;
+  margin-top: 24px;
+  line-height: 24px;
+}
+
+.wellcome-modal-text-2{
+  font-size: 14px;
+  color: #7B7B7B;
+  margin-top: 24px;
+  max-width: 440px;
+  letter-spacing: 0.07px;
+}
+
+/* hero */
+
 .hero {
   background: #E3E3E3;
 }

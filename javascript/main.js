@@ -329,3 +329,5 @@ document.querySelectorAll('.slider-container-about').forEach(container => {
 
   if (window.innerWidth <= 768) createDots();
 });
+
+// wellcome-modal

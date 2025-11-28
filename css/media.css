@@ -344,6 +344,28 @@
 
 /* მთავარი გვერდი */
 
+@media (max-width: 768px) and (min-width: 320px) {
+  .wellcome-modal-content {
+    padding: 36px 21px;
+  }
+  .wellcome-modal-text {
+    font-size: 14px;
+    max-width: 269px;
+    margin-top: 12px;
+  }
+
+  .wellcome-modal-text-2{
+    font-size: 12px;
+    margin-top: 12px;
+    max-width: 269px;
+  }
+
+  .modal-icon-wellcome{
+    width: 28px;
+    height: 28px;
+  }
+}
+
 @media (max-width: 1160px) and (min-width: 1025px) {
   .hero-wrapper {
     padding: 195px 32px 185px;
