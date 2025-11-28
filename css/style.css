@@ -249,6 +249,7 @@ header {
   cursor: pointer;
   font-size: 14px;
   transition: all .2s;
+  letter-spacing: 0.07px;
 }
 
 .chip.active {
@@ -264,6 +265,7 @@ header {
   padding: 17px 28px;
   font-size: 16px;
   cursor: pointer;
+  letter-spacing: 0.08px;
 }
 
 /* უზერ მოდალი */
@@ -320,11 +322,13 @@ header {
 .user-name{
   font-size: 14px;
   color: #191919;
+  letter-spacing: 0.07px;
 }
 
 .user-mail{
   font-size: 12px;
-  color: #ACACAC; 
+  color: #ACACAC;
+  letter-spacing: 0.06px;
 }
 
 .line-user{
@@ -346,6 +350,7 @@ header {
 .user-a{
   font-size: 14px;
   color: #191919;
+  letter-spacing: 0.07px;
 }
 
 .button-log-out{
@@ -398,6 +403,7 @@ header {
 .notif-title {
   font-size: 16px;
   color: #191919;
+  letter-spacing: 0.08px;
 }
 
 .close-notif{
@@ -417,16 +423,19 @@ header {
 .not-p{
   font-size: 14px;
   color: #191919;
+  letter-spacing: 0.07px;
 }
 
 .not-what{
   font-size: 14px;
   color: #191919;
+  letter-spacing: 0.07px;
 }
 
 .not-time {
   font-size: 12px;
   color: #ACACAC;
+  letter-spacing: 0.06px;
 }
 
 .notif-item {
@@ -1013,6 +1022,7 @@ input.error {
   width: 500px;
   font-size: 20px;
   margin-bottom: 24px;
+  line-height: 30px;
 }
 
 .hero-button {
