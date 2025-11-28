@@ -2287,11 +2287,13 @@ input[type="file"] {
 .inner-name{
   font-size: 16px;
   color: #191919;
+  letter-spacing: 0.08px;
 }
 
 .inner-data{
   font-size: 14px;
-  color: #7B7B7B; 
+  color: #7B7B7B;
+  letter-spacing: 0.07px;
 }
 
 .div-inner-icons{
