@@ -308,6 +308,12 @@
   }
 }
 
+@media (max-width: 321px) and (min-width: 320px) {
+  .footer-div-margin-right{
+    margin-right: 16px;
+  }
+}
+
 @media (max-width: 562px) and (min-width: 320px) {
   .div-under{
     display: block;
@@ -903,6 +909,7 @@
   .modal-text {
     font-size: 14px;
     margin-top: 12px;
+    max-width: 242px;
   }
 
   .modal-text-2{
@@ -1305,10 +1312,20 @@
     padding: 36px 30px;
   }
 
+  .cancel-delete{
+    width: 120px;
+    height: 36px;
+  }
+
+  .confirm-delete{
+    width: 120px;
+    height: 36px;
+  }
+
   .p-delete-inner{
     font-size: 14px;
     margin-top: 12px;
-    max-width: 246px;
+    max-width: 249px;
   }
 
   .modal-buttons-inner{

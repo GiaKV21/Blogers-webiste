@@ -146,6 +146,11 @@ header {
   text-decoration: none;
 }
 
+.header-ul li{
+  font-size: 16px;
+  letter-spacing: 0.08px;
+}
+
 .header-right{
   display:flex;
   flex-direction:row;
@@ -574,6 +579,7 @@ header {
 .footer-ul li{
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.07px;
 }
 
 .footer-ul{
@@ -594,6 +600,7 @@ header {
 .p-footer-down{
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 .div-social{
@@ -624,6 +631,7 @@ header {
   padding: 0 0 24px 72px;
   font-size: 14px;
   z-index: 1000;
+  letter-spacing: 0.07px;
 }
 
 .enter-section{
@@ -689,10 +697,12 @@ header {
   border-radius: 10px;
   font-size: 14px;
   outline: none;
+  letter-spacing: 0.07px;
 }
 
 .field h3{
   font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 #loginEmail::placeholder,
@@ -721,6 +731,7 @@ header {
   gap: 5px;
   font-size: 14px;
   cursor: pointer;
+  letter-spacing: 0.07px;
 }
 
 .aprove{
@@ -730,10 +741,12 @@ header {
   gap: 4px;
   font-size: 14px;
   cursor: pointer;
+  letter-spacing: 0.07px;
 }
 
 .span-aprove{
   color: #1B7CDE;
+  letter-spacing: 0.14px;
 }
 
 input[type="checkbox"] {
@@ -750,6 +763,7 @@ input[type="checkbox"] {
   font-size: 14px;
   background: #282624;
   color: #FFFFFF;
+  letter-spacing: 0.07px;
 }
 
 
@@ -761,7 +775,9 @@ input[type="checkbox"] {
   background: #FFFFFF;
   padding: 15px;
   border-radius: 8px;
+  font-size: 14px;
   border: 1px solid #ACACAC;
+  letter-spacing: 0.07px;
 }
 
 .divider {
@@ -799,6 +815,7 @@ input[type="checkbox"] {
   color: #1B7CDE; 
   text-decoration: none; 
   font-size: 14px;
+  letter-spacing: 0.14px;
 }
 
 .password-wrapper {
@@ -861,6 +878,7 @@ input.error {
   color: rgba(0, 0, 0, 0.5);
   font-size: 16px;
   margin-bottom: 36px;
+  letter-spacing: 0.08px;
 }
 
 .field-password{
@@ -872,10 +890,12 @@ input.error {
 
 .field-password h3{
   font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 .password-field h3{
   font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 .email-input {
@@ -884,6 +904,7 @@ input.error {
   border: 1px solid #ACACAC;
   border-radius: 8px;
   font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 #youremail::placeholder,
@@ -902,6 +923,7 @@ input.error {
   font-size: 14px;
   text-decoration: none;
   display: inline-block;
+  letter-spacing: 0.07px;
 }
 
 .showemail{
@@ -915,6 +937,7 @@ input.error {
   color: #565656;
   text-decoration: none;
   text-align: center;
+  letter-spacing: 0.07px;
 }
 
 .code-inputs {
@@ -949,6 +972,7 @@ input.error {
   border-radius: 10px;
   font-size: 14px;
   outline: none;
+  letter-spacing: 0.07px;
 }
 
 .small-text {
@@ -956,6 +980,7 @@ input.error {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
   text-align: center;
+  letter-spacing: 0.07px;
 }
 
 .a-small-text{
@@ -1046,6 +1071,7 @@ input.error {
 
 .a-slider{
   font-size: 14px;
+  letter-spacing: 0.14px;
 }
 
 .slider-container {
@@ -1259,6 +1285,7 @@ input.error {
   font-size: 20px;
   cursor: pointer;
   border-radius: 10px;
+  letter-spacing: 0.07px;
 }
 
 /* faq */
@@ -1399,12 +1426,13 @@ input.error {
 .about-h4{
   color: #7B7B7B;
   font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 .p-slider-about{
   color: #191919;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   margin-bottom: 32px;
 }
 
@@ -1416,6 +1444,7 @@ input.error {
 .span-slider-about{
   color:#1B7CDE;
   font-size: 14px;
+  letter-spacing: 0.14px;
 }
 
 /* პარამეტრები */
@@ -1532,6 +1561,7 @@ input.error {
   font-size: 14px;
   background: #FAFAFA;
   color: #191919;
+  letter-spacing: 0.07px;
 }
 
 .form-about{
@@ -1543,6 +1573,8 @@ input.error {
   font-size: 14px;
   background: #FAFAFA;
   color: #191919;
+  letter-spacing: 0.07px;
+  line-height: 22px;
 }
 
 .form-short{
@@ -1554,6 +1586,8 @@ input.error {
   font-size: 14px;
   background: #FAFAFA;
   color: #191919;
+  letter-spacing: 0.07px;
+  line-height: 22px;
 }
 
 .form-input:focus,
@@ -1626,6 +1660,7 @@ input[type="file"] {
   font-size: 14px;
   background: #FDFCF9;
   cursor: pointer;
+  letter-spacing: 0.07px;
 }
 
 .btn-primary {
@@ -1638,6 +1673,7 @@ input[type="file"] {
   color: #FFFFFF;
   border: none;
   cursor: pointer;
+  letter-spacing: 0.07px;
 }
 
 .btn-primary[disabled] {
@@ -1698,6 +1734,7 @@ input[type="file"] {
   border: transparent;
   cursor: pointer;
   margin-top: 78px;
+  letter-spacing: 0.08px;
 }
 
 .btn-delete {
@@ -1760,6 +1797,8 @@ input[type="file"] {
   font-size: 20px;
   color: #191919;
   margin-top: 24px;
+  line-height: 24px;
+  max-width: 340px;
 }
 
 .modal-text-2{
@@ -1813,6 +1852,7 @@ input[type="file"] {
   max-width: 724px;
   width: 100%;
   margin-bottom: 12px;
+  line-height: 22px;
 }
 
 .a-user-link{
@@ -1821,6 +1861,7 @@ input[type="file"] {
   display: flex;
   gap: 6px;
   margin-bottom: 12px;
+  letter-spacing: 0.14px;
 }
 
 .div-user-info{
@@ -1987,6 +2028,12 @@ input[type="file"] {
   font-size: 16px;
 }
 
+.div-rules{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
 .recommendation{
   background-color: #F2F2F2;
   padding: 16px;
@@ -2041,6 +2088,7 @@ input[type="file"] {
   max-width: 724px;
   width: 100%;
   margin-bottom: 12px;
+  line-height: 22px;
 }
 
 .a-author-link{
@@ -2050,6 +2098,7 @@ input[type="file"] {
   align-items: center;
   gap: 6px;
   margin-bottom: 12px;
+  letter-spacing: 0.14px;
 }
 
 .icon-author-user{
@@ -2084,6 +2133,7 @@ input[type="file"] {
   cursor: pointer;
   color: #191919;
   flex-shrink: 0;
+  letter-spacing: 0.08px;
 }
 
 .active {
@@ -2117,6 +2167,14 @@ input[type="file"] {
   color: #191919;
   font-size: 16px;
   font-weight: 400;
+  letter-spacing: 0.08px;
+}
+
+.div-about-author{
+  color: #191919;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.08px;
 }
 
 /* აღმოაჩინე */
@@ -2156,7 +2214,7 @@ input[type="file"] {
 
 .explore-slider {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex: 1;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -2171,6 +2229,7 @@ input[type="file"] {
   font-size: 14px;
   cursor: pointer;
   flex-shrink: 0;
+  letter-spacing: 0.14px;
 }
 
 .exp-item.active {
@@ -2296,6 +2355,14 @@ input[type="file"] {
 
 .p-introduction{
   font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.08px;
+}
+
+.regular-text{
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.08px;
 }
 
 .p-inner-text{
@@ -2323,6 +2390,7 @@ input[type="file"] {
   font-size: 14px;
   border-radius: 8px;
   display: inline-block;
+  letter-spacing: 0.14px;
 }
 
 .inner-wrapper{
@@ -2361,6 +2429,7 @@ input[type="file"] {
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
+  letter-spacing: 0.07px;
 }
 
 .li-inner:hover{
@@ -2400,6 +2469,7 @@ input[type="file"] {
   font-size: 20px;
   margin-top: 24px;
   max-width: 366px;
+  line-height: 24px;
 }
 
 .cancel-delete{
@@ -2410,6 +2480,7 @@ input[type="file"] {
   font-size: 14px;
   background: #FDFCF9;
   cursor: pointer;
+  letter-spacing: 0.07px;
 }
 
 .confirm-delete{
@@ -2421,6 +2492,7 @@ input[type="file"] {
   color: #FFFFFF;
   border: none;
   cursor: pointer;
+  letter-spacing: 0.07px;
 }
 
 .modal-buttons-inner{
@@ -2462,6 +2534,7 @@ input[type="file"] {
   font-size: 14px;
   color: #3D3D3D;
   transition: all 0.3s ease;
+  letter-spacing: 0.07px;
 }
 
 .item:hover{
@@ -2583,6 +2656,7 @@ input[type="file"] {
   transition: top 0.3s ease;
   font-size: 14px;
   z-index: 9999;
+  letter-spacing: 0.07px;
 }
 
 #top-notif.show {
@@ -2598,6 +2672,7 @@ input[type="file"] {
   font-size: 14px;
   color: #3D3D3D;
   transition: all 0.3s ease;
+  letter-spacing: 0.07px;
 }
 
 .copy-btn:hover{
