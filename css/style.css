@@ -870,7 +870,7 @@ input.error {
 }
 
 .password-container {
-  max-width: 360px;
+  max-width: 362px;
   width: 100%;
 }
 
@@ -1329,6 +1329,7 @@ input.error {
   width: 100%;
   padding: 24px 0;
   cursor: pointer;
+  letter-spacing: 0.16px;
 }
 
 .faq-content {
@@ -1336,6 +1337,8 @@ input.error {
   display: none;
   font-size: 14px;
   color: #565656;
+  letter-spacing: 0.14px;
+  line-height: 22px;
 }
 
 .arrow {
@@ -2212,6 +2215,7 @@ input[type="file"] {
   font-size: 18px;
   margin-bottom: 24px;
   width: 427px;
+  line-height: 30px;
 }
 
 .explore-slider-wrapper {
