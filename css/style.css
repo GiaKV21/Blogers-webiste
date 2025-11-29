@@ -2697,9 +2697,11 @@ input[type="file"] {
   gap: 5px;
 }
 
-.liked {
+/* .liked {
   cursor: pointer;
   transition: 0.3s;
+  width: 20px;
+  height: 18px;
 }
 
 .liked.active {
@@ -2709,10 +2711,12 @@ input[type="file"] {
 .saved{
   cursor: pointer;
   transition: 0.3s;
+  width: 17px;
+  height: 18px;
 }
 .saved.active {
   filter: invert(0%) sepia(3%) saturate(200%) hue-rotate(0deg) brightness(15%) contrast(85%);
-}
+} */
 
 #top-notif {
   position: fixed;

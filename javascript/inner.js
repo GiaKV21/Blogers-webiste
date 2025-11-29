@@ -230,15 +230,15 @@ document.addEventListener("click", (e) => {
     }
 });
 
-// დალაიქება/დასეივება
+// // დალაიქება/დასეივება
 
-document.querySelector('.liked').addEventListener('click', function () {
-  this.classList.toggle('active');
-});
+// document.querySelector('.liked').addEventListener('click', function () {
+//   this.classList.toggle('active');
+// });
 
-document.querySelector('.saved').addEventListener('click', function () {
-  this.classList.toggle('active');
-});
+// document.querySelector('.saved').addEventListener('click', function () {
+//   this.classList.toggle('active');
+// });
 
 // დაკოპირება
 
