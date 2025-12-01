@@ -12,7 +12,7 @@ document.querySelectorAll('.slider-container').forEach(container => {
 
   function getVisibleCount() {
     const width = window.innerWidth;
-    if (width <= 874 && width >= 769) return 2;
+    if (width <= 1024 && width >= 769) return 2;
     return 3;
   }
 

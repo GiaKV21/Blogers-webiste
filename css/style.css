@@ -1144,10 +1144,9 @@ input.error {
 }
 
 .slider-container {
-  /* position: relative; */
   display: flex;
   align-items: center;
-  gap: 65px;
+  gap: 70px;
 }
 
 .slider-track {
@@ -1162,6 +1161,10 @@ input.error {
   opacity: 0;
   transition: opacity 0.1s ease;
   transition: transform 0.3s ease;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  list-style-type: none !important;
 }
 
 .slider-card:hover{
@@ -1244,15 +1247,10 @@ input.error {
 }
 
 .slider-btn {
-  /* position: absolute;
-  top: 45%; */
   cursor: pointer;
   border: transparent;
   background: transparent;
 }
-
-/* .slider-btn.prev { left: -65px; }
-.slider-btn.next { right: -65px; } */
 
 /* პიროვნებები */
 
@@ -1265,6 +1263,10 @@ input.error {
   justify-content: center;
   gap: 20px;
   position: relative;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  list-style-type: none;
 }
 
 .img-hand{
