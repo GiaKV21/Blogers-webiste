@@ -1341,48 +1341,6 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  .slider-section-title-inner {
-    font-size: 20px;
-  }
-
-  .a-slider-inner{
-    font-size: 13px;
-  }
-
-  .card-description-inner{
-    padding-top: 16px;
-  }
-
-  .slider-card-tag-inner {
-    font-size: 15px;
-    margin-bottom: 12px;
-  }
-
-  .img-user-inner{
-    width: 17px;
-    height: 17px;
-  }
-
-  .slider-card-title-inner {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-
-  .slider-card-text-inner {
-    font-size: 15px;
-    margin-bottom: 16px;
-  }
-
-  .slider-card-meta-inner {
-    font-size: 13px;
-  }
-
-  .span-images-inner{
-    font-size: 13px;
-  }
-}
-
 @media (max-width: 768px) and (min-width: 320px) {
   .slider-section-title-inner {
     font-size: 16px;

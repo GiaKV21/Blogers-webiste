@@ -1131,7 +1131,7 @@ input.error {
   align-items: center;
   margin-bottom: 20px;
   gap: 10px;
-  padding: 0 84px;
+  padding: 0 90px;
 }
 
 .slider-section-title {
@@ -1157,14 +1157,8 @@ input.error {
 .slider-card {
   max-width: 367px;
   width: 100%;
-  display: none;
   opacity: 0;
-  transition: opacity 0.1s ease;
-  transition: transform 0.3s ease;
-  backface-visibility: hidden;
-  box-sizing: border-box;
-  -ms-flex-negative: 0;
-  list-style-type: none !important;
+  transition: all 0.2s ease;
 }
 
 .slider-card:hover{
@@ -1459,15 +1453,13 @@ input.error {
 
 .slider-track-about {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .slider-card-about {
   flex: 0 0 calc(33.333% - 20px);
-  display: none;
-  opacity: 0;
-  transition: opacity 0.1s ease;
   background-color: #FAFAFA;
+  transition: all 0.2s ease;
   padding: 36px 24px;
   border-radius: 8px;
   width: 100%;
@@ -2622,10 +2614,8 @@ input[type="file"] {
 .slider-card-inner {
   max-width: 367px;
   width: 100%;
-  display: none;
   opacity: 0;
-  transition: opacity 0.1s ease;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .slider-card-inner:hover{
