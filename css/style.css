@@ -2282,7 +2282,7 @@ input[type="file"] {
 
 .explore-slider {
   display: flex;
-  gap: 8px;
+  gap: 7.5px;
   flex: 1;
   overflow-x: hidden;
   scroll-behavior: smooth;

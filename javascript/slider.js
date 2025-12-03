@@ -1,13 +1,6 @@
-// -----------------------------------------------------
 // SLIDER MASTER FUNCTION
-// -----------------------------------------------------
 
-function initSlider({
-  containerSelector,
-  cardSelector,
-  dotsSelector,
-  getVisibleCount
-}) {
+function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleCount}) {
   document.querySelectorAll(containerSelector).forEach(container => {
 
     const cards = Array.from(container.querySelectorAll(cardSelector));
@@ -21,9 +14,7 @@ function initSlider({
     let startIndex = 0;
     let isAnimating = false;
 
-    // --------------------------
     // ARROWS
-    // --------------------------
     function updateArrows() {
       const visible = getVisibleCount();
 
@@ -42,9 +33,7 @@ function initSlider({
       }
     }
 
-    // --------------------------
     // SHOW CARDS
-    // --------------------------
     function showCards(newIndex) {
       const visible = getVisibleCount();
       if (window.innerWidth < 769 || isAnimating) return;
@@ -71,9 +60,7 @@ function initSlider({
       }, 100);
     }
 
-    // --------------------------
     // INITIAL DISPLAY
-    // --------------------------
     function initDisplay() {
       startIndex = 0;
       const visible = getVisibleCount();
@@ -95,9 +82,7 @@ function initSlider({
 
     initDisplay();
 
-    // --------------------------
     // BUTTONS
-    // --------------------------
     nextBtn?.addEventListener('click', () => {
       const visible = getVisibleCount();
       if (startIndex + visible < cards.length) showCards(startIndex + visible);
@@ -108,9 +93,7 @@ function initSlider({
       if (startIndex - visible >= 0) showCards(startIndex - visible);
     });
 
-    // --------------------------
     // SWIPE (mobile)
-    // --------------------------
     let isDown = false, startX, scrollLeft;
 
     container.addEventListener('mousedown', e => {
@@ -129,9 +112,7 @@ function initSlider({
       container.scrollLeft = scrollLeft - (x - startX);
     });
 
-    // --------------------------
     // DOTS (mobile)
-    // --------------------------
     function createDots() {
       dotsContainer.innerHTML = "";
       dots = cards.map((_, i) => {
@@ -177,11 +158,9 @@ function initSlider({
   });
 }
 
-// -----------------------------------------------------
 // INITIALIZATIONS FOR 3 SLIDERS
-// -----------------------------------------------------
 
-// 1) MAIN SLIDER
+// MAIN SLIDER
 initSlider({
   containerSelector: ".slider-container",
   cardSelector: ".slider-card",
@@ -193,7 +172,7 @@ initSlider({
   }
 });
 
-// 2) ABOUT SLIDER
+// ABOUT SLIDER
 initSlider({
   containerSelector: ".slider-container-about",
   cardSelector: ".slider-card-about",
@@ -201,7 +180,7 @@ initSlider({
   getVisibleCount: () => 3
 });
 
-// 3) INNER SLIDER (same structure as main)
+// INNER SLIDER
 initSlider({
   containerSelector: ".slider-container",
   cardSelector: ".slider-card-inner",
