@@ -1068,7 +1068,7 @@ input.error {
 }
 
 .hero-wrapper {
-  padding: 196px 0 184px;
+  padding: 192px 0 184px;
   margin: 0 auto 0;
 }
 
@@ -1101,7 +1101,7 @@ input.error {
 
 /* Slider Section */
 
-.slider-dots {
+/* .slider-dots {
   display: none;
   justify-content: center;
   gap: 4px;
@@ -1243,11 +1243,11 @@ input.error {
   cursor: pointer;
   border: transparent;
   background: transparent;
-}
+} */
 
 /* Slider Section */
 
-/* .slider-dots {
+.slider-dots {
   display: none;
   justify-content: center;
   gap: 4px;
@@ -1301,14 +1301,29 @@ input.error {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
-  overflow-x: hidden;
+  overflow-x: scroll;
   scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
 }
 
 .slider-card {
   max-width: 361px;
   width: 100%;
   flex-shrink: 0;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  list-style-type: none;
 }
 
 .slider-card-cover {
@@ -1383,7 +1398,7 @@ input.error {
   cursor: pointer;
   border: transparent;
   background: transparent;
-} */
+}
 
 /* პიროვნებები */
 
@@ -1588,17 +1603,30 @@ input.error {
   display: flex;
   align-items: center;
   gap: 65px;
+  overflow: hidden;
+  position: relative;
 }
 
-.slider-track-about {
+/* .slider-track-about {
   display: flex;
   gap: 30px;
-}
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
 
 .slider-card-about {
-  flex: 0 0 calc(33.333% - 20px);
+  /* flex: 0 0 calc(33.333% - 20px);
   background-color: #FAFAFA;
-  transition: all 0.1s ease;
+  transition: all 0.1s ease; */
+  max-width: 367px;
+  flex-shrink: 0;
   padding: 36px 24px;
   border-radius: 8px;
   width: 100%;
@@ -2751,13 +2779,13 @@ input[type="file"] {
 }
 
 .slider-card-inner {
-  max-width: 367px;
+  /* max-width: 367px;
   width: 100%;
   opacity: 0;
-  transition: all 0.1s ease;
-  /* max-width: 361px;
+  transition: all 0.1s ease; */
+  max-width: 361px;
   width: 100%;
-  flex-shrink: 0; */
+  flex-shrink: 0;
 }
 
 .icon {
