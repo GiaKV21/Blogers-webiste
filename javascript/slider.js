@@ -193,6 +193,7 @@
 // });
 
 // SLIDER FUNCTION
+
 function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleCount }) {
   document.querySelectorAll(containerSelector).forEach(container => {
 
