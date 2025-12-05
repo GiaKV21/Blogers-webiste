@@ -196,7 +196,6 @@
 
 function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleCount }) {
   document.querySelectorAll(containerSelector).forEach(container => {
-
     const track = container.querySelector(".slider-track");
     const cards = Array.from(track.querySelectorAll(cardSelector));
     if (!cards.length) return;
@@ -209,17 +208,14 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
       : document.querySelector(dotsSelector);
 
     let dots = [];
-    let isDown = false, startX = 0, scrollStart = 0;
+    let isDown = false, startX = 0, scrollStart = 0, isDragging = false;
 
     // ARROWS
     function updateArrows() {
       if (!prevBtn || !nextBtn) return;
-
       const maxScroll = track.scrollWidth - track.clientWidth;
-
       prevBtn.style.opacity = track.scrollLeft > 2 ? "1" : "0";
       nextBtn.style.opacity = track.scrollLeft < maxScroll - 2 ? "1" : "0";
-
       prevBtn.style.pointerEvents = track.scrollLeft > 2 ? "auto" : "none";
       nextBtn.style.pointerEvents = track.scrollLeft < maxScroll - 2 ? "auto" : "none";
     }
@@ -247,13 +243,16 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
 
     // DRAG
     container.addEventListener("mousedown", e => {
+      if (e.target.tagName === "A" || e.target.closest("a")) e.preventDefault();
       isDown = true;
+      isDragging = false;
       startX = e.pageX;
       scrollStart = track.scrollLeft;
     });
 
     container.addEventListener("mousemove", e => {
       if (!isDown) return;
+      isDragging = true;
       const walk = e.pageX - startX;
       track.scrollLeft = scrollStart - walk;
     });
@@ -261,10 +260,15 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
     container.addEventListener("mouseup", () => isDown = false);
     container.addEventListener("mouseleave", () => isDown = false);
 
+    cards.forEach(card => {
+      card.addEventListener("click", e => {
+        if (isDragging) e.preventDefault();
+      });
+    });
+
     // DOTS
     function createDots() {
       if (!dotsContainer) return;
-
       dotsContainer.innerHTML = "";
       dots = cards.map((_, i) => {
         const dot = document.createElement("div");
@@ -272,7 +276,7 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
         if (i === 0) dot.classList.add("active");
 
         dot.addEventListener("click", () => {
-          const cardWidth = cards[0].offsetWidth + 16;
+          const cardWidth = cards[0].offsetWidth + (window.innerWidth <= 768 ? 16 : 20);
           track.scrollTo({
             left: i * cardWidth,
             behavior: "smooth"
@@ -286,26 +290,24 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
 
     function updateDots() {
       if (window.innerWidth > 768 || !dots.length) return;
-
       const maxScroll = track.scrollWidth - track.clientWidth;
       const scrollLeft = track.scrollLeft;
       let index;
-
       if (scrollLeft >= maxScroll - 5) {
         index = dots.length - 1;
       } else {
         const cardWidth = cards[0].offsetWidth + 16;
         index = Math.round(scrollLeft / cardWidth);
       }
-
       dots.forEach((dot, i) => {
         dot.classList.toggle("active", i === index);
       });
     }
 
-    // SCROLL EVENTS
     track.addEventListener("scroll", updateDots);
     track.addEventListener("scroll", updateArrows);
+
+    // RESIZE HANDLER
     function handleResize() {
       if (window.innerWidth <= 768) {
         createDots();

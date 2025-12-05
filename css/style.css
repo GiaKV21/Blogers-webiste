@@ -1302,7 +1302,7 @@ input.error {
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: scroll;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   -webkit-touch-callout: none;
