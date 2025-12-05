@@ -154,3 +154,10 @@ initSlider({
   dotsSelector: ".slider-dots",
   getVisibleCount: () => (window.innerWidth <= 1024 && window.innerWidth >= 769 ? 2 : 3)
 });
+
+initSlider({
+  containerSelector: ".explore-slider-wrapper",
+  cardSelector: ".exp-item",
+  dotsSelector: ".exp-dots",
+  getVisibleCount: () => 4
+});

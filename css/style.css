@@ -2329,7 +2329,11 @@ input[type="file"] {
   align-items: center;
 }
 
-.explore-slider::-webkit-scrollbar {
+.exp-slider-track {
+  padding: 0px;
+}
+
+.exp-slider-track::-webkit-scrollbar {
   display: none;
 }
 
