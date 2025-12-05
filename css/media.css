@@ -403,11 +403,11 @@
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .slider-card {
-    max-width: 405px;
+    max-width: 410px;
   }
 
   .slider-card-cover {
-    max-width: 405px;
+    max-width: 410px;
   }
 }
 
@@ -1167,6 +1167,10 @@
 @media (max-width: 1024px) and (min-width: 769px) {
   .slider-inner-h2{
     font-size: 20px;
+  }
+
+  .slider-card-inner {
+    max-width: 410px;
   }
 }
 
