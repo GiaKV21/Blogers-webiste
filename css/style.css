@@ -759,6 +759,7 @@ input[type="checkbox"] {
   width: 17px;
   height: 17px;
   border-radius: 4px;
+  padding: 0px;
 }
 
 .primary{
