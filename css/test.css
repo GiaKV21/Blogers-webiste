@@ -7,3 +7,7 @@
 .section-editor-wrapper{
   margin: 118px auto 223px;
 }
+
+.editor-textarea{
+  min-height: 1260px;
+}
