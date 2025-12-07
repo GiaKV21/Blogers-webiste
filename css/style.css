@@ -626,19 +626,15 @@ header {
   border-bottom: none;
   background-color: transparent;
   position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  padding: 24px 0 0 72px;
+  top: 24px;
+  left: 72px;
   z-index: 1000;
 }
 
 .enter-footer{
   position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  padding: 0 0 24px 72px;
+  bottom: 24px;
+  left: 72px;
   font-size: 14px;
   z-index: 1000;
   letter-spacing: 0.07px;
@@ -647,8 +643,7 @@ header {
 .enter-section{
   display: flex;
   justify-content: center;
-  padding: 100px 0 219px;
-  min-height: 100vh;
+  margin: 100px 0 219px;
   box-sizing: border-box;
 }
 
@@ -865,8 +860,7 @@ input.error {
 .section-password {
   display: flex;
   justify-content: center;
-  padding: 145px 0 287px;
-  min-height: 100vh;
+  margin: 145px 0 287px;
   box-sizing: border-box;
 }
 

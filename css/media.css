@@ -993,9 +993,9 @@
   }
 }
 
-@media (max-width: 358px) and (min-width: 337px) {
+@media (max-width: 362px) and (min-width: 320px) {
   .aprove{
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -1019,15 +1019,15 @@
   }
 
   .enter-header{
-    padding: 24px 0 0 16px;
+    left: 16px;
   }
 
   .enter-footer{
-    padding: 0 0 16px 16px;
+    left: 16px;
   }
 
   .enter-section{
-    padding: 117px 16px 212px;
+    margin: 117px 0px 184px;
   }
 }
 
@@ -1035,7 +1035,7 @@
 
 @media (max-width: 768px) and (min-width: 320px) {
   .section-password {
-    padding: 117px 16px 315px;
+    margin: 117px 0px 315px;
   }
 
   .h2-steps {
