@@ -12,3 +12,7 @@
   min-height: 1260px;
   padding: 42px;
 }
+
+.tox-statusbar__branding{
+  display: none;
+}
