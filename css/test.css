@@ -44,6 +44,7 @@
   border-radius: 8px;
   font-size: 14px;
   letter-spacing: 0.14px;
+  cursor: pointer;
 }
 
 .button-next-editor{
@@ -59,4 +60,5 @@
   border-radius: 8px;
   letter-spacing: 0.14px;
   font-size: 14px;
+  cursor: pointer;
 }
