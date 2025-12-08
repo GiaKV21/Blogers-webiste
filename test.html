@@ -185,6 +185,50 @@
       <div class="div-button-editor">
         <button class="button-next-editor bold">გაგრძელება</button>
         <button class="button-reset-editor bold">გაუქმება</button>
+        <div class="custom-modal" id="uploadModal">
+        <div class="custom-modal-content">
+
+            <button class="close-modal">
+              <img src="images/Close Circle.png">
+            </button>
+
+            <h2 class="h2-editor medium">გარეკანის ფოტო</h2>
+            <div class="upload-box" id="uploadBox">
+                <input type="file" id="coverInput" accept=".jpg,.jpeg,.png,.webp" required/>
+                <div class="upload-inner">
+                  <img src="images/add-editor-img.png">
+                </div>
+            </div>
+
+            <div class="input-box">
+              <h2 class="h2-editor medium">სათაური</h2>
+              <input class="editor-h medium" id="title" type="text" placeholder="დაასათაურე საკითხავი" required/>
+            </div>
+
+            <div class="select-box">
+              <h2 class="h2-editor medium">კატეგორია (მაქსიმუმ 2)</h2>
+              <input class="editor-select medium" id="categoryInput" type="text" placeholder="მიუთითე კატეგორია" id="categoryInput" required/>
+              <div class="checkbox-list" id="checkboxList">
+                <label class="list"><input type="checkbox"> პიროვნული ზრდა</label>
+                <label class="list"><input type="checkbox"> პროდუქტიულობა</label>
+                <label class="list"><input type="checkbox"> ფინანსური თავისუფლება</label>
+                <label class="list"><input type="checkbox"> ფსიქოლოგია</label>
+                <label class="list"><input type="checkbox"> მოტივაცია</label>
+                <label class="list"><input type="checkbox"> ბიზნესი</label>
+                <label class="list"><input type="checkbox"> მენეჯმენტი</label>
+                <label class="list"><input type="checkbox"> ლიდერობა</label>
+                <label class="list"><input type="checkbox"> ტექნოლოგიები</label>
+                <label class="list"><input type="checkbox"> AI</label>
+                <label class="list"><input type="checkbox"> სწავლება</label>
+              </div>
+            </div>
+
+            <div class="bottom-buttons">
+                <button class="inner-editor-reset bold" id="resetBtn">გაუქმება</button>
+                <button class="inner-editor-publish bold" id="submitBtn">გამოქვეყნება</button>
+            </div>
+
+        </div>
       </div>
     </section>
 
