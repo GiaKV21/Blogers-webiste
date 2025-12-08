@@ -14,14 +14,14 @@ tinymce.init({
   uploadcare_public_key: '8de56763523416290ffa',
 });
 
-/* --- Modal --- */
+// Modal
 const openBtn = document.querySelector('.button-next-editor');
 const modal = document.getElementById('uploadModal');
 const closeBtn = document.querySelector('.close-modal');
 
 openBtn.addEventListener('click', () => {
     modal.classList.add('active');
-    disableButtons(); // <-- დაიწყოს გათიშული ღილაკებით
+    disableButtons();
 });
 
 closeBtn.addEventListener('click', () => modal.classList.remove('active'));
@@ -30,7 +30,7 @@ modal.addEventListener('click', e => {
     if (e.target === modal) modal.classList.remove('active'); 
 });
 
-/* --- Elements --- */
+// Elements
 const coverInput = document.getElementById("coverInput");
 const uploadBox = document.getElementById("uploadBox");
 
@@ -51,7 +51,7 @@ function enableButtons() {
     resetBtn.disabled = false;
 }
 
-/* --- Upload --- */
+// Upload
 uploadBox.addEventListener("click", () => coverInput.click());
 
 coverInput.addEventListener("change", () => {
@@ -61,10 +61,7 @@ coverInput.addEventListener("change", () => {
     }
 });
 
-/* --- Title --- */
 titleInput.addEventListener("input", checkAnyInputChanged);
-
-/* --- Category --- */
 categoryInput.addEventListener("click", () =>
     checkboxList.classList.toggle("active")
 );
@@ -84,8 +81,6 @@ checkboxList.addEventListener("change", () => {
     categoryInput.value = checked.map(ch => ch.parentNode.textContent.trim()).join(", ");
     checkAnyInputChanged();
 });
-
-/* --- Check if ANY input has changed --- */
 function checkAnyInputChanged() {
     const hasCover = coverInput.files.length > 0;
     const hasTitle = titleInput.value.trim().length > 0;
@@ -98,7 +93,7 @@ function checkAnyInputChanged() {
     }
 }
 
-/* --- Reset Button --- */
+// Reset Button
 resetBtn.addEventListener("click", () => {
     coverInput.value = "";
     uploadBox.classList.remove("active");
