@@ -299,12 +299,6 @@ header {
   align-items: center;
   gap: 8px;
   padding: 20px;
-  transition: all 0.3s ease;
-}
-
-.div-user-img-info:hover{
-  background-color: #F2F2F2;
-  border-radius: 10px;
 }
 
 .user-name-mail{
@@ -340,18 +334,13 @@ header {
 
 .li-user{
   padding: 20px;
-  transition: all 0.3s ease;
-}
-
-.li-user:hover{
-  background-color: #F2F2F2;
-  border-radius: 10px;
 }
 
 .user-a{
   font-size: 14px;
   color: #191919;
   letter-spacing: 0.07px;
+  font-weight: 400;
 }
 
 .button-log-out{
@@ -362,6 +351,19 @@ header {
   justify-content: flex-start;
   color: #191919;
   font-size: 14px;
+}
+
+.div-user-img-info:hover .user-name,
+.div-user-img-info:hover .user-mail {
+  font-weight: 600;
+}
+
+.user-a:hover{
+  font-weight: 600;
+}
+
+.button-log-out:hover {
+  font-weight: 600;
 }
 
 /* შეტყობინების მოდალი */
