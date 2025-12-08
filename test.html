@@ -195,6 +195,7 @@
             <h2 class="h2-editor medium">გარეკანის ფოტო</h2>
             <div class="upload-box" id="uploadBox">
                 <input type="file" id="coverInput" accept=".jpg,.jpeg,.png,.webp" required/>
+                <img id="coverPreview" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:8px;">
                 <div class="upload-inner">
                   <img src="images/add-editor-img.png">
                 </div>
@@ -203,11 +204,16 @@
             <div class="input-box">
               <h2 class="h2-editor medium">სათაური</h2>
               <input class="editor-h medium" id="title" type="text" placeholder="დაასათაურე საკითხავი" required/>
+              <div id="titleError" class="error-text regular" style="display:none;">სათაური არ არის მინიჭებული</div>
             </div>
 
             <div class="select-box">
               <h2 class="h2-editor medium">კატეგორია (მაქსიმუმ 2)</h2>
-              <input class="editor-select medium" id="categoryInput" type="text" placeholder="მიუთითე კატეგორია" id="categoryInput" required/>
+              <div class="select-wrapper" style="position: relative; width: 100%;">
+                <input class="editor-select medium" id="categoryInput" type="text" placeholder="მიუთითე კატეგორია" required/>
+                <img src="images/arrow-editor.png" alt="arrow" class="arrow-img">
+              </div>
+              <div id="categoryError" class="error-text regular" style="display:none;">აირჩიეთ მინიმუმ 1 კატეგორია</div>
               <div class="checkbox-list" id="checkboxList">
                 <label class="list"><input type="checkbox"> პიროვნული ზრდა</label>
                 <label class="list"><input type="checkbox"> პროდუქტიულობა</label>
