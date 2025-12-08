@@ -112,11 +112,8 @@ categoryInput.addEventListener("click", () => {
     }
 });
 
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".select-wrapper")) {
-        checkboxList.classList.remove("active");
-        arrowImg.classList.remove("rotate");
-    }
+checkboxList.addEventListener("click", (e) => {
+    e.stopPropagation();
 });
 
 // CHECKBOX LOGIC
