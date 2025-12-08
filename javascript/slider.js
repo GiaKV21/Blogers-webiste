@@ -138,7 +138,7 @@ initSlider({
   containerSelector: ".slider-container",
   cardSelector: ".slider-card",
   dotsSelector: ".slider-dots",
-  getVisibleCount: () => (window.innerWidth <= 1024 && window.innerWidth >= 769 ? 2 : 3)
+  getVisibleCount: () => 3
 });
 
 initSlider({
@@ -152,7 +152,7 @@ initSlider({
   containerSelector: ".slider-container",
   cardSelector: ".slider-card-inner",
   dotsSelector: ".slider-dots",
-  getVisibleCount: () => (window.innerWidth <= 1024 && window.innerWidth >= 769 ? 2 : 3)
+  getVisibleCount: () => 3
 });
 
 initSlider({
