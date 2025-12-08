@@ -13,6 +13,10 @@
   padding: 42px;
 }
 
-.tox-statusbar__branding{
+.tox:not([dir=rtl]) .tox-statusbar__branding {
+  display: none;
+}
+
+.tox:not([dir=rtl]) .tox-statusbar__path>* {
   display: none;
 }
