@@ -72,17 +72,18 @@ coverInput.addEventListener("change", () => {
         reader.readAsDataURL(file);
 
         uploadBox.classList.add("active");
-        checkAnyInputChanged();
         uploadBox.classList.remove("error-border");
+        checkAnyInputChanged();
     }
 });
 
-// CHECK ANY INPUT
+// CHECK ANY INPUT INCLUDING CATEGORY
 function checkAnyInputChanged() {
     const hasCover = coverInput.files.length > 0;
     const hasTitle = titleInput.value.trim().length > 0;
+    const hasCategory = checkboxList.querySelectorAll("input:checked").length > 0;
 
-    if (hasCover || hasTitle) {
+    if (hasCover || hasTitle || hasCategory) {
         enableButtons();
     } else {
         disableButtons();
@@ -134,7 +135,6 @@ checkboxList.addEventListener("change", () => {
     }
 
     updateCategoryTags(checked);
-
     checkAnyInputChanged();
 });
 
@@ -190,6 +190,8 @@ submitBtn.addEventListener("click", (e) => {
         e.preventDefault();
         return;
     }
+
+    // აქ ფორმის გაგზავნა
 });
 
 // RESET BUTTON
@@ -199,9 +201,12 @@ resetBtn.addEventListener("click", () => {
     uploadInner.style.display = "flex";
     uploadBox.classList.remove("active");
     uploadBox.classList.remove("error-border");
+
     titleInput.value = "";
     titleError.style.display = "none";
-    categoryInput.value = "";
+
+    categoryInput.innerHTML = "";
+    categoryInput.classList.add("placeholder");
     categoryError.style.display = "none";
 
     checkboxList.querySelectorAll("input").forEach(ch => {
