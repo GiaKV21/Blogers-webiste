@@ -87,9 +87,8 @@ coverInput.addEventListener("change", () => {
 function checkAnyInputChanged() {
     const hasCover = coverInput.files.length > 0;
     const hasTitle = titleInput.value.trim().length > 0;
-    const hasCategory = categoryInput.value.trim().length > 0;
 
-    if (hasCover || hasTitle || hasCategory) {
+    if (hasCover || hasTitle) {
         enableButtons();
     } else {
         disableButtons();
@@ -120,7 +119,6 @@ checkboxList.addEventListener("click", (e) => {
     e.stopPropagation();
 });
 
-// CHECKBOX LOGIC
 checkboxList.addEventListener("change", () => {
     const checkboxes = [...checkboxList.querySelectorAll("input")];
     const checked = checkboxes.filter(ch => ch.checked);
@@ -141,9 +139,29 @@ checkboxList.addEventListener("change", () => {
         });
     }
 
-    categoryInput.value = checked.map(ch => ch.parentNode.textContent.trim()).join(", ");
+    updateCategoryTags(checked);
+
     checkAnyInputChanged();
 });
+
+// CREATE TAGS INSIDE DIV
+function updateCategoryTags(checked) {
+    categoryInput.innerHTML = "";
+
+    if (checked.length === 0) {
+        categoryInput.classList.add("placeholder");
+        return;
+    }
+
+    categoryInput.classList.remove("placeholder");
+
+    checked.forEach(ch => {
+        const tag = document.createElement("span");
+        tag.classList.add("selected-tag");
+        tag.textContent = ch.parentNode.textContent.trim();
+        categoryInput.appendChild(tag);
+    });
+}
 
 // PUBLISH BUTTON
 submitBtn.addEventListener("click", (e) => {

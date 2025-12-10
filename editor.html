@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, JavaScript"/>
-    <title>უახლესი საკითხავი</title>
+    <title>სტატიის შექმნის გვერდი</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/test.css" />
     <link rel="stylesheet" href="css/media.css" />
     <script src="javascript/header.js" defer></script>
     <script src="javascript/test.js" defer></script>
@@ -194,27 +193,30 @@
 
             <h2 class="h2-editor medium">გარეკანის ფოტო</h2>
             <div class="upload-box" id="uploadBox">
-                <input type="file" id="coverInput" accept=".jpg,.jpeg,.png,.webp" required/>
-                <img id="coverPreview" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:8px;">
-                <div class="upload-inner">
-                  <img src="images/add-editor-img.png">
-                </div>
+              <!-- <label class="resend-img-test" type="file" accept=".jpg,.jpeg,.png,.webp">
+                <img src="images/resend.png">
+              </label> -->
+              <input type="file" id="coverInput" accept=".jpg,.jpeg,.png,.webp" required/>
+              <img id="coverPreview" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:8px;">
+              <div class="upload-inner">
+                <img src="images/add-editor-img.png">
+              </div>
             </div>
 
             <div class="input-box">
               <h2 class="h2-editor medium">სათაური</h2>
-              <input class="editor-h medium" id="title" type="text" placeholder="დაასათაურე საკითხავი" required/>
+              <input class="editor-h" id="title" type="text" placeholder="დაასათაურე საკითხავი" required/>
               <div id="titleError" class="error-text regular" style="display:none;">სათაური არ არის მინიჭებული</div>
             </div>
 
             <div class="select-box">
               <h2 class="h2-editor medium">კატეგორია (მაქსიმუმ 2)</h2>
-              <div class="select-wrapper" style="position: relative; width: 100%;">
-                <input class="editor-select medium" id="categoryInput" type="text" placeholder="მიუთითე კატეგორია" required/>
+              <div class="select-wrapper">
+                <div class="editor-select placeholder" id="categoryInput" data-placeholder="მიუთითე კატეგორია"></div>
                 <img src="images/arrow-editor.png" alt="arrow" class="arrow-img">
               </div>
               <div id="categoryError" class="error-text regular" style="display:none;">აირჩიეთ მინიმუმ 1 კატეგორია</div>
-              <div class="checkbox-list" id="checkboxList">
+              <div class="checkbox-list regular" id="checkboxList">
                 <label class="list"><input type="checkbox"> პიროვნული ზრდა</label>
                 <label class="list"><input type="checkbox"> პროდუქტიულობა</label>
                 <label class="list"><input type="checkbox"> ფინანსური თავისუფლება</label>
