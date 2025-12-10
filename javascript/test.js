@@ -1,5 +1,4 @@
-
-  tinymce.init({
+tinymce.init({
     selector: 'textarea',
     plugins: [
       // Core editing features
@@ -17,7 +16,7 @@
     ],
     ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
     uploadcare_public_key: '8de56763523416290ffa',
-  });
+});
 
 // MODAL
 const openBtn = document.querySelector('.button-next-editor');

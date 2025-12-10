@@ -94,7 +94,7 @@
 .custom-modal-content {
   background: #FDFCF9;
   width: 485px;
-  padding: 42px;
+  padding: 30px;
   border-radius: 8px;
   position: relative;
 }
@@ -118,11 +118,11 @@
   align-items: center;
   cursor: pointer;
   background: #FAFAFA;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .input-box{
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .select-box {
@@ -170,7 +170,7 @@
   border: 1px solid #B8B8B8;
   border-radius: 10px;
   padding: 16px;
-  max-height: 365px;
+  max-height: 200px;
   overflow-y: auto;
   margin-top: 6px;
 }
@@ -189,7 +189,7 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  margin-top: 32px;
+  margin-top: 20px;
 }
 
 .inner-editor-reset{
@@ -266,4 +266,18 @@
 
 .arrow-img.rotate {
   transform: translateY(-50%) rotate(180deg);
+}
+
+
+@media (max-width: 500px) and (min-width: 320px) {
+  .custom-modal{
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .custom-modal-content{
+    height: 526px;
+    overflow-y: auto;
+  }
 }
