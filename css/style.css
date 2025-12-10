@@ -2867,15 +2867,15 @@ input[type="file"] {
 .custom-modal-content {
   background: #FDFCF9;
   width: 485px;
-  padding: 30px;
+  padding: 22px;
   border-radius: 8px;
   position: relative;
 }
 
 .close-modal {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   border: none;
   background: none;
   cursor: pointer;
