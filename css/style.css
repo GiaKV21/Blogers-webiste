@@ -2903,6 +2903,7 @@ input[type="file"] {
   bottom: 12px;
   right: 12px;
   cursor: pointer;
+  display: none;
 }
 
 .input-box{

@@ -155,6 +155,7 @@ coverInput.addEventListener("change", () => {
             coverPreview.src = e.target.result;
             coverPreview.style.display = "block";
             uploadInner.style.display = "none";
+            document.querySelector(".resend-img-test").style.display = "block";
         };
         reader.readAsDataURL(file);
 
@@ -306,6 +307,8 @@ resetBtn.addEventListener("click", () => {
     checkboxList.classList.remove("active");
     arrowImg.classList.remove("rotate");
     checkboxList.classList.remove("up");
+
+    document.querySelector(".resend-img-test").style.display = "none";
 
     disableButtons();
 });
