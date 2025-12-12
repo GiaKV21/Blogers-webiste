@@ -267,13 +267,13 @@
 
 @media (max-width: 1172px) and (min-width: 769px) {
   .div-footer{
-    padding: 70px 48px 30px;
+    padding: 70px 32px 30px;
   }
 }
 
 @media (max-width: 768px) and (min-width: 426px) {
   .div-footer{
-    padding: 32px 48px 16px;
+    padding: 32px 32px 16px;
   }
 }
 
@@ -297,7 +297,7 @@
   }
 }
 
-@media (max-width: 817px) and (min-width: 320px) {
+@media (max-width: 787px) and (min-width: 320px) {
   .footer-div-p{
     max-width: 704px;
   }
@@ -315,13 +315,14 @@
   }
 }
 
-@media (max-width: 562px) and (min-width: 320px) {
+@media (max-width: 533px) and (min-width: 320px) {
   .div-under{
     display: block;
   }
 
   .div-social{
     justify-self: flex-end;
+    margin-bottom: 25px;
   }
   
   .p-footer-down{
@@ -330,15 +331,21 @@
   }
 }
 
-@media (max-width: 363px) and (min-width: 343px) {
+@media (max-width: 366px) and (min-width: 345px) {
   .p-footer-down{
     font-size: 13px;
   }
 }
 
-@media (max-width: 342px) and (min-width: 320px) {
+@media (max-width: 344px) and (min-width: 323px) {
   .p-footer-down{
     font-size: 12px;
+  }
+}
+
+@media (max-width: 322px) and (min-width: 320px) {
+  .p-footer-down{
+    font-size: 11px;
   }
 }
 

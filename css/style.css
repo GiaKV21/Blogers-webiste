@@ -560,7 +560,7 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 28px;
+  gap: 20px;
 }
 
 .footer-logo-p{
