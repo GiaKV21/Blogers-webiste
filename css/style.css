@@ -2892,15 +2892,15 @@ input[type="file"] {
   cursor: pointer;
   background: #FAFAFA;
   margin-bottom: 20px;
-  /* position: relative; */
+  position: relative;
 }
 
-/* .resend-img-test{
+.resend-img-test{
   position: absolute;
   bottom: 12px;
   right: 12px;
   cursor: pointer;
-} */
+}
 
 .input-box{
   margin-bottom: 20px;
