@@ -2509,15 +2509,15 @@ input[type="file"] {
 
 .li-inner{
   padding: 17px 24px 13px 16px;
-  transition: all 0.3s ease;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 0.07px;
+  width: 220px;
 }
 
 .li-inner:hover{
-  background-color: #F2F2F2;
+  font-weight: 700;
 }
 
 .menu.hidden,

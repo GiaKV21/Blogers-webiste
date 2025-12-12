@@ -239,9 +239,63 @@
           <div class="dots-wrapper">
             <img class="dots" src="images/inner-dots.png" alt="menu">
             <ul class="menu hidden regular">
-              <li class="li-inner edit-btn">რედაქტირება</li>
+              <li class="li-inner edit-btn">ტექსტის რედაქტირება</li>
+              <li class="li-inner detal-btn">გამოქვეყნების დეტალები</li>
               <li class="li-inner delete-btn">წაშლა</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-modal" id="uploadModal">
+        <div class="custom-modal-content">
+          <button class="close-modal">
+            <img src="images/Close Circle.png">
+          </button>
+
+          <h2 class="h2-editor medium">გარეკანის ფოტო</h2>
+          <div class="upload-box" id="uploadBox">
+            <label class="resend-img-test" type="file" accept=".jpg,.jpeg,.png,.webp">
+              <img src="images/resend.png">
+            </label>
+            <input type="file" id="coverInput" accept=".jpg,.jpeg,.png,.webp" required/>
+            <img id="coverPreview" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:8px;">
+            <div class="upload-inner">
+              <img src="images/add-editor-img.png">
             </div>
+          </div>
+
+          <div class="input-box">
+            <h2 class="h2-editor medium">სათაური</h2>
+            <input class="editor-h" id="title" type="text" placeholder="დაასათაურე საკითხავი" required/>
+            <div id="titleError" class="error-text regular" style="display:none;">სათაური არ არის მინიჭებული</div>
+          </div>
+
+          <div class="select-box">
+            <h2 class="h2-editor medium">კატეგორია (მაქსიმუმ 2)</h2>
+            <div class="select-wrapper">
+              <div class="editor-select placeholder" id="categoryInput" data-placeholder="მიუთითე კატეგორია"></div>
+              <img src="images/arrow-editor.png" alt="arrow" class="arrow-img">
+            </div>
+            <div id="categoryError" class="error-text regular" style="display:none;">აირჩიეთ მინიმუმ 1 კატეგორია</div>
+            <div class="checkbox-list regular" id="checkboxList">
+              <label class="list"><input type="checkbox"> პიროვნული ზრდა</label>
+              <label class="list"><input type="checkbox"> პროდუქტიულობა</label>
+              <label class="list"><input type="checkbox"> ფინანსური თავისუფლება</label>
+              <label class="list"><input type="checkbox"> ფსიქოლოგია</label>
+              <label class="list"><input type="checkbox"> მოტივაცია</label>
+              <label class="list"><input type="checkbox"> ბიზნესი</label>
+              <label class="list"><input type="checkbox"> მენეჯმენტი</label>
+              <label class="list"><input type="checkbox"> ლიდერობა</label>
+              <label class="list"><input type="checkbox"> ტექნოლოგიები</label>
+              <label class="list"><input type="checkbox"> AI</label>
+              <label class="list"><input type="checkbox"> სწავლება</label>
+            </div>
+          </div>
+
+          <div class="bottom-buttons">
+            <button class="inner-editor-reset bold" id="resetBtn">გაუქმება</button>
+            <button class="inner-editor-publish bold" id="submitBtn">გამოქვეყნება</button>
           </div>
         </div>
       </div>
@@ -293,16 +347,36 @@
 
       <div class="div-inner-icons">
         <div class="heart-number medium">
-          <img src="images/inner-heart.png">
+          <span id="likeBtn" class="icon">
+            <svg width="22" height="20" viewBox="0 0 24 24" stroke-width="1.8">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+                C13.09 3.81 14.76 3 16.5 3
+                19.58 3 22 5.42 22 8.5
+                c0 3.78-3.4 6.86-8.55 11.54
+                L12 21.35z"/>
+            </svg>
+          </span>
           244
         </div>
         <div class="inner-funcions medium">
           <div class="save-number">
-            <img src="images/inner-save.png">
+            <span id="saveBtn" class="icon">
+              <svg width="20" height="18" viewBox="0 0 24 24" stroke-width="1.8">
+                <path d="M6 2h12a2 2 0 0 1 2 2v18l-8-4-8 4V4a2 2 0 0 1 2-2z"/>
+              </svg>
+            </span>
             12
           </div>
           <div class="share-number">
-            <img src="images/inner-share.png">
+              <div id="shareBtn">
+                <img src="images/inner-share.png">
+                <div id="shareMenu" class="hidden">
+                  <div class="copy-btn"><img src="images/copy-inner.png">დააკოპირე ბმული</div>
+                  <div class="item"><img src="images/f-inner.png">გაზიარე Facebook-ზე</div>
+                  <div class="item"><img src="images/link-inner.png">გაზიარე Linkedin-ზე</div>
+                </div>
+              </div>
             6
           </div>
           <div class="seen-number">
