@@ -29,50 +29,74 @@ document.addEventListener('click', function (e) {
   }
 });
 
-const btn = document.getElementById("shareBtn");
-const menu = document.getElementById("shareMenu");
+// გაზიარების მენიუ
+document.querySelectorAll('.share-container').forEach(container => {
+    const btn = container.querySelector('.shareBtn');
+    const menu = container.querySelector('.shareMenu');
+    const copyBtn = container.querySelector('.copy-btn');
 
-btn.addEventListener("click", (e) => {
-    e.stopPropagation(); 
-    menu.classList.toggle("hidden");
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        document.querySelectorAll('.shareMenu').forEach(m => {
+            if (m !== menu) m.classList.add('hidden');
+        });
+
+        menu.classList.toggle('hidden');
+    });
 });
 
-menu.addEventListener("click", (e) => {
-    e.stopPropagation();
-});
-
-document.addEventListener("click", (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-        menu.classList.add("hidden");
-    }
+document.addEventListener('click', () => {
+    document.querySelectorAll('.shareMenu').forEach(menu => {
+        menu.classList.add('hidden');
+    });
 });
 
 // დალაიქება/დასეივება
+const likeBtns = document.querySelectorAll(".like-btn");
 
-const likeBtn = document.getElementById("likeBtn");
-const saveBtn = document.getElementById("saveBtn");
-
-likeBtn.addEventListener("click", () => {
-    likeBtn.classList.toggle("active");
-    likeBtn.classList.toggle("like");  
+likeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const isActive = btn.classList.toggle("active");
+        likeBtns.forEach(b => {
+            if (isActive) {
+                b.classList.add("active", "like");
+            } else {
+                b.classList.remove("active", "like");
+            }
+        });
+    });
 });
 
-saveBtn.addEventListener("click", () => {
-    saveBtn.classList.toggle("active");
-    saveBtn.classList.toggle("save");
+const saveBtns = document.querySelectorAll(".save-btn");
+
+saveBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const isActive = btn.classList.toggle("active");
+        saveBtns.forEach(b => {
+            if (isActive) {
+                b.classList.add("active", "save");
+            } else {
+                b.classList.remove("active", "save");
+            }
+        });
+    });
 });
+
 
 // დაკოპირება
+const copyBtns = document.querySelectorAll(".copy-btn");
+const notif = document.getElementById('top-notif');
 
-document.querySelector('.copy-btn').addEventListener('click', () => {
+copyBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
 
-  const notif = document.getElementById('top-notif');
+        notif.classList.add("show");
 
-  notif.classList.add('show');
-
-  setTimeout(() => {
-    notif.classList.remove('show');
-  }, 2000);
+        setTimeout(() => {
+            notif.classList.remove("show");
+        }, 2000);
+    });
 });
 
 // MODAL
