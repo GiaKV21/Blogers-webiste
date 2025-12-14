@@ -1,15 +1,16 @@
-tinymce.init({
-    selector: 'textarea',
-    plugins: [
-      'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
-    ],
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-    tinycomments_mode: 'embedded',
-    tinycomments_author: 'Author name',
-    mergetags_list: [
-      { value: 'First.Name', title: 'First Name' },
-      { value: 'Email', title: 'Email' },
-    ],
+const editor = SUNEDITOR.create('editor', {
+    width: '100%',
+    height: '1260px',
+
+    buttonList: [
+        ['undo', 'redo'],
+        ['font', 'fontSize', 'formatBlock'],
+        ['bold', 'underline', 'italic', 'strike'],
+        ['fontColor', 'hiliteColor'],
+        ['align', 'list', 'outdent', 'indent'],
+        ['table', 'link', 'image', 'video'],
+        ['fullScreen', 'showBlocks', 'codeView']
+    ]
 });
 
 // MODAL

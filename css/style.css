@@ -2784,22 +2784,6 @@ input[type="file"] {
   margin: 118px auto 223px;
 }
 
-.editor-textarea{
-  min-height: 1260px;
-}
-
-.tox .tox-promotion {
-  display: none;
-}
-
-.tox:not([dir=rtl]) .tox-statusbar__branding {
-  display: none;
-}
-
-.tox:not([dir=rtl]) .tox-statusbar__path>* {
-  display: none;
-}
-
 .div-button-editor{
   margin-top: 24px;
   display: flex;
