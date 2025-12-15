@@ -646,6 +646,8 @@ header {
   justify-content: center;
   margin: 100px 0 219px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 10000;
 }
 
 .container {
@@ -742,7 +744,6 @@ header {
 
 .aprove{
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 4px;
   font-size: 14px;
