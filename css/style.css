@@ -1472,6 +1472,7 @@ input.error {
   padding: 36px 24px;
   border-radius: 8px;
   width: 100%;
+  background-color: #FAFAFA;
 }
 
 .slider-div-about{

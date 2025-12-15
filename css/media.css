@@ -578,8 +578,8 @@
     display: none;
   }
 
-  .slider-track {
-    gap: 16px;
+  .exp-slider-track {
+    gap: 8px;
   }
 
   .slider-card {
