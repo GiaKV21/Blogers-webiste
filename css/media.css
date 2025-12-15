@@ -231,7 +231,7 @@
     position: absolute;
     top: 25px;
     right: -17px;
-    background: #FFFFFF;
+    background: #FDFCF9;
     border: 1px solid #ACACAC;
     border-radius: 300px;
     display: none;
@@ -251,7 +251,7 @@
   .filter-options .chip {
     padding: 0px;
     border: none;
-    background: #FFFFFF;
+    background: #FDFCF9;
     font-size: 12px;
     letter-spacing: 0.06px;
   }
@@ -271,15 +271,16 @@
   }
 }
 
-@media (max-width: 768px) and (min-width: 426px) {
+@media (max-width: 768px) and (min-width: 320px) {
   .div-footer{
-    padding: 32px 32px 16px;
+    padding: 32px 24px 16px;
   }
 }
 
-@media (max-width: 425px) and (min-width: 320px) {
-  .div-footer{
-    padding: 32px 24px 16px;
+
+@media (max-width: 455px) and (min-width: 320px) {
+  .footer-nav-logo {
+    gap: 28px;
   }
 }
 
@@ -303,9 +304,15 @@
   }
 }
 
-@media (max-width: 425px) and (min-width: 320px) {
+@media (max-width: 455px) and (min-width: 351px) {
   .footer-div-margin-right{
     margin-right: 18px;
+  }
+}
+
+@media (max-width: 455px) and (min-width: 320px) {
+  .footer-div-margin-top{
+    margin-top: 4px;
   }
 }
 
@@ -327,7 +334,6 @@
   
   .p-footer-down{
     display: flex;
-    justify-content: center;
   }
 }
 
@@ -337,7 +343,7 @@
   }
 }
 
-@media (max-width: 344px) and (min-width: 323px) {
+@media (max-width: 344px) and (min-width: 320px) {
   .p-footer-down{
     font-size: 12px;
   }
@@ -588,6 +594,13 @@
 
   .slider-dots {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .img-hand {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -867,7 +880,7 @@
 @media (max-width: 425px) and (min-width: 320px) {
   .div-profile-flex{
     justify-content: flex-start;
-    gap: 4px;
+    gap: 24px;
     flex-direction: column;
   }
 
@@ -1011,15 +1024,21 @@
   }
 }
 
-@media (max-width: 362px) and (min-width: 320px) {
+@media (max-width: 366px) and (min-width: 345px) {
+  .aprove{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 344px) and (min-width: 323px) {
   .aprove{
     font-size: 12px;
   }
 }
 
-@media (max-width: 336px) and (min-width: 320px) {
+@media (max-width: 322px) and (min-width: 320px) {
   .aprove{
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
