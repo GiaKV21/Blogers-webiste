@@ -1399,6 +1399,7 @@ input.error {
   padding: 24px 0;
   cursor: pointer;
   letter-spacing: 0.16px;
+  line-height: 24px;
 }
 
 .faq-content {
