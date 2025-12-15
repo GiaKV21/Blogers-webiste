@@ -645,8 +645,6 @@ header {
   display: flex;
   justify-content: center;
   margin: 100px 0 219px;
-  position: relative;
-  z-index: 1000;
   background-color: #FDFCF9;
 }
 
