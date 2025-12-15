@@ -629,7 +629,7 @@ header {
   position: fixed;
   top: 24px;
   left: 72px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .enter-footer{
@@ -637,7 +637,7 @@ header {
   bottom: 24px;
   left: 72px;
   font-size: 14px;
-  z-index: 1000;
+  z-index: 100;
   letter-spacing: 0.07px;
 }
 
@@ -645,9 +645,9 @@ header {
   display: flex;
   justify-content: center;
   margin: 100px 0 219px;
-  box-sizing: border-box;
   position: relative;
-  z-index: 10000;
+  z-index: 1000;
+  background-color: #FDFCF9;
 }
 
 .container {
@@ -867,7 +867,9 @@ input.error {
   display: flex;
   justify-content: center;
   margin: 145px 0 287px;
-  box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
+  background-color: #FDFCF9;
 }
 
 .password-container {
