@@ -1,6 +1,34 @@
+
+const style = document.createElement('style');
+style.innerHTML = `
+@font-face {
+    font-family: "regular";
+    src: url("../fonts/HelveticaNeue-Roman.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sun-editor-editable,
+.sun-editor-editable * {
+    font-family: "regular";
+}
+`;
+document.head.appendChild(style);
+
 const editor = SUNEDITOR.create('editor', {
     width: '100%',
     height: '1260px',
+
+    formats: ['h1', 'p'],
+    defaultTag: 'h1',
+
+    font: [
+        'thin',
+        'light',
+        'regular',
+        'medium',
+        'bold'
+    ],
 
     buttonList: [
         ['undo', 'redo'],
@@ -8,10 +36,22 @@ const editor = SUNEDITOR.create('editor', {
         ['bold', 'underline', 'italic', 'strike'],
         ['fontColor', 'hiliteColor'],
         ['align', 'list', 'outdent', 'indent'],
-        ['link', 'image', 'video'],
-        ['fullScreen']
+        ['table', 'link', 'image', 'video'],
+        ['fullScreen', 'showBlocks', 'codeView']
     ]
 });
+
+editor.onKeyDown = function (e) {
+    if (e.key === 'Enter') {
+        const currentFormat = editor.getCurrentFormat?.();
+
+        if (currentFormat === 'h1') {
+            setTimeout(() => {
+                editor.execCommand('formatBlock', 'p');
+            }, 0);
+        }
+    }
+};
 
 // MODAL
 const openBtn = document.querySelector('.button-next-editor');
