@@ -36,22 +36,10 @@ const editor = SUNEDITOR.create('editor', {
         ['bold', 'underline', 'italic', 'strike'],
         ['fontColor', 'hiliteColor'],
         ['align', 'list', 'outdent', 'indent'],
-        ['table', 'link', 'image', 'video'],
-        ['fullScreen', 'showBlocks', 'codeView']
+        ['link', 'image', 'video'],
+        ['fullScreen']
     ]
 });
-
-editor.onKeyDown = function (e) {
-    if (e.key === 'Enter') {
-        const currentFormat = editor.getCurrentFormat?.();
-
-        if (currentFormat === 'h1') {
-            setTimeout(() => {
-                editor.execCommand('formatBlock', 'p');
-            }, 0);
-        }
-    }
-};
 
 // MODAL
 const openBtn = document.querySelector('.button-next-editor');
