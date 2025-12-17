@@ -8,8 +8,8 @@ const editor = SUNEDITOR.create('editor', {
         ['bold', 'underline', 'italic', 'strike'],
         ['fontColor', 'hiliteColor'],
         ['align', 'list', 'outdent', 'indent'],
-        ['table', 'link', 'image', 'video'],
-        ['fullScreen', 'showBlocks', 'codeView']
+        ['link', 'image', 'video'],
+        ['fullScreen']
     ]
 });
 
