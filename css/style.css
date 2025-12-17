@@ -1078,7 +1078,7 @@ input.error {
 }
 
 .hero-text {
-  width: 500px;
+  width: 474px;
   font-size: 20px;
   margin-bottom: 24px;
   line-height: 30px;
@@ -1798,7 +1798,7 @@ input[type="file"] {
   user-select: none;
 }
 
-#newPasswordError, #confirmPasswordError {
+#newPasswordError, #confirmPasswordError, #oldPasswordError {
   font-size: 14px;
   margin-top: 8px;
 }
