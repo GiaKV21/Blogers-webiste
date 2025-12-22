@@ -5,58 +5,58 @@
 }
 
 @font-face {
-  font-family: "bold";
+  font-family: "HelveticaNeue-Bold";
   src: url("../fonts/HelveticaNeue-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "medium";
+  font-family: "HelveticaNeue-Medium";
   src: url("../fonts/HelveticaNeue-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "regular";
+  font-family: "HelveticaNeue-Regular";
   src: url("../fonts/HelveticaNeue-Roman.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "light";
+  font-family: "HelveticaNeue-Light";
   src: url("../fonts/HelveticaNeue-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "thin";
+  font-family: "HelveticaNeue-Thin";
   src: url("../fonts/HelveticaNeue-Thin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 .bold {
-  font-family: "bold";
+  font-family: "HelveticaNeue-Bold";
 }
 
 .medium {
-  font-family: "medium";
+  font-family: "HelveticaNeue-Medium";
 }
 
 .regular {
-  font-family: "regular";
+  font-family: "HelveticaNeue-Regular";
 }
 
 .light {
-  font-family: "light";
+  font-family: "HelveticaNeue-Light";
 }
 
 .thin {
-  font-family: "thin";
+  font-family: "HelveticaNeue-Thin";
 }
 
 .wrapper{
@@ -65,7 +65,7 @@
 }
 
 .more-wrapper{
-  margin: 114px auto 150px;
+  margin: 114px auto 42px;
 }
 
 .active-link {
@@ -1362,9 +1362,9 @@ input.error {
   color: #191919;
   background-color: #F8F8F8;
   padding: 17.5px 21.5px;
-  font-size: 20px;
+  font-size: 14px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 8px;
   letter-spacing: 0.07px;
 }
 
@@ -1445,7 +1445,7 @@ input.error {
 .h2-about{
   font-size: 24px;
   color: #191919;
-  padding-left: 87px;
+  padding-left: 90px;
   margin-bottom: 20px;
 }
 
@@ -1469,13 +1469,19 @@ input.error {
   position: relative;
 }
 
+.about-track{
+  padding: 2px;
+}
+
 .slider-card-about {
-  max-width: 367px;
+  max-width: 364px;
   flex-shrink: 0;
   padding: 36px 24px;
   border-radius: 8px;
   width: 100%;
-  background-color: #FAFAFA;
+  background-color: #FDFCF9;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
 }
 
 .slider-div-about{
@@ -1713,11 +1719,12 @@ input.error {
   right: 0;
   background-color: #191919;
   border-radius: 50%;
-  padding: 8px;
+  padding: 6px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid #FDFCF9;
 }
 
 input[type="file"] {
@@ -1943,6 +1950,10 @@ input[type="file"] {
   letter-spacing: 0.14px;
 }
 
+.a-user-link:hover{
+  text-decoration: underline;
+}
+
 .div-user-info{
   display: flex;
   align-items: center;
@@ -2162,6 +2173,11 @@ input[type="file"] {
   font-size: 20px;
 }
 
+.new-user-author-icon{
+  width: 20px;
+  height: 20px;
+}
+
 .author-p{
   color: #313131;
   font-size: 16px;
@@ -2180,6 +2196,10 @@ input[type="file"] {
   gap: 6px;
   margin-bottom: 12px;
   letter-spacing: 0.14px;
+}
+
+.a-author-link:hover{
+  text-decoration: underline;
 }
 
 .icon-author-user{
@@ -2290,7 +2310,7 @@ input[type="file"] {
   display: flex;
   align-items: center;
   gap: 13px;
-  max-width: 1140px;
+  max-width: 1182px;
   margin: 0 auto 0;
 }
 

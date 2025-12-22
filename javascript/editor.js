@@ -2,7 +2,7 @@
 const style = document.createElement('style');
 style.innerHTML = `
 @font-face {
-    font-family: "regular";
+    font-family: "HelveticaNeue-Regular";
     src: url("../fonts/HelveticaNeue-Roman.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
@@ -10,7 +10,7 @@ style.innerHTML = `
 
 .sun-editor-editable,
 .sun-editor-editable * {
-    font-family: "regular";
+    font-family: "HelveticaNeue-Regular";
 }
 `;
 document.head.appendChild(style);
@@ -23,17 +23,17 @@ const editor = SUNEDITOR.create('editor', {
     defaultTag: 'h1',
 
     font: [
-        'thin',
-        'light',
-        'regular',
-        'medium',
-        'bold'
+        'HelveticaNeue-Thin',
+        'HelveticaNeue-Light',
+        'HelveticaNeue-Regular',
+        'HelveticaNeue-Medium',
+        'HelveticaNeue-Bold'
     ],
 
     buttonList: [
         ['undo', 'redo'],
         ['font', 'fontSize', 'formatBlock'],
-        ['bold', 'underline', 'italic', 'strike'],
+        ['bold', 'underline', 'italic'],
         ['fontColor', 'hiliteColor'],
         ['align', 'list', 'outdent', 'indent'],
         ['link', 'image', 'video'],

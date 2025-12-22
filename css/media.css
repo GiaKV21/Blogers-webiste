@@ -180,6 +180,7 @@
 
   .h3-button-notif{
     padding: 20px 12px 32px 20px;
+    border-bottom: none;
   }
 
   .notif-title {
@@ -658,7 +659,7 @@
   }
 
   .h2-about{
-    padding-left: 82px;
+    padding-left: 85px;
   }
 }
 
@@ -668,7 +669,7 @@
   }
 
   .h2-about{
-    padding-left: 77px;
+    padding-left: 80px;
   }
 }
 
@@ -678,7 +679,7 @@
   }
 
   .h2-about{
-    padding-left: 72px;
+    padding-left: 75px;
   }
 }
 
@@ -688,7 +689,7 @@
   }
 
   .h2-about{
-    padding-left: 67px;
+    padding-left: 70px;
   }
 }
 
@@ -698,7 +699,7 @@
   }
 
   .h2-about{
-    padding-left: 62px;
+    padding-left: 65px;
   }
 }
 
@@ -708,7 +709,7 @@
   }
 
   .h2-about{
-    padding-left: 57px;
+    padding-left: 60px;
   }
 }
 
@@ -718,7 +719,7 @@
   }
 
   .h2-about{
-    padding-left: 52px;
+    padding-left: 55px;
   }
 }
 
@@ -728,7 +729,7 @@
   }
 
   .h2-about{
-    padding-left: 47px;
+    padding-left: 50px;
   }
 }
 
@@ -738,7 +739,7 @@
   }
 
   .h2-about{
-    padding-left: 42px;
+    padding-left: 45px;
   }
 }
 
@@ -748,7 +749,7 @@
   }
 
   .h2-about{
-    padding-left: 37px;
+    padding-left: 40px;
   }
 }
 
@@ -758,7 +759,7 @@
   }
 
   .h2-about{
-    padding-left: 32px;
+    padding-left: 35px;
   }
 }
 
@@ -768,7 +769,7 @@
   }
 
   .h2-about{
-    padding-left: 27px;
+    padding-left: 30px;
   }
 }
 
@@ -1177,14 +1178,9 @@
   }
 }
 
-@media (max-width: 1172px) and (min-width: 320px) {
-  .explore-slider {
-    overflow-x: auto;
-    overflow-y: hidden;
-    cursor: grab;
-  }
-  .slider-btn-exp {
-    display: none;
+@media (max-width: 1198px) and (min-width: 320px) {
+  .explore-slider-wrapper {
+    padding: 0 16px;
   }
 }
 
