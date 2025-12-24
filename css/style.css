@@ -1285,6 +1285,7 @@ input.error {
 .slider-btn {
   display: none;
 }
+
 .slider-btn.visible {
   display: block;
 }
