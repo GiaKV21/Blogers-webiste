@@ -434,6 +434,13 @@ header {
   letter-spacing: 0.07px;
 }
 
+.not-check{
+  font-size: 14px;
+  color: #191919;
+  letter-spacing: 0.07px;
+  text-decoration: underline;
+}
+
 .not-time {
   font-size: 12px;
   color: #ACACAC;
@@ -446,7 +453,6 @@ header {
   align-items: center;
   gap: 6px;
   padding: 8.5px 15px;
-  transition: all 0.3s ease;
   background-color: #FDFCF9;
 }
 
