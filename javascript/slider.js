@@ -19,6 +19,17 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
     // ARROWS
     function updateArrows() {
       if (!prevBtn || !nextBtn) return;
+      const cards = Array.from(track.querySelectorAll(cardSelector));
+
+      if (cards.length === 0) {
+        prevBtn.classList.remove("visible");
+        nextBtn.classList.remove("visible");
+        return;
+      } else {
+        prevBtn.classList.add("visible");
+        nextBtn.classList.add("visible");
+      }
+
       const maxScroll = track.scrollWidth - track.clientWidth;
       prevBtn.style.opacity = track.scrollLeft > 2 ? "1" : "0";
       nextBtn.style.opacity = track.scrollLeft < maxScroll - 2 ? "1" : "0";

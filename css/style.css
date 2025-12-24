@@ -1282,6 +1282,13 @@ input.error {
   background: transparent;
 }
 
+.slider-btn {
+  display: none;
+}
+.slider-btn.visible {
+  display: block;
+}
+
 /* პიროვნებები */
 
 .card {
