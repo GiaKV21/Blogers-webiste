@@ -902,12 +902,22 @@
   }
 
   .btn {
-    max-width: 191px;
+    max-width: 200px;
     height: 40px;
   }
 
   .btn-primary {
-    max-width: 191px;
+    max-width: 200px;
+    height: 40px;
+  }
+
+  .btn-password {
+    max-width: 200px;
+    height: 40px;
+  }
+
+  .btn-primary-password {
+    max-width: 200px;
     height: 40px;
   }
 }
