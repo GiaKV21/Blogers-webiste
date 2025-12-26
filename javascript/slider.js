@@ -103,10 +103,11 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
         dotsContainer.appendChild(dot);
         return dot;
       });
+      updateDots();
     }
 
     function updateDots() {
-      if (window.innerWidth > 768 || !dots.length) return;
+      if (!dots.length) return;
       const maxScroll = track.scrollWidth - track.clientWidth;
       const scrollLeft = track.scrollLeft;
       let index;
@@ -126,15 +127,8 @@ function initSlider({ containerSelector, cardSelector, dotsSelector, getVisibleC
 
     // RESIZE HANDLER
     function handleResize() {
-      if (window.innerWidth <= 768) {
-        createDots();
-        if (dotsContainer) dotsContainer.style.display = "flex";
-      } else {
-        if (dotsContainer) {
-          dotsContainer.innerHTML = "";
-          dotsContainer.style.display = "none";
-        }
-      }
+      createDots();
+      if (dotsContainer) dotsContainer.style.display = "flex";
       updateArrows();
     }
 
